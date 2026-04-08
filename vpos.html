@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///Users/apple/Downloads/vpos-casestudy_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vpos — Daye Go Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Vpos — Daye Go Portfolio_files/css2" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--text:#000000;--muted:#888888;
+  --border:#e8e8e8;--pill-bg:#000000;--pill-text:#ffffff;
+  --footer-bg:#0a0a0a;--footer-text:#ffffff;
+  --sp:80px;--cw:1200px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-bottom:1px solid var(--border)}
+.nav-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
+.nav-logo-text{font-size:20px;font-weight:700;color:#000;letter-spacing:-0.5px;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:40px}
+.nav-links a{font-size:16px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
+.nav-links a:hover{opacity:.45}
+.btn-nav{padding:10px 22px;border-radius:100px;background:#000;color:#fff;font-size:15px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;transition:opacity .2s}
+.btn-nav:hover{opacity:.75}
+
+/* PAGE */
+.page{width:100%;background:#ffffff;display:flex;flex-direction:column;align-items:center}
+.col{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding-left:var(--sp);padding-right:var(--sp)}
+
+/* HERO */
+.hero{padding-top:160px;padding-bottom:64px;display:flex;flex-direction:column;gap:40px}
+.hero-meta{display:flex;flex-direction:row;gap:64px;align-items:flex-start;flex-wrap:wrap}
+.meta-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
+.meta-value{font-size:20px;font-weight:600;color:#000}
+.hero-divider{width:100%;height:1px;background:var(--border)}
+.hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:880px}
+
+/* IMAGE */
+.img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
+.img-wrap.full{aspect-ratio:4/3}
+.img-wrap.wide{aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap.half-w{width:50%;aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;color:transparent;position:relative;z-index:1}
+.img-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f0f0f0 25%,#e8e8e8 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;z-index:0}
+.img-wrap.loaded::before{display:none}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%}
+
+/* SECTIONS */
+.sections{width:100%;display:flex;flex-direction:column;gap:120px;padding:120px 0}
+
+/* TEXT */
+.txt{display:flex;flex-direction:column;gap:28px;max-width:800px}
+.txt h2{font-size:clamp(24px,2.4vw,38px);font-weight:500;line-height:1.2;letter-spacing:-0.015em;color:#000}
+.txt h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.txt p{font-size:17px;font-weight:400;line-height:1.82;color:rgba(0,0,0,.62)}
+.txt p strong{color:#000;font-weight:600}
+.txt blockquote{border-left:3px solid #000;padding-left:24px;margin:8px 0}
+.txt blockquote p{font-size:18px;font-style:italic;font-weight:500;color:rgba(0,0,0,.8)}
+
+/* LABELED */
+.labeled{display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:start;width:100%}
+.lbl-tag{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px}
+.lbl-title{font-size:17px;font-weight:700;color:#000;line-height:1.4}
+.lbl-content{display:flex;flex-direction:column;gap:32px}
+.lbl-content h2{font-size:clamp(26px,2.8vw,42px);font-weight:500;line-height:1.15;letter-spacing:-0.02em;color:#000}
+.lbl-content h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.lbl-content p{font-size:17px;line-height:1.82;color:rgba(0,0,0,.62)}
+.lbl-content p strong{color:#000;font-weight:600}
+
+/* SECTION TITLE (standalone) */
+.section-title{font-size:clamp(22px,2.2vw,32px);font-weight:500;letter-spacing:-0.015em;color:#000;margin-bottom:0}
+
+/* CAROUSEL */
+.carousel-outer{width:100%;display:flex;flex-direction:column;gap:20px}
+.carousel-vp{width:100%;overflow:hidden;border-radius:12px}
+.carousel-track{display:flex;gap:24px;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.carousel-track .img-wrap{flex-shrink:0;width:calc(50% - 12px);aspect-ratio:2596/1568;border-radius:12px}
+.carousel-ctrls{display:flex;align-items:center;gap:12px}
+.c-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;color:#000;transition:all .2s;user-select:none}
+.c-btn:hover{background:#000;color:#fff;border-color:#000}
+.c-dots{display:flex;gap:8px;margin-left:4px}
+.c-dot{width:6px;height:6px;border-radius:50%;background:#ddd;cursor:pointer;transition:background .2s}
+.c-dot.on{background:#000}
+
+/* FOOTER */
+footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
+.foot-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);margin:0 auto}
+.foot-tag{font-size:12px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:24px}
+.foot-h{font-size:clamp(44px,6vw,96px);font-weight:500;line-height:1.04;letter-spacing:-0.035em;color:#fff;margin-bottom:48px;max-width:760px}
+.foot-cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;background:#fff;color:#000;font-size:17px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;margin-bottom:120px;transition:opacity .2s}
+.foot-cta:hover{opacity:.8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;align-items:center;justify-content:space-between}
+.foot-nav{display:flex;gap:28px}
+.foot-nav a{font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.foot-nav a:hover{color:#fff}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.25)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
+@media(max-width:800px){:root{--sp:24px}.hero-meta{gap:32px}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-bottom{flex-direction:column;gap:20px;align-items:flex-start}.nav-links{display:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero{animation:fadeUp .6s ease both}
+
+/* VOC ROW — wide image + phone screenshot side by side */
+.voc-row{display:flex;flex-direction:row;gap:32px;align-items:flex-end;width:100%}
+.voc-img{flex:1;min-width:0}
+.voc-phone{flex-shrink:0;width:220px}
+.voc-phone img{width:100%;display:block;border-radius:24px;box-shadow:0 12px 48px rgba(0,0,0,.13)}
+@media(max-width:800px){.voc-row{flex-direction:column}.voc-phone{width:100%;max-width:240px;margin:0 auto}}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="file:///" class="nav-logo-text">Daye.</a>
+    <div class="nav-links">
+      <a href="file:///work">Work</a>
+      <a href="file:///about">About</a>
+      <a href="file:///contact">Contact</a>
+    </div>
+    <a href="mailto:designer.daye@gmail.com" class="btn-nav">Contact</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="col">
+    <div class="hero">
+      <div class="hero-meta">
+        <div>
+          <div class="meta-label">Industry</div>
+          <div class="meta-value">Restaurant POS</div>
+        </div>
+        <div>
+          <div class="meta-label">Client</div>
+          <div class="meta-value">Vpos</div>
+        </div>
+        <div>
+          <div class="meta-label">Role</div>
+          <div class="meta-value">Product Designer, End-to-End UX</div>
+        </div>
+      </div>
+      <h1 class="hero-h1">A restaurant POS designed around natural service workflows — minimizing the learning curve through user-centered design.</h1>
+      <div class="hero-divider"></div>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="col">
+    <div class="img-wrap full loaded">
+      <img src="./Vpos — Daye Go Portfolio_files/886pj77HJMhgfOutvUiibA1TlTI.png" alt="Vpos restaurant POS system hero">
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="sections">
+
+      <!-- 1. The Problem -->
+      <div class="txt">
+        <h2>The Problem Nobody Was Talking About Out Loud</h2>
+        <p>Most restaurant POS systems were designed in a conference room, not a kitchen. They were optimized for feature lists and procurement decisions — not for the server who's managing three tables during a Saturday dinner rush, or the new hire who needs to process their first order in under five minutes with no trainer nearby.</p>
+        <p>The result was a category of software that required significant training, created friction at peak service hours, and punished restaurants every time they hired someone new. The POS was supposed to make service faster. It was making it slower.</p>
+        <p>Vpos asked a different question: what if we designed around <em>how restaurants actually operate</em> — including the chaos?</p>
+      </div>
+
+      <!-- GALLERY 2-col -->
+      <div class="grid2">
+        <div class="img-wrap wide loaded">
+          <img src="./Vpos — Daye Go Portfolio_files/nomWc3raY5Rha7DYLEPnHsqquhE.png" alt="Vpos order management interface">
+        </div>
+        <div class="img-wrap wide loaded">
+          <img src="./Vpos — Daye Go Portfolio_files/ZWHPCP202iI6of2SAcI2HFOcAI.png" alt="Vpos table management and floor view">
+        </div>
+      </div>
+
+      <!-- 2. Design Approach -->
+      <div class="txt">
+        <h2>Designed for the Chaotic Realities of Restaurants</h2>
+        <p>We designed for <strong>hot kitchens, peak-hour rush, and inexperienced new staff</strong> — so the system stays usable under pressure. That framing shaped every decision: navigation depth, touch target sizing, error recovery, order confirmation flows, and the mental model of the entire interface.</p>
+        <p>If a design choice added a second of friction during a busy dinner service, it was wrong — regardless of how clean it looked on a desk.</p>
+      </div>
+
+      <!-- 3. Speed Optimization -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Feature 01</div>
+          <div class="lbl-title">Solving Restaurant-Specific Complexity</div>
+        </div>
+        <div class="lbl-content">
+          <h2>Speed isn't just about fast taps. It's about never having to think.</h2>
+          <p><strong>Speed Optimization</strong><br>
+          The navigation structure was rebuilt around the tasks servers actually repeat: opening a table, adding items, modifying an order, sending to kitchen, processing payment. Each of these flows was timed and iterated until it required the fewest possible decisions under pressure.</p>
+          <p>Toast Flex hardware adapts to any restaurant setup — screen rotation, height adjustment, and wall-mount support mean the POS works in a cramped bar, a full-service dining room, or a fast-casual counter without configuration changes.</p>
+          <p><strong>Handling Complex Orders</strong><br>
+          Real restaurant orders are messy. "No mayo, add onions, dressing on the side, one plate but split the bill three ways" — this is a normal request, and the system needed to handle it without a workaround.</p>
+          <blockquote><p>"A reliable order flow that ensures accurate, no-miss communication from front-of-house to kitchen — even when the order has six modifications."</p></blockquote>
+          <p>We designed a modification system that matched how servers actually verbalize customizations, and a kitchen display integration that surfaced modifications clearly rather than burying them in a text string. The goal was zero missed modifiers — because in a restaurant, a missed modifier is a returned dish, a frustrated guest, and a comped item.</p>
+        </div>
+      </div>
+
+      <!-- WIDE IMAGE -->
+      <div class="img-wrap wide loaded">
+        <img src="./Vpos — Daye Go Portfolio_files/SgvqARIHuUjITUjpnxv58F9vQw.png" alt="Vpos order modification and kitchen communication flow">
+      </div>
+
+      <!-- 4. Learning Curve -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Feature 02</div>
+          <div class="lbl-title">Minimizing the Learning Curve</div>
+        </div>
+        <div class="lbl-content">
+          <h2>A new hire should be able to process their first order without a trainer. That was the benchmark.</h2>
+          <p><strong>Fast Onboarding</strong><br>
+          Restaurant turnover is high. Training time is a real cost — not just in hours, but in errors made during the learning period. We designed in-app, step-by-step tutorials that activate contextually when a new user encounters a flow for the first time.</p>
+          <p>Rather than a separate training mode that users skip, guidance appears inline at the moment of first use: the first time a server opens a table, splits a check, or processes a refund, the system walks them through it. Each tutorial is dismissible and never appears twice. An interface that's easy to learn regardless of experience level means restaurants don't need to factor in POS training as a significant onboarding cost.</p>
+          <p><strong>A Single Integrated Solution</strong><br>
+          One of the most persistent pain points for restaurant operators was managing multiple disconnected tools: a separate system for reservations, another for inventory, another for payroll reporting. Every additional tool is another thing to learn, maintain, and reconcile.</p>
+          <p>Vpos was designed as a <strong>cloud-based, real-time management platform with offline mode</strong> — so operations continue even when the internet drops, a common reality in older restaurant buildings. No need to learn or maintain separate tools or systems. One interface, one data source, one place to look when something goes wrong.</p>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="carousel-outer">
+        <div class="carousel-vp">
+          <div class="carousel-track" id="ct" style="transform: translateX(0px);">
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/shXBEcIcnJSpqi2wrlxRI5I0FVE.png" alt="Vpos in-app onboarding tutorial flow"></div>
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/nomWc3raY5Rha7DYLEPnHsqquhE.png" alt="Vpos payment and split check interface"></div>
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/ZWHPCP202iI6of2SAcI2HFOcAI.png" alt="Vpos floor plan and table management"></div>
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/SgvqARIHuUjITUjpnxv58F9vQw.png" alt="Vpos cloud dashboard and reporting"></div>
+          </div>
+        </div>
+        <div class="carousel-ctrls">
+          <button class="c-btn" id="cprev">←</button>
+          <button class="c-btn" id="cnext">→</button>
+          <div class="c-dots" id="cdots"><div class="c-dot on"></div><div class="c-dot"></div><div class="c-dot"></div><div class="c-dot"></div></div>
+        </div>
+      </div>
+
+      <!-- 5. What I Learned -->
+      <div class="txt">
+        <h2>What I Learned: Designing for Environments That Don't Forgive Friction</h2>
+        <p>This project taught me that user-centered design has an additional dimension in high-stress operational environments: it's not enough to design for the average case. You have to design for the worst case — the dinner rush, the new hire, the dropped connection, the complicated order from table 12.</p>
+        <p>The standard usability heuristics still apply, but they're not sufficient. <em>Speed</em> isn't just a nice-to-have — it's the entire value proposition. <em>Error recovery</em> isn't an edge case — it's a nightly occurrence. <em>Learnability</em> isn't about onboarding flow completion rates — it's about whether a new server can handle their first shift without calling for help.</p>
+        <p>Designing the system around those constraints, rather than retrofitting them onto a conventional POS information architecture, was what made Vpos feel fundamentally different from the tools restaurant operators had experienced before.</p>
+        <p><strong>Built for how restaurants actually work. Not how software teams imagine they work.</strong></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <p class="foot-tag">Contact</p>
+    <h2 class="foot-h">Let's start creating together</h2>
+    <a href="mailto:designer.daye@gmail.com" class="foot-cta">Let's talk ↗</a>
+    <div class="foot-bottom">
+      <nav class="foot-nav">
+        <a href="file:///">Home</a>
+        <a href="file:///work">Work</a>
+        <a href="file:///about">About</a>
+        <a href="file:///contact">Contact</a>
+      </nav>
+      <p class="foot-copy">© 2024 Daye Go. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const track = document.getElementById('ct');
+const dotsEl = document.getElementById('cdots');
+let cur = 0;
+const total = track.children.length;
+for(let i=0;i<total;i++){
+  const d=document.createElement('div');
+  d.className='c-dot'+(i===0?' on':'');
+  d.onclick=()=>goTo(i);
+  dotsEl.appendChild(d);
+}
+function goTo(idx){
+  cur=((idx%total)+total)%total;
+  const w=track.children[0].offsetWidth+24;
+  track.style.transform=`translateX(-${cur*w}px)`;
+  dotsEl.querySelectorAll('.c-dot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+}
+document.getElementById('cprev').onclick=()=>goTo(cur-1);
+document.getElementById('cnext').onclick=()=>goTo(cur+1);
+let autoT=setInterval(()=>goTo(cur+1),4500);
+track.addEventListener('mouseenter',()=>clearInterval(autoT));
+track.addEventListener('mouseleave',()=>{autoT=setInterval(()=>goTo(cur+1),4500)});
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft')goTo(cur-1);
+  if(e.key==='ArrowRight')goTo(cur+1);
+});
+document.querySelectorAll('.img-wrap img').forEach(img=>{
+  if(img.complete&&img.naturalWidth)img.parentElement.classList.add('loaded');
+  img.addEventListener('load',()=>img.parentElement.classList.add('loaded'));
+});
+</script>
+
+</body></html>

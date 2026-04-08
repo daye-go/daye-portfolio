@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///Users/apple/Downloads/kakao-enterprise-casestudy_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kakao Work — Daye Go Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Kakao Work — Daye Go Portfolio_files/css2" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--text:#000000;--muted:#888888;
+  --border:#e8e8e8;--pill-bg:#000000;--pill-text:#ffffff;
+  --footer-bg:#0a0a0a;--footer-text:#ffffff;
+  --sp:80px;--cw:1200px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-bottom:1px solid var(--border)}
+.nav-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
+.nav-logo-text{font-size:20px;font-weight:700;color:#000;letter-spacing:-0.5px;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:40px}
+.nav-links a{font-size:16px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
+.nav-links a:hover{opacity:.45}
+.btn-nav{padding:10px 22px;border-radius:100px;background:#000;color:#fff;font-size:15px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;transition:opacity .2s}
+.btn-nav:hover{opacity:.75}
+
+/* PAGE */
+.page{width:100%;background:#ffffff;display:flex;flex-direction:column;align-items:center}
+.col{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding-left:var(--sp);padding-right:var(--sp)}
+
+/* HERO */
+.hero{padding-top:160px;padding-bottom:64px;display:flex;flex-direction:column;gap:40px}
+.hero-meta{display:flex;flex-direction:row;gap:64px;align-items:flex-start;flex-wrap:wrap}
+.meta-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
+.meta-value{font-size:20px;font-weight:600;color:#000}
+.hero-divider{width:100%;height:1px;background:var(--border)}
+.hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:880px}
+
+/* IMAGE */
+.img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
+.img-wrap.full{aspect-ratio:4/3}
+.img-wrap.wide{aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap.half-w{width:50%;aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;color:transparent;position:relative;z-index:1}
+.img-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f0f0f0 25%,#e8e8e8 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;z-index:0}
+.img-wrap.loaded::before{display:none}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%}
+
+/* SECTIONS */
+.sections{width:100%;display:flex;flex-direction:column;gap:120px;padding:120px 0}
+
+/* TEXT */
+.txt{display:flex;flex-direction:column;gap:28px;max-width:800px}
+.txt h2{font-size:clamp(24px,2.4vw,38px);font-weight:500;line-height:1.2;letter-spacing:-0.015em;color:#000}
+.txt h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.txt p{font-size:17px;font-weight:400;line-height:1.82;color:rgba(0,0,0,.62)}
+.txt p strong{color:#000;font-weight:600}
+.txt blockquote{border-left:3px solid #000;padding-left:24px;margin:8px 0}
+.txt blockquote p{font-size:18px;font-style:italic;font-weight:500;color:rgba(0,0,0,.8)}
+
+/* LABELED */
+.labeled{display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:start;width:100%}
+.lbl-tag{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px}
+.lbl-title{font-size:17px;font-weight:700;color:#000;line-height:1.4}
+.lbl-content{display:flex;flex-direction:column;gap:32px}
+.lbl-content h2{font-size:clamp(26px,2.8vw,42px);font-weight:500;line-height:1.15;letter-spacing:-0.02em;color:#000}
+.lbl-content h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.lbl-content p{font-size:17px;line-height:1.82;color:rgba(0,0,0,.62)}
+.lbl-content p strong{color:#000;font-weight:600}
+
+/* SECTION TITLE (standalone) */
+.section-title{font-size:clamp(22px,2.2vw,32px);font-weight:500;letter-spacing:-0.015em;color:#000;margin-bottom:0}
+
+/* CAROUSEL */
+.carousel-outer{width:100%;display:flex;flex-direction:column;gap:20px}
+.carousel-vp{width:100%;overflow:hidden;border-radius:12px}
+.carousel-track{display:flex;gap:24px;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.carousel-track .img-wrap{flex-shrink:0;width:calc(50% - 12px);aspect-ratio:2596/1568;border-radius:12px}
+.carousel-ctrls{display:flex;align-items:center;gap:12px}
+.c-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;color:#000;transition:all .2s;user-select:none}
+.c-btn:hover{background:#000;color:#fff;border-color:#000}
+.c-dots{display:flex;gap:8px;margin-left:4px}
+.c-dot{width:6px;height:6px;border-radius:50%;background:#ddd;cursor:pointer;transition:background .2s}
+.c-dot.on{background:#000}
+
+/* FOOTER */
+footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
+.foot-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);margin:0 auto}
+.foot-tag{font-size:12px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:24px}
+.foot-h{font-size:clamp(44px,6vw,96px);font-weight:500;line-height:1.04;letter-spacing:-0.035em;color:#fff;margin-bottom:48px;max-width:760px}
+.foot-cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;background:#fff;color:#000;font-size:17px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;margin-bottom:120px;transition:opacity .2s}
+.foot-cta:hover{opacity:.8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;align-items:center;justify-content:space-between}
+.foot-nav{display:flex;gap:28px}
+.foot-nav a{font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.foot-nav a:hover{color:#fff}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.25)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
+@media(max-width:800px){:root{--sp:24px}.hero-meta{gap:32px}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-bottom{flex-direction:column;gap:20px;align-items:flex-start}.nav-links{display:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero{animation:fadeUp .6s ease both}
+
+/* VOC ROW — wide image + phone screenshot side by side */
+.voc-row{display:flex;flex-direction:row;gap:32px;align-items:flex-end;width:100%}
+.voc-img{flex:1;min-width:0}
+.voc-phone{flex-shrink:0;width:220px}
+.voc-phone img{width:100%;display:block;border-radius:24px;box-shadow:0 12px 48px rgba(0,0,0,.13)}
+@media(max-width:800px){.voc-row{flex-direction:column}.voc-phone{width:100%;max-width:240px;margin:0 auto}}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="file:///" class="nav-logo-text">Daye.</a>
+    <div class="nav-links">
+      <a href="file:///work">Work</a>
+      <a href="file:///about">About</a>
+      <a href="file:///contact">Contact</a>
+    </div>
+    <a href="mailto:designer.daye@gmail.com" class="btn-nav">Contact</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="col">
+    <div class="hero">
+      <div class="hero-meta">
+        <div>
+          <div class="meta-label">Industry</div>
+          <div class="meta-value">B2B SaaS</div>
+        </div>
+        <div>
+          <div class="meta-label">Client</div>
+          <div class="meta-value">Kakao Enterprise</div>
+        </div>
+        <div>
+          <div class="meta-label">Role</div>
+          <div class="meta-value">Lead Product Designer, End-to-End UX</div>
+        </div>
+      </div>
+      <h1 class="hero-h1">Reducing friction, amplifying understanding — Kakao Work attendance redesign.</h1>
+      <div class="hero-divider"></div>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="col">
+    <div class="img-wrap full loaded">
+      <img src="./Kakao Work — Daye Go Portfolio_files/Y4AcrP3o9idE443RDX1HQ4Ju8w.png" alt="Kakao Work attendance redesign hero">
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="sections">
+
+      <!-- 1. The Problem -->
+      <div class="txt">
+        <h2>Attendance management that anyone can start right from the first screen.</h2>
+        <p>Kakao Work's attendance module had a serious onboarding problem. HR managers spent days configuring rules before employees could clock a single shift. Employees found the interface confusing enough that help desk tickets about basic attendance functions were among the top support categories.</p>
+        <p>The system wasn't broken — it was <em>built for power users</em> and then handed to everyone else. The challenge was designing a zero learning curve experience without stripping away the configurability enterprise clients depended on.</p>
+        <p>We had to make it feel effortless on day one, without making it brittle on day one thousand.</p>
+      </div>
+
+      <!-- GALLERY 2-col -->
+      <div class="grid2">
+        <div class="img-wrap wide loaded">
+          <img src="./Kakao Work — Daye Go Portfolio_files/4Sk41buTpd1tw46olW11D1feU.png" alt="Kakao Work attendance screen 1">
+        </div>
+        <div class="img-wrap wide loaded">
+          <img src="./Kakao Work — Daye Go Portfolio_files/g7ohTDmKqX3SD89Pnh2Y9eGcHWs.png" alt="Kakao Work attendance screen 2">
+        </div>
+      </div>
+
+      <!-- 2. My Role -->
+      <div class="txt">
+        <h2>My Role</h2>
+        <p>I led end-to-end design from concept to deployment — owning the full product design process across research, architecture, interaction design, and handoff. This was one of the most operationally complex projects of my career: attendance policy logic is genuinely intricate, and the surface area of configuration options required deep collaboration with the PM and engineering teams to understand what was actually possible.</p>
+        <p>Working within Kakao Enterprise's design system, I simultaneously had to advocate for simplification while preserving the depth that large enterprise clients required. That tension — between simplicity and power — defined every major design decision on this project.</p>
+      </div>
+
+      <!-- 3. Design Process -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Research</div>
+          <div class="lbl-title">Zero Learning Curve UX Design</div>
+        </div>
+        <div class="lbl-content">
+          <h2>The first screen is a promise. We had to keep it.</h2>
+          <p>Through bi-weekly usability testing and field research with HR managers and employees, we identified the core issue: the mental model gap. Users thought in terms of <em>outcomes</em> (I want everyone on a 9-to-6 schedule, with 15 days of annual leave) — but the interface was organized around <em>configurations</em> (define shift rules, assign policy groups, configure exception handling).</p>
+          <h3>What research revealed:</h3>
+          <p>HR managers consistently described their setup experience as "having to think like a developer." Employees described the daily attendance UI as "I just click what I think is right and hope it worked." Both groups were experiencing the same root problem: the system's internal logic was leaking into the surface design.</p>
+          <p>We restructured the information architecture around two core jobs-to-be-done:<br><br>
+          <strong>For employees:</strong> Clock in, clock out, check my leave balance, request time off. Four actions. These should take one tap each.<br><br>
+          <strong>For administrators:</strong> Set up a policy, assign it to a team, handle exceptions. Three phases. Each phase should feel like a guided workflow, not a configuration panel.</p>
+        </div>
+      </div>
+
+      <!-- WIDE IMAGE -->
+      <div class="img-wrap wide loaded">
+        <img src="./Kakao Work — Daye Go Portfolio_files/WMxqeddodkaUd4NKIC1JcLPiRA.png" alt="Kakao Work admin configuration flow">
+      </div>
+
+      <!-- 4. What We Built -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Design</div>
+          <div class="lbl-title">One-click templates. Intuitive UX writing. Continuous refinement.</div>
+        </div>
+        <div class="lbl-content">
+          <h2>The insight that changed everything: templates eliminate the blank page problem.</h2>
+          <p>The highest drop-off in the admin setup flow happened at the very first configuration screen — a blank policy editor. Administrators stared at it, unsure where to start, and either called support or abandoned the setup entirely.</p>
+          <blockquote><p>"One-click templates enable employees to track attendance and vacation days instantly, while intuitive UX writing empowers administrators to configure settings tailored to their company's unique needs."</p></blockquote>
+          <p>We introduced a <strong>policy template library</strong> covering the most common workforce structures — standard 9-to-5, flexible hours, shift-based schedules, remote-first policies. Administrators could start from a template that matched their organization's shape and customize from there, rather than building from scratch.</p>
+          <p>The second major intervention was UX writing. Every label, tooltip, and confirmation message was rewritten with the administrator's mental model in mind. Instead of "Define attendance rule parameters," we wrote "When does your team's workday start?" Instead of "Configure exception policy," we wrote "What should happen when someone forgets to clock in?"</p>
+          <p>Through <strong>iterative CBT testing</strong> — running structured tests with real HR managers and employees at multiple points in the design process — we continuously validated and refined both interventions until the drop-off rate at first setup fell to near zero.</p>
+          <h3>After launch, routine task completion time dropped by the equivalent of 3–5 clicks per action — translating to hundreds of hours saved across enterprise clients monthly.</h3>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="carousel-outer">
+        <div class="carousel-vp">
+          <div class="carousel-track" id="ct" style="transform: translateX(-1836px);">
+            <div class="img-wrap loaded"><img src="./Kakao Work — Daye Go Portfolio_files/rwScsfEW8jJhWg4ZQKXCm8PuPe0.png" alt="Kakao Work employee view"></div>
+            <div class="img-wrap loaded"><img src="./Kakao Work — Daye Go Portfolio_files/azSY2fhQGpbQ0BJneThWEBOOkAY.png" alt="Kakao Work admin dashboard"></div>
+            <div class="img-wrap loaded"><img src="./Kakao Work — Daye Go Portfolio_files/4Sk41buTpd1tw46olW11D1feU.png" alt="Kakao Work leave request"></div>
+            <div class="img-wrap loaded"><img src="./Kakao Work — Daye Go Portfolio_files/g7ohTDmKqX3SD89Pnh2Y9eGcHWs.png" alt="Kakao Work policy template"></div>
+          </div>
+        </div>
+        <div class="carousel-ctrls">
+          <button class="c-btn" id="cprev">←</button>
+          <button class="c-btn" id="cnext">→</button>
+          <div class="c-dots" id="cdots"><div class="c-dot"></div><div class="c-dot"></div><div class="c-dot"></div><div class="c-dot on"></div></div>
+        </div>
+      </div>
+
+      <!-- 5. Impact -->
+      <div class="txt">
+        <h2>Transforming Enterprise Workforce Management</h2>
+        <p>This project transformed Kakao Work's attendance module from a fragmented, specialist-only tool into a B2B SaaS platform that genuinely served everyone in the organization.</p>
+        <p><strong>Delivered Measurable Business Impact</strong><br>
+        Reduced routine task completion time by 3–5 clicks through strategic workflow restructuring — directly translating to hundreds of hours saved across enterprise clients. Accelerated product development velocity by <strong>40%</strong> through a scalable design system that eliminated inconsistencies and reduced design debt across the entire platform.</p>
+        <p><strong>Established Research-Led Design Practice</strong><br>
+        Pioneered bi-weekly usability testing protocols that embedded user feedback into every product decision. Conducted field research with HR managers and employees to uncover critical pain points in policy management — insights that directly shaped the product roadmap and competitive positioning.</p>
+        <p><strong>Created Strategic Competitive Advantage</strong><br>
+        Performed comprehensive competitive analysis and heuristic evaluation to identify white space opportunities in the time-and-attendance market. These insights drove differentiation strategies that positioned the platform as an industry leader, not a follower.</p>
+        <p><strong>Built for Scale</strong><br>
+        Architected a design system and component library that serves as the foundation for the entire enterprise platform — enabling consistent, rapid feature development while remaining flexible enough to evolve with changing business needs.</p>
+        <p>The result: a cohesive B2B SaaS experience that empowers both employees and administrators, reduces operational friction, and sets new standards for workplace management tools.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <p class="foot-tag">Contact</p>
+    <h2 class="foot-h">Let's start creating together</h2>
+    <a href="mailto:designer.daye@gmail.com" class="foot-cta">Let's talk ↗</a>
+    <div class="foot-bottom">
+      <nav class="foot-nav">
+        <a href="file:///">Home</a>
+        <a href="file:///work">Work</a>
+        <a href="file:///about">About</a>
+        <a href="file:///contact">Contact</a>
+      </nav>
+      <p class="foot-copy">© 2024 Daye Go. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const track = document.getElementById('ct');
+const dotsEl = document.getElementById('cdots');
+let cur = 0;
+const total = track.children.length;
+for(let i=0;i<total;i++){
+  const d=document.createElement('div');
+  d.className='c-dot'+(i===0?' on':'');
+  d.onclick=()=>goTo(i);
+  dotsEl.appendChild(d);
+}
+function goTo(idx){
+  cur=((idx%total)+total)%total;
+  const w=track.children[0].offsetWidth+24;
+  track.style.transform=`translateX(-${cur*w}px)`;
+  dotsEl.querySelectorAll('.c-dot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+}
+document.getElementById('cprev').onclick=()=>goTo(cur-1);
+document.getElementById('cnext').onclick=()=>goTo(cur+1);
+let autoT=setInterval(()=>goTo(cur+1),4500);
+track.addEventListener('mouseenter',()=>clearInterval(autoT));
+track.addEventListener('mouseleave',()=>{autoT=setInterval(()=>goTo(cur+1),4500)});
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft')goTo(cur-1);
+  if(e.key==='ArrowRight')goTo(cur+1);
+});
+document.querySelectorAll('.img-wrap img').forEach(img=>{
+  if(img.complete&&img.naturalWidth)img.parentElement.classList.add('loaded');
+  img.addEventListener('load',()=>img.parentElement.classList.add('loaded'));
+});
+</script>
+
+</body></html>

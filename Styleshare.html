@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///Users/apple/Downloads/styleshare-casestudy_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StyleShare — Daye Go Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Styleshare_files/css2" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--text:#000000;--muted:#888888;
+  --border:#e8e8e8;--pill-bg:#000000;--pill-text:#ffffff;
+  --footer-bg:#0a0a0a;--footer-text:#ffffff;
+  --sp:80px;--cw:1200px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-bottom:1px solid var(--border)}
+.nav-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
+.nav-logo-text{font-size:20px;font-weight:700;color:#000;letter-spacing:-0.5px;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:40px}
+.nav-links a{font-size:16px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
+.nav-links a:hover{opacity:.45}
+.btn-nav{padding:10px 22px;border-radius:100px;background:#000;color:#fff;font-size:15px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;transition:opacity .2s}
+.btn-nav:hover{opacity:.75}
+
+/* PAGE */
+.page{width:100%;background:#ffffff;display:flex;flex-direction:column;align-items:center}
+.col{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding-left:var(--sp);padding-right:var(--sp)}
+
+/* HERO */
+.hero{padding-top:160px;padding-bottom:64px;display:flex;flex-direction:column;gap:40px}
+.hero-meta{display:flex;flex-direction:row;gap:64px;align-items:flex-start;flex-wrap:wrap}
+.meta-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
+.meta-value{font-size:20px;font-weight:600;color:#000}
+.hero-divider{width:100%;height:1px;background:var(--border)}
+.hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:880px}
+
+/* IMAGE */
+.img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
+.img-wrap.full{aspect-ratio:4/3}
+.img-wrap.wide{aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap.half-w{width:50%;aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;color:transparent;position:relative;z-index:1}
+.img-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f0f0f0 25%,#e8e8e8 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;z-index:0}
+.img-wrap.loaded::before{display:none}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%}
+
+/* SECTIONS */
+.sections{width:100%;display:flex;flex-direction:column;gap:120px;padding:120px 0}
+
+/* TEXT */
+.txt{display:flex;flex-direction:column;gap:28px;max-width:800px}
+.txt h2{font-size:clamp(24px,2.4vw,38px);font-weight:500;line-height:1.2;letter-spacing:-0.015em;color:#000}
+.txt h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.txt p{font-size:17px;font-weight:400;line-height:1.82;color:rgba(0,0,0,.62)}
+.txt p strong{color:#000;font-weight:600}
+.txt blockquote{border-left:3px solid #000;padding-left:24px;margin:8px 0}
+.txt blockquote p{font-size:18px;font-style:italic;font-weight:500;color:rgba(0,0,0,.8)}
+
+/* LABELED */
+.labeled{display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:start;width:100%}
+.lbl-tag{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px}
+.lbl-title{font-size:17px;font-weight:700;color:#000;line-height:1.4}
+.lbl-content{display:flex;flex-direction:column;gap:32px}
+.lbl-content h2{font-size:clamp(26px,2.8vw,42px);font-weight:500;line-height:1.15;letter-spacing:-0.02em;color:#000}
+.lbl-content h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.lbl-content p{font-size:17px;line-height:1.82;color:rgba(0,0,0,.62)}
+.lbl-content p strong{color:#000;font-weight:600}
+
+/* SECTION TITLE (standalone) */
+.section-title{font-size:clamp(22px,2.2vw,32px);font-weight:500;letter-spacing:-0.015em;color:#000;margin-bottom:0}
+
+/* CAROUSEL */
+.carousel-outer{width:100%;display:flex;flex-direction:column;gap:20px}
+.carousel-vp{width:100%;overflow:hidden;border-radius:12px}
+.carousel-track{display:flex;gap:24px;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.carousel-track .img-wrap{flex-shrink:0;width:calc(50% - 12px);aspect-ratio:2596/1568;border-radius:12px}
+.carousel-ctrls{display:flex;align-items:center;gap:12px}
+.c-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;color:#000;transition:all .2s;user-select:none}
+.c-btn:hover{background:#000;color:#fff;border-color:#000}
+.c-dots{display:flex;gap:8px;margin-left:4px}
+.c-dot{width:6px;height:6px;border-radius:50%;background:#ddd;cursor:pointer;transition:background .2s}
+.c-dot.on{background:#000}
+
+/* FOOTER */
+footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
+.foot-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);margin:0 auto}
+.foot-tag{font-size:12px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:24px}
+.foot-h{font-size:clamp(44px,6vw,96px);font-weight:500;line-height:1.04;letter-spacing:-0.035em;color:#fff;margin-bottom:48px;max-width:760px}
+.foot-cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;background:#fff;color:#000;font-size:17px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;margin-bottom:120px;transition:opacity .2s}
+.foot-cta:hover{opacity:.8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;align-items:center;justify-content:space-between}
+.foot-nav{display:flex;gap:28px}
+.foot-nav a{font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.foot-nav a:hover{color:#fff}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.25)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
+@media(max-width:800px){:root{--sp:24px}.hero-meta{gap:32px}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-bottom{flex-direction:column;gap:20px;align-items:flex-start}.nav-links{display:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero{animation:fadeUp .6s ease both}
+
+/* VOC ROW — wide image + phone screenshot side by side */
+.voc-row{display:flex;flex-direction:row;gap:32px;align-items:flex-end;width:100%}
+.voc-img{flex:1;min-width:0}
+.voc-phone{flex-shrink:0;width:220px}
+.voc-phone img{width:100%;display:block;border-radius:24px;box-shadow:0 12px 48px rgba(0,0,0,.13)}
+@media(max-width:800px){.voc-row{flex-direction:column}.voc-phone{width:100%;max-width:240px;margin:0 auto}}
+
+
+/* Results table */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.results-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0 0 12px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.results-table td {
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: rgba(0,0,0,.62);
+  line-height: 1.5;
+  vertical-align: top;
+}
+.results-table td:first-child {
+  font-weight: 600;
+  color: #000;
+  width: 42%;
+  padding-right: 24px;
+}
+.results-table .highlight {
+  color: #000;
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="file:///Users/apple/Downloads/index.html" class="nav-logo-text">Daye.</a>
+    <div class="nav-links">
+      <a href="file:///Users/apple/Downloads/index.html#work">Work</a>
+      <a href="file:///Users/apple/Downloads/index.html#about">About</a>
+      <a href="file:///Users/apple/Downloads/index.html#contact">Contact</a>
+    </div>
+    <a href="file:///cdn-cgi/l/email-protection#81e5e4f2e8e6efe4f3afe5e0f8e4c1e6ece0e8edafe2eeec" class="btn-nav">Contact</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="col">
+    <div class="hero">
+      <div class="hero-meta">
+        <div>
+          <div class="meta-label">Industry</div>
+          <div class="meta-value">Fashion Commerce</div>
+        </div>
+        <div>
+          <div class="meta-label">Client</div>
+          <div class="meta-value">StyleShare</div>
+        </div>
+        <div>
+          <div class="meta-label">Role</div>
+          <div class="meta-value">Solo Designer — Growth Squad (PM · Data Analyst · Engineers)</div>
+        </div>
+        <div>
+          <div class="meta-label">Method</div>
+          <div class="meta-value">Growth Hacking · Sprint · Crazy 8s · A/B Testing</div>
+        </div>
+      </div>
+      <h1 class="hero-h1">Growth Hacking: Winning Back the 20s — D7 Retention 35% → 60%.</h1>
+      <div class="hero-divider"></div>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="col">
+    <div class="img-wrap full">
+      <img src="./Styleshare_files/BsQehDvxqS1b4nTR34ud4495KE.png" alt="StyleShare growth hacking onboarding redesign">
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="sections">
+
+      <!-- 1. The Problem -->
+      <div class="txt">
+        <h2>The Problem Nobody Was Talking About Out Loud</h2>
+        <p>StyleShare was losing its 20s users — and fast. Churn rate in that cohort exceeded <strong>50%</strong>, well above other age groups. The gut reaction was a content problem, but user interviews told a different story.</p>
+        <p>20s users weren't leaving because the product was bad. They were leaving because <em>it never felt like theirs</em>. Across sessions, we kept hearing the same thing: <strong>"이 서비스는 10대 느낌이라 내가 찾는 옷이 없어요."</strong> The platform had built its identity around teen fashion, and 20s users — despite being a critical growth cohort for revenue — were getting a feed that had nothing to do with them.</p>
+        <p>This was declared a company-wide problem. Our growth squad took ownership.</p>
+      </div>
+
+      <!-- GALLERY 2-col -->
+      <div class="grid2">
+        <div class="img-wrap wide">
+          <img src="./Styleshare_files/yX9TpdmIhV0gsAsqSJZWi5cBg.png" alt="StyleShare onboarding system — swipe interaction">
+        </div>
+        <div class="img-wrap wide">
+          <img src="./Styleshare_files/zWgSKb8giPDF878kw6aSkF7B0.png" alt="StyleShare personalized home feed">
+        </div>
+      </div>
+
+      <!-- 2. My Role -->
+      <div class="txt">
+        <h2>My Role</h2>
+        <p>I was the <strong>only designer on the growth squad</strong>. Every experiment we ran — every screen, flow, and A/B variant — went through me. Beyond execution, I drove the ideation process itself: running <strong>Sprints and Crazy 8s</strong> with the PM, data analyst, and engineers to generate hypotheses, then owning the design as DRI from concept to ship.</p>
+        <p>Silicon Valley-style product culture applied end-to-end: hypothesis first, design second, data always.</p>
+      </div>
+
+      <!-- 3. Diagnosis -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Diagnosis</div>
+          <div class="lbl-title">An Activation Problem, Not a Content Problem</div>
+        </div>
+        <div class="lbl-content">
+          <h2>20s users were leaving in the first few sessions — before personalization ever kicked in.</h2>
+          <p>Our data analyst mapped drop-off by cohort. The pattern was clear: 20s users were churning in the <strong>first few sessions</strong>, not after extended use. This was an Activation and Cold Start problem — not a content depth problem.</p>
+          <p>New users arrived with no taste profile. The algorithm defaulted to the platform's dominant signal: teen fashion. 20s users saw irrelevant content immediately, concluded the product wasn't for them, and left before personalization ever had a chance to correct itself.</p>
+          <h3>The feedback loop:</h3>
+          <p>No taste data → Teen-skewed feed → 20s disengage → Algorithm never corrects → More churn. A self-reinforcing trap that no amount of new content could break — unless we fixed the cold start.</p>
+        </div>
+      </div>
+
+      <!-- WIDE IMAGE -->
+      <div class="img-wrap wide">
+        <img src="./Styleshare_files/V9V7vc3aDglLLFtkFluskfd3U1U.png" alt="StyleShare cohort analysis and churn diagnosis">
+      </div>
+
+      <!-- 4. What We Built -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Design</div>
+          <div class="lbl-title">Onboarding System — The Core Experiment Series</div>
+        </div>
+        <div class="lbl-content">
+          <h2>We looked outside fashion to design the onboarding. That was the insight that made it work.</h2>
+          <p>The highest-impact initiative I led was designing StyleShare's first real onboarding system. The reference frame was deliberately cross-category.</p>
+          <p>We looked at <strong>Tinder</strong> for interaction design — swipe-style selection that makes preference input feel like play, not a form. We looked at <strong>Pinterest</strong> for data strategy — collecting enough initial signals to seed the recommendation algorithm before a user ever reaches the home feed.</p>
+          <blockquote><p>"The goal was dual: give users a genuinely fun, low-friction way to express fashion taste — and collect first-party preference data to cold-start personalization from session one."</p></blockquote>
+          <p>We ran <strong>multiple A/B test variants</strong> — different card formats, selection counts, visual treatments, and progression logic — to find the version that maximized completion rate and downstream retention. This wasn't a single launch; it was an iterated series of experiments.</p>
+          <p>Onboarding data fed directly into a personalized home feed. 20s users saw content that reflected their input from their very first scroll. We worked closely with the data analyst to define which signals to surface and how to weight fresh user preferences against platform-wide trending content.</p>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="carousel-outer">
+        <div class="carousel-vp">
+          <div class="carousel-track" id="ct">
+            <div class="img-wrap"><img src="./Styleshare_files/Cylfir4TUNhx2bsPZUAC4EJkLo.png" alt="StyleShare alert and recommendation experiments"></div>
+            <div class="img-wrap"><img src="./Styleshare_files/c3kCauxRzcfgyUab3bG7nDU7o9g.png" alt="StyleShare points and tier system renewal"></div>
+            <div class="img-wrap"><img src="./Styleshare_files/yX9TpdmIhV0gsAsqSJZWi5cBg.png" alt="StyleShare onboarding card variants"></div>
+            <div class="img-wrap"><img src="./Styleshare_files/zWgSKb8giPDF878kw6aSkF7B0.png" alt="StyleShare personalized feed after onboarding"></div>
+          </div>
+        </div>
+        <div class="carousel-ctrls">
+          <button class="c-btn" id="cprev">←</button>
+          <button class="c-btn" id="cnext">→</button>
+          <div class="c-dots" id="cdots"></div>
+        </div>
+      </div>
+
+      <!-- 5. Additional Experiments -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Experiments</div>
+          <div class="lbl-title">Alert, Recommendation &amp; Loyalty Systems</div>
+        </div>
+        <div class="lbl-content">
+          <h2>Three more workstreams. Each targeting a different part of the retention funnel.</h2>
+          <p><strong>Alert &amp; Recommendation Experiments</strong><br>
+          We ran a series of mid-funnel engagement experiments: cart-based similar item recommendations surfaced relevant alternatives to saved or abandoned items, and personalized push notifications were tested across timing, copy, and trigger conditions to re-engage dormant users. Each variant was grounded in a clear hypothesis, run as an A/B test, and evaluated against conversion metrics.</p>
+          <p><strong>Home Feed Algorithm Redesign</strong><br>
+          Beyond the onboarding cold start fix, we iterated on the feed algorithm itself — defining which signals to surface and how to weight fresh user preferences against platform-wide trending content, ensuring the personalization loop strengthened with every session.</p>
+          <p><strong>Points &amp; Tier System Renewal</strong><br>
+          To pull churned users back, we redesigned the loyalty and reward system — building a structural habit loop rather than relying on one-off campaigns. The renewal contributed to improved <strong>Resurrection Rate</strong> among previously inactive users.</p>
+        </div>
+      </div>
+
+      <!-- 6. Results -->
+      <div class="txt">
+        <h2>Results</h2>
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D7 Retention</td>
+              <td><span class="highlight">35% → 60% (+25%p)</span></td>
+            </tr>
+            <tr>
+              <td>D30 Retention</td>
+              <td>↑ Improved</td>
+            </tr>
+            <tr>
+              <td>20s Churn Rate</td>
+              <td>↓ Significant reduction</td>
+            </tr>
+            <tr>
+              <td>Activation (onboarding → engaged)</td>
+              <td>↑ Substantial lift</td>
+            </tr>
+            <tr>
+              <td>Purchase Conversion Rate</td>
+              <td>↑ Improved</td>
+            </tr>
+            <tr>
+              <td>Resurrection Rate</td>
+              <td>↑ Improved</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 7. What I Learned -->
+      <div class="txt">
+        <h2>What I Learned: Design in a Growth Context Is Hypothesis Design</h2>
+        <p>Running experiments as the sole designer taught me that <strong>design in a growth context is hypothesis design</strong> as much as visual design. The question isn't "what looks good" — it's "what assumption are we testing, and how do we isolate the variable?"</p>
+        <p>The Tinder/Pinterest reference was a deliberate UX strategy call. Both products had solved onboarding for preference collection better than any fashion e-commerce product I'd seen. Borrowing the interaction model from outside the category was the key insight that made the onboarding system work.</p>
+        <p>The result: <strong>D7 Retention went from 35% to 60%</strong>. Not through a redesign. Through the right experiment, run at the right moment in the user journey, with enough iterations to find the version that actually worked.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <p class="foot-tag">Contact</p>
+    <h2 class="foot-h">Let's start creating together</h2>
+    <a href="file:///cdn-cgi/l/email-protection#81e5e4f2e8e6efe4f3afe5e0f8e4c1e6ece0e8edafe2eeec" class="foot-cta">Let's talk ↗</a>
+    <div class="foot-bottom">
+      <nav class="foot-nav">
+        <a href="file:///Users/apple/Downloads/index.html">Home</a>
+        <a href="file:///Users/apple/Downloads/index.html#work">Work</a>
+        <a href="file:///Users/apple/Downloads/index.html#about">About</a>
+        <a href="file:///Users/apple/Downloads/index.html#contact">Contact</a>
+      </nav>
+      <p class="foot-copy">© 2024 Daye Go. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="file:///cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const track = document.getElementById('ct');
+const dotsEl = document.getElementById('cdots');
+let cur = 0;
+const total = track.children.length;
+for(let i=0;i<total;i++){
+  const d=document.createElement('div');
+  d.className='c-dot'+(i===0?' on':'');
+  d.onclick=()=>goTo(i);
+  dotsEl.appendChild(d);
+}
+function goTo(idx){
+  cur=((idx%total)+total)%total;
+  const w=track.children[0].offsetWidth+24;
+  track.style.transform=`translateX(-${cur*w}px)`;
+  dotsEl.querySelectorAll('.c-dot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+}
+document.getElementById('cprev').onclick=()=>goTo(cur-1);
+document.getElementById('cnext').onclick=()=>goTo(cur+1);
+let autoT=setInterval(()=>goTo(cur+1),4500);
+track.addEventListener('mouseenter',()=>clearInterval(autoT));
+track.addEventListener('mouseleave',()=>{autoT=setInterval(()=>goTo(cur+1),4500)});
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft')goTo(cur-1);
+  if(e.key==='ArrowRight')goTo(cur+1);
+});
+document.querySelectorAll('.img-wrap img').f</script></body></html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///Users/apple/Downloads/flipster-casestudy_2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flipster — Daye Go Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./flipster_files/css2" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--text:#000000;--muted:#888888;
+  --border:#e8e8e8;--pill-bg:#000000;--pill-text:#ffffff;
+  --footer-bg:#0a0a0a;--footer-text:#ffffff;
+  --sp:80px;--cw:1200px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-bottom:1px solid var(--border)}
+.nav-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
+.nav-logo-text{font-size:20px;font-weight:700;color:#000;letter-spacing:-0.5px;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:40px}
+.nav-links a{font-size:16px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
+.nav-links a:hover{opacity:.45}
+.btn-nav{padding:10px 22px;border-radius:100px;background:#000;color:#fff;font-size:15px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;transition:opacity .2s}
+.btn-nav:hover{opacity:.75}
+
+/* PAGE */
+.page{width:100%;background:#ffffff;display:flex;flex-direction:column;align-items:center}
+.col{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding-left:var(--sp);padding-right:var(--sp)}
+
+/* HERO */
+.hero{padding-top:160px;padding-bottom:64px;display:flex;flex-direction:column;gap:40px}
+.hero-meta{display:flex;flex-direction:row;gap:64px;align-items:flex-start;flex-wrap:wrap}
+.meta-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
+.meta-value{font-size:20px;font-weight:600;color:#000}
+.hero-divider{width:100%;height:1px;background:var(--border)}
+.hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:880px}
+
+/* IMAGE */
+.img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
+.img-wrap.full{aspect-ratio:4/3}
+.img-wrap.wide{aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap.half-w{width:50%;aspect-ratio:2596/1568;border-radius:12px}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;color:transparent;position:relative;z-index:1}
+.img-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f0f0f0 25%,#e8e8e8 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;z-index:0}
+.img-wrap.loaded::before{display:none}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%}
+
+/* SECTIONS */
+.sections{width:100%;display:flex;flex-direction:column;gap:120px;padding:120px 0}
+
+/* TEXT */
+.txt{display:flex;flex-direction:column;gap:28px;max-width:800px}
+.txt h2{font-size:clamp(24px,2.4vw,38px);font-weight:500;line-height:1.2;letter-spacing:-0.015em;color:#000}
+.txt h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.txt p{font-size:17px;font-weight:400;line-height:1.82;color:rgba(0,0,0,.62)}
+.txt p strong{color:#000;font-weight:600}
+.txt blockquote{border-left:3px solid #000;padding-left:24px;margin:8px 0}
+.txt blockquote p{font-size:18px;font-style:italic;font-weight:500;color:rgba(0,0,0,.8)}
+
+/* LABELED */
+.labeled{display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:start;width:100%}
+.lbl-tag{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px}
+.lbl-title{font-size:17px;font-weight:700;color:#000;line-height:1.4}
+.lbl-content{display:flex;flex-direction:column;gap:32px}
+.lbl-content h2{font-size:clamp(26px,2.8vw,42px);font-weight:500;line-height:1.15;letter-spacing:-0.02em;color:#000}
+.lbl-content h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
+.lbl-content p{font-size:17px;line-height:1.82;color:rgba(0,0,0,.62)}
+.lbl-content p strong{color:#000;font-weight:600}
+
+/* SECTION TITLE (standalone) */
+.section-title{font-size:clamp(22px,2.2vw,32px);font-weight:500;letter-spacing:-0.015em;color:#000;margin-bottom:0}
+
+/* CAROUSEL */
+.carousel-outer{width:100%;display:flex;flex-direction:column;gap:20px}
+.carousel-vp{width:100%;overflow:hidden;border-radius:12px}
+.carousel-track{display:flex;gap:24px;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.carousel-track .img-wrap{flex-shrink:0;width:calc(50% - 12px);aspect-ratio:2596/1568;border-radius:12px}
+.carousel-ctrls{display:flex;align-items:center;gap:12px}
+.c-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;color:#000;transition:all .2s;user-select:none}
+.c-btn:hover{background:#000;color:#fff;border-color:#000}
+.c-dots{display:flex;gap:8px;margin-left:4px}
+.c-dot{width:6px;height:6px;border-radius:50%;background:#ddd;cursor:pointer;transition:background .2s}
+.c-dot.on{background:#000}
+
+/* FOOTER */
+footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
+.foot-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);margin:0 auto}
+.foot-tag{font-size:12px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:24px}
+.foot-h{font-size:clamp(44px,6vw,96px);font-weight:500;line-height:1.04;letter-spacing:-0.035em;color:#fff;margin-bottom:48px;max-width:760px}
+.foot-cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;background:#fff;color:#000;font-size:17px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;margin-bottom:120px;transition:opacity .2s}
+.foot-cta:hover{opacity:.8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;align-items:center;justify-content:space-between}
+.foot-nav{display:flex;gap:28px}
+.foot-nav a{font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.foot-nav a:hover{color:#fff}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.25)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
+@media(max-width:800px){:root{--sp:24px}.hero-meta{gap:32px}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-bottom{flex-direction:column;gap:20px;align-items:flex-start}.nav-links{display:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero{animation:fadeUp .6s ease both}
+
+/* VOC ROW — wide image + phone screenshot side by side */
+.voc-row{display:flex;flex-direction:row;gap:32px;align-items:flex-end;width:100%}
+.voc-img{flex:1;min-width:0}
+.voc-phone{flex-shrink:0;width:220px}
+.voc-phone img{width:100%;display:block;border-radius:24px;box-shadow:0 12px 48px rgba(0,0,0,.13)}
+@media(max-width:800px){.voc-row{flex-direction:column}.voc-phone{width:100%;max-width:240px;margin:0 auto}}
+
+
+.img-wrap.ratio-wide-sm {aspect-ratio:1947/1176}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="file:///Users/apple/Downloads/index.html" class="nav-logo-text">Daye.</a>
+    <div class="nav-links">
+      <a href="file:///Users/apple/Downloads/index.html#work">Work</a>
+      <a href="file:///Users/apple/Downloads/index.html#about">About</a>
+      <a href="file:///Users/apple/Downloads/index.html#contact">Contact</a>
+    </div>
+    <a href="file:///cdn-cgi/l/email-protection#fc98998f959b92998ed2989d8599bc9b919d9590d29f9391" class="btn-nav">Contact</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="col">
+    <div class="hero">
+      <div class="hero-meta">
+        <div>
+          <div class="meta-label">Industry</div>
+          <div class="meta-value">Crypto / Fintech</div>
+        </div>
+        <div>
+          <div class="meta-label">Client</div>
+          <div class="meta-value">Flipster</div>
+        </div>
+        <div>
+          <div class="meta-label">Role</div>
+          <div class="meta-value">Product Designer — Activation Squad (Sole Designer)</div>
+        </div>
+      </div>
+      <h1 class="hero-h1">Making crypto trading intuitive and trustworthy — reducing the friction between understanding and action.</h1>
+      <div class="hero-divider"></div>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="col">
+    <div class="img-wrap full">
+      <img src="./flipster_files/wH7mlJCMMpiGeWpu6buWloj3kb8.png" alt="Flipster perpetual futures crypto exchange redesign">
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="sections">
+
+      <!-- 1. Background -->
+      <div class="txt">
+        <h2>The Problem Nobody Was Talking About Out Loud</h2>
+        <p>Flipster is a perpetual futures crypto exchange built for experienced traders. As the platform scaled, it began attracting a broader user base — including those new to derivatives trading, or users familiar with traditional finance and spot trading but encountering futures-specific concepts for the first time.</p>
+        <p>Two patterns stood out from analytics. First, <strong>first-trade completion rates among new users were low.</strong> Drop-off within the trading interface clustered around moments when key terminology appeared — Funding Rate, Mark Price, Liquidation Price. When users hit an unfamiliar term, they either searched externally and didn't return, or abandoned the trade entirely. This wasn't limited to crypto beginners; even users with traditional finance backgrounds showed the same friction when encountering derivatives-specific concepts.</p>
+        <p>Second, <strong>Earn feature activation was well below potential.</strong> Earn offered yield on deposited assets without requiring active trading — a low-barrier entry point for users not yet ready to trade. But expected returns weren't communicated in a way that felt tangible, and comparing products was difficult. Traffic to the page wasn't converting into action.</p>
+      </div>
+
+      <!-- GALLERY 2-col -->
+      <div class="grid2">
+        <div class="img-wrap wide">
+          <img src="./flipster_files/uPI8q27sUHx136hVDgvfdMtPaE4.png" alt="Flipster trading interface with glossary layer">
+        </div>
+        <div class="img-wrap wide">
+          <img src="./flipster_files/1m3jCetxLE19D5LKtO0JZLwDmm8.png" alt="Flipster Earn system redesign">
+        </div>
+      </div>
+
+      <!-- 2. My Role -->
+      <div class="txt">
+        <h2>My Role</h2>
+        <p>I was the designer for the Activation Squad — one of five squads within Flipster's design organization — and the <strong>sole designer</strong> within the squad. My scope was end-to-end: from problem framing through final design, covering five product areas across desktop web and mobile web.</p>
+        <p>The five workstreams were homepage redesign, Earn system overhaul, Crypto Glossary, Passkey authentication, and Delisting screens. On the surface these look like separate features. They're all solving the same underlying problem from different angles: <em>reducing the friction between a user understanding something and taking action on it.</em></p>
+      </div>
+
+      <!-- 3. Crypto Glossary -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Feature 01</div>
+          <div class="lbl-title">Crypto Glossary — Removing the Language Barrier</div>
+        </div>
+        <div class="lbl-content">
+          <h2>The first unfamiliar term was where users left. We put the answer there instead.</h2>
+          <p>Perpetual futures trading comes with a vocabulary that doesn't map cleanly onto traditional finance or spot trading. Terms like Funding Rate, Mark Price, Liquidation Price, and Airdrop create a wall for anyone outside the crypto-native audience. When users encountered these terms mid-flow, they left the platform to search externally — breaking momentum at the exact moment a decision needed to be made.</p>
+          <h3>Two principles anchored the design:</h3>
+          <p><strong>Keep users in the flow.</strong> The Glossary needed to be accessible from within the interface at the moment a term appeared — not after the fact, and not through an external link.</p>
+          <p><strong>Translate, don't define.</strong> Instead of textbook-style financial definitions, each entry was written to answer the question a user would actually have in context: what does this mean for my trade, right now?</p>
+          <p>Example: "Liquidation Price" → <em>"The price at which your position is automatically closed. If the market reaches this level, your entered margin is consumed."</em></p>
+          <p>The Glossary was designed not as a static dictionary, but as a <strong>learning layer</strong> — something users would build familiarity with organically through repeated use of the platform, without ever having to leave it.</p>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="img-wrap wide ratio-wide-sm">
+        <img src="./flipster_files/qEySqSRmrwk2jl8NTxNN3au7zA.png" alt="Flipster Crypto Glossary in-flow contextual tooltips">
+      </div>
+
+      <!-- 4. Earn + Passkey -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Feature 02 — 03</div>
+          <div class="lbl-title">Earn Redesign + Passkey Authentication</div>
+        </div>
+        <div class="lbl-content">
+          <h2>Make APR the hook. Make security feel like convenience.</h2>
+          <p><strong>Earn System Overhaul</strong><br>
+          The Earn tab existed, but didn't convert. Users couldn't quickly grasp how much they'd earn on a given deposit, product comparison was difficult, and the expected return never felt concrete enough to prompt action.</p>
+          <p>I surfaced APR prominently at the top of the page — leading with the number itself as the primary hook ("Earn 5% APR on BTC &amp; ETH"). A comparison table layout showed APR, conditions, and duration across products at a glance. The "Deposit now" CTA was repositioned directly adjacent to yield information, collapsing the distance between understanding and acting. A dashboard view displayed currently deployed assets and accumulated earnings in one place.</p>
+          <blockquote><p>"Users could compare earning options at a glance. The redesigned interface translated technical concepts into familiar language, enabling users to act confidently without external help."</p></blockquote>
+          <p><strong>Passkey Registration — Reframing Security as Convenience</strong><br>
+          Password-based login created friction at re-authentication — a recurring pain point on a platform where session timeouts are frequent. Beyond UX, crypto users carry heightened anxiety around account security, and passwords represent a known vulnerability.</p>
+          <p>I designed the passkey registration flow using biometric authentication (fingerprint / Face ID) as the primary method. Rather than replacing password login immediately, I designed a <strong>parallel transition period</strong> where both methods coexist — forcing a sudden change on users managing financial assets would generate resistance. At the end of the flow, users see a clear confirmation: <em>"You can now log in with just your fingerprint."</em> The goal was for enhanced security to feel like a gain in convenience — not a new thing to learn.</p>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="carousel-outer">
+        <div class="carousel-vp">
+          <div class="carousel-track" id="ct">
+            <div class="img-wrap"><img src="./flipster_files/wlZag0hx6RRN7rkLi4J1x05gP8.png" alt="Flipster passkey authentication flow"></div>
+            <div class="img-wrap"><img src="./flipster_files/uPI8q27sUHx136hVDgvfdMtPaE4.png" alt="Flipster Earn system APR hook"></div>
+            <div class="img-wrap"><img src="./flipster_files/1m3jCetxLE19D5LKtO0JZLwDmm8.png" alt="Flipster homepage redesign entry paths"></div>
+            <div class="img-wrap"><img src="./flipster_files/qEySqSRmrwk2jl8NTxNN3au7zA.png" alt="Flipster delisting status screen"></div>
+          </div>
+        </div>
+        <div class="carousel-ctrls">
+          <button class="c-btn" id="cprev">←</button>
+          <button class="c-btn" id="cnext">→</button>
+          <div class="c-dots" id="cdots"></div>
+        </div>
+      </div>
+
+      <!-- 5. Homepage + Delisting -->
+      <div class="labeled">
+        <div class="lbl-col">
+          <div class="lbl-tag">Feature 04 — 05</div>
+          <div class="lbl-title">Homepage Redesign + Delisting Screens</div>
+        </div>
+        <div class="lbl-content">
+          <h2>First impressions and failure states — the moments that determine whether a user trusts the platform enough to stay.</h2>
+          <p><strong>Homepage Redesign</strong><br>
+          The existing homepage was optimized for experienced traders who arrived knowing what they wanted. As Flipster's audience widened, the homepage needed to serve as a genuine first impression for users with varied backgrounds — but its information hierarchy and entry paths weren't built for that.</p>
+          <p>I restructured the page to lead with Flipster's core value proposition — accessible trading and yield opportunity — immediately on load. Designed <strong>parallel entry paths</strong>: experienced users could move directly into trading, while newer users were routed toward lower-barrier features like Earn.</p>
+          <p><strong>Delisting Screens</strong><br>
+          When a coin was delisted, there was no dedicated UI to communicate what was happening. Users encountering a suddenly non-tradable asset had no context — many assumed it was a bug.</p>
+          <p>I designed a progressive status screen that communicated the delisting timeline across three stages: confirmed, grace period active, and trading closed — including clear guidance on what users could do with open positions at each point. The priority was eliminating ambiguity: users needed to understand both <em>why</em> trading had stopped and <em>what actions were still available</em> to them.</p>
+        </div>
+      </div>
+
+      <!-- 6. Reflection -->
+      <div class="txt">
+        <h2>What I Learned: Five Features, One Underlying Problem</h2>
+        <p>These five workstreams look like separate features on the surface. But they're all solving the same underlying problem from different angles: <strong>reducing the friction between a user understanding something and taking action on it.</strong></p>
+        <p>The Glossary lowers the language barrier. The Earn redesign makes potential returns tangible. Passkey reframes security as ease. The homepage and Delisting screens handle first impressions and failure states — the moments that determine whether a user trusts the platform enough to stay.</p>
+        <p>Working within a squad-based org meant each team owned its domain, but the quality of the overall product experience depended on those domains feeling coherent together. Making sure my squad's work aligned with the design decisions being made elsewhere — and that the same underlying principles were being applied consistently — was as important as the work itself.</p>
+        <p><strong>Beyond individual features. A design framework for building trust in a platform where trust is everything.</strong></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <p class="foot-tag">Contact</p>
+    <h2 class="foot-h">Let's start creating together</h2>
+    <a href="file:///cdn-cgi/l/email-protection#5135342238363f34237f3530283411363c30383d7f323e3c" class="foot-cta">Let's talk ↗</a>
+    <div class="foot-bottom">
+      <nav class="foot-nav">
+        <a href="file:///Users/apple/Downloads/index.html">Home</a>
+        <a href="file:///Users/apple/Downloads/index.html#work">Work</a>
+        <a href="file:///Users/apple/Downloads/index.html#about">About</a>
+        <a href="file:///Users/apple/Downloads/index.html#contact">Contact</a>
+      </nav>
+      <p class="foot-copy">© 2024 Daye Go. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="file:///cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const track = document.getElementById('ct');
+const dotsEl = document.getElementById('cdots');
+let cur = 0;
+const total = track.children.length;
+for(let i=0;i<total;i++){
+  const d=document.createElement('div');
+  d.className='c-dot'+(i===0?' on':'');
+  d.onclick=()=>goTo(i);
+  dotsEl.appendChild(d);
+}
+function goTo(idx){
+  cur=((idx%total)+total)%total;
+  const w=track.children[0].offsetWidth+24;
+  track.style.transform=`translateX(-${cur*w}px)`;
+  dotsEl.querySelectorAll('.c-dot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+}
+document.getElementById('cprev').onclick=()=>goTo(cur-1);
+document.getElementById('cnext').onclick=()=>goTo(cur+1);
+let autoT=setInterval(()=>goTo(cur+1),4500);
+track.addEventListener('mouseenter',()=>clearInterval(autoT));
+track.addEventListener('mouseleave',()=>{autoT=setInterval(()=>goTo(cur+1),4500)});
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft')goTo(cur-1);
+  if(e.key==='ArrowRight')goTo(cur+1);
+});
+document.querySelectorAll('.img-wrap img').f</script></body></html>
