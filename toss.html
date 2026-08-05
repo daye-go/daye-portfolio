@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<!-- saved from url=(0051)file:///Users/apple/Downloads/toss-casestudy_9.html -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toss — Daye Go Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./Toss — Daye Go Portfolio_files/css2" rel="stylesheet">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Toss | Daye Go Portfolio</title>
+<meta name="description" content="토스 머니 관리 경험 개선 · 고다예 포트폴리오">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Toss — Money Management UX | Daye Go">
+<meta property="og:description" content="Redesigning money management in Toss. D7 revisit 45→68%, NPS 89→93.">
+<!-- 배포 시 절대 URL로 교체하세요 (상대 경로는 링크 미리보기가 생성되지 않습니다) -->
+<meta property="og:image" content="./Toss — Daye Go Portfolio_files/MIheI1gFHQA89w70JBn0XUZGM.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#ffffff;--text:#000000;--muted:#888888;
   --border:#e8e8e8;--pill-bg:#000000;--pill-text:#ffffff;
   --footer-bg:#0a0a0a;--footer-text:#ffffff;
-  --sp:80px;--cw:1200px;
+  --sp:80px;--cw:1520px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'IBM Plex Sans KR','Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-bottom:1px solid var(--border)}
-.nav-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
-.nav-logo-text{font-size:20px;font-weight:700;color:#000;letter-spacing:-0.5px;text-decoration:none}
-.nav-links{display:flex;align-items:center;gap:40px}
-.nav-links a{font-size:16px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
-.nav-links a:hover{opacity:.45}
-.btn-nav{padding:10px 22px;border-radius:100px;background:#000;color:#fff;font-size:15px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;transition:opacity .2s}
-.btn-nav:hover{opacity:.75}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;transition:background .35s}
+.ni{width:100%;max-width:var(--cw);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:700;color:#000;cursor:default;transition:color .35s}
+.nl{display:flex;align-items:center;gap:40px}
+.nl a{font-size:18px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s,color .35s}
+.nl a:hover{opacity:.5}
 
 /* PAGE */
 .page{width:100%;background:#ffffff;display:flex;flex-direction:column;align-items:center}
@@ -38,7 +45,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;ali
 .meta-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
 .meta-value{font-size:20px;font-weight:600;color:#000}
 .hero-divider{width:100%;height:1px;background:var(--border)}
-.hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:880px}
+.hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.3;letter-spacing:-0.025em;color:#000;max-width:880px}
+.hero-h1.hero-wide{max-width:1280px}
 
 /* IMAGE */
 .img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
@@ -57,19 +65,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;ali
 .sections{width:100%;display:flex;flex-direction:column;gap:120px;padding:120px 0}
 
 /* TEXT */
-.txt{display:flex;flex-direction:column;gap:28px;max-width:800px}
+.txt{display:flex;flex-direction:column;gap:18px;max-width:1280px}
+.txt.problem-intro{max-width:1280px;width:100%;margin-bottom:-30px}
+.txt.role-block{max-width:1280px;width:100%}
 .txt h2{font-size:clamp(24px,2.4vw,38px);font-weight:500;line-height:1.2;letter-spacing:-0.015em;color:#000}
 .txt h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
 .txt p{font-size:17px;font-weight:400;line-height:1.82;color:rgba(0,0,0,.62)}
 .txt p strong{color:#000;font-weight:600}
 .txt blockquote{border-left:3px solid #000;padding-left:24px;margin:8px 0}
 .txt blockquote p{font-size:18px;font-style:italic;font-weight:500;color:rgba(0,0,0,.8)}
+#s3-ref a{color:#6b7280;text-decoration:none}
+#s3-ref a:hover{color:#4b5563}
 
 /* LABELED */
 .labeled{display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:start;width:100%}
 .lbl-tag{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px}
 .lbl-title{font-size:17px;font-weight:700;color:#000;line-height:1.4}
-.lbl-content{display:flex;flex-direction:column;gap:32px}
+.lbl-content{display:flex;flex-direction:column;gap:20px;max-width:1280px;width:100%}
 .lbl-content h2{font-size:clamp(26px,2.8vw,42px);font-weight:500;line-height:1.15;letter-spacing:-0.02em;color:#000}
 .lbl-content h3{font-size:18px;font-weight:500;line-height:1.75;color:rgba(0,0,0,.68)}
 .lbl-content p{font-size:17px;line-height:1.82;color:rgba(0,0,0,.62)}
@@ -97,15 +109,23 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 .foot-h{font-size:clamp(44px,6vw,96px);font-weight:500;line-height:1.04;letter-spacing:-0.035em;color:#fff;margin-bottom:48px;max-width:760px}
 .foot-cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;background:#fff;color:#000;font-size:17px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;margin-bottom:120px;transition:opacity .2s}
 .foot-cta:hover{opacity:.8}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;align-items:center;justify-content:space-between}
-.foot-nav{display:flex;gap:28px}
-.foot-nav a{font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
-.foot-nav a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;flex-direction:column;gap:32px}
+.foot-main-nav{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:24px 80px;border-radius:24px;background:#fff}
+.foot-logo{font-size:24px;font-weight:700;color:#000}
+.foot-nl{display:flex;align-items:center;gap:40px}
+.foot-nl a{font-size:18px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
+.foot-nl a:hover{opacity:.5}
+.foot-lang-btn{background:rgb(243,244,245);border:none;border-radius:30px;padding:11px 16px;cursor:pointer;font-size:13px;font-weight:600;color:rgb(58,62,68);transition:opacity .2s;min-width:80px;font-family:inherit}
+.foot-lang-btn:hover{opacity:.7}
 .foot-copy{font-size:12px;color:rgba(255,255,255,.25)}
 
 /* RESPONSIVE */
-@media(max-width:1100px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
-@media(max-width:800px){:root{--sp:24px}.hero-meta{gap:32px}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-bottom{flex-direction:column;gap:20px;align-items:flex-start}.nav-links{display:none}}
+.lang-btn{background:rgb(243,244,245);border:none;border-radius:30px;padding:11px 16px;cursor:pointer;font-size:13px;font-weight:600;color:rgb(58,62,68);transition:0.2s;min-width:80px;font-family:inherit}
+.lang-btn:hover{opacity:.7}
+@media(max-width:1200px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
+@media(max-width:900px){:root{--sp:32px}.hero-meta{gap:32px}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-main-nav{flex-direction:column;align-items:flex-start;gap:20px}.foot-nl{flex-wrap:wrap;gap:20px}}
+@media(max-width:600px){.nl{display:none}}
+@media(max-width:600px){.foot-nl{display:none}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .hero{animation:fadeUp .6s ease both}
 
@@ -120,14 +140,14 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 <body>
 
 <nav>
-  <div class="nav-inner">
-    <a href="file:///" class="nav-logo-text">Daye.</a>
-    <div class="nav-links">
-      <a href="file:///work">Work</a>
-      <a href="file:///about">About</a>
-      <a href="file:///contact">Contact</a>
+  <div class="ni">
+    <div class="logo">Daye.</div>
+    <div class="nl">
+      <a href="index.html#work" id="t-nav-work">Work</a>
+      <a href="index.html#about" id="t-nav-about">About</a>
+      <a href="index.html" id="t-nav-resume">Resume</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">한국어</button>
     </div>
-    <a href="file:///cdn-cgi/l/email-protection#7f1b1a0c1618111a0d511b1e061a3f18121e1613511c1012" class="btn-nav">Contact</a>
   </div>
 </nav>
 
@@ -138,19 +158,27 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
     <div class="hero">
       <div class="hero-meta">
         <div>
-          <div class="meta-label">Industry</div>
-          <div class="meta-value">Fintech</div>
+          <div class="meta-label" id="hero-meta-label-1">Industry</div>
+          <div class="meta-value" id="hero-meta-value-1">Fintech</div>
         </div>
         <div>
-          <div class="meta-label">Client</div>
-          <div class="meta-value">Toss</div>
+          <div class="meta-label" id="hero-meta-label-2">Client</div>
+          <div class="meta-value" id="hero-meta-value-2">Toss</div>
         </div>
         <div>
-          <div class="meta-label">Role</div>
-          <div class="meta-value">Product Designer (DRI), Cross-squad Collaboration Lead</div>
+          <div class="meta-label" id="hero-meta-label-3">Role</div>
+          <div class="meta-value" id="hero-meta-value-3">Product Designer (DRI), Cross-squad Collaboration Lead</div>
+        </div>
+        <div>
+          <div class="meta-label" id="hero-meta-label-4">Duration</div>
+          <div class="meta-value" id="hero-meta-value-4">DEC 2020 – MAR 2021</div>
+        </div>
+        <div>
+          <div class="meta-label" id="hero-meta-label-5">Impact</div>
+          <div class="meta-value" id="hero-meta-value-5">D7 revisit 45→68% · NPS 89→93</div>
         </div>
       </div>
-      <h1 class="hero-h1">Beyond Simple Usage — Feel the ease in every financial moment.</h1>
+      <h1 class="hero-h1 hero-wide" id="hero-h1">Beyond Simple Usage,<br>Feel the ease in every financial moment.</h1>
       <div class="hero-divider"></div>
     </div>
   </div>
@@ -166,11 +194,19 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
     <div class="sections">
 
       <!-- 1. The Problem -->
-      <div class="txt">
-        <h2>The Problem Nobody Was Asking Out Loud</h2>
-        <p>Toss had built one of the most usable fintech apps in Korea. Competitors were catching up on usability. And as they did, Toss's once-distinctive edge was quietly disappearing.</p>
-        <p>The harder question wasn't <em>how</em> users interacted with the product — it was <em>why</em> they still hit friction when it actually mattered. We had optimized for ease of use, but not for ease of <em>life</em>.</p>
-        <p>We had been asking the wrong questions.</p>
+      <div class="txt problem-intro">
+        <h2 id="s1-h2">Redefining the Financial Journey: MOMENT SILO</h2>
+        <p id="s1-p1">"No one should lose out simply because finance is hard."<br>We rewrite every financial moment into the "simplest experience in the world."</p>
+        <p id="s1-p2">While other silos at Toss focus on being the best-performing "trees" in their respective domains, the MOMENT SILO is the squad that designs the entire "forest." We don’t get buried in specific features; instead, we move with a bold ambition: to take full responsibility for every single moment a user encounters finance in their daily life.</p>
+        <p id="s1-p3"><strong>From Product-Centric Functions to User Mental Models</strong><br>We refuse to think in industrial, functional units like "Remittance," "Payments," or "Insurance." Instead, we obsess over the fundamental questions users face every day: "Is this transaction safe?" "What if I’m short on cash right now?" "Am I missing out on benefits I’m entitled to?"</p>
+        <p id="s1-p4"><strong>Bridging the Experience Gaps through Collaboration:</strong> MOMENT SILO overlooks the entire platform’s user experience, identifying the "experience voids" and backlogs that often fall between different silos.<br><br><strong>Cross-Silo Orchestration:</strong> To ensure a seamless organic flow that specific functional teams might overlook, we collaborate intensely with various squads. We integrate fragmented features into one cohesive, unified "Financial Journey."</p>
+        <p id="s1-p5"><strong>The Role of a Designer Who Sees the Forest</strong><br>As a Product Designer in the MOMENT SILO, I’ve spent my time proposing the most intuitive and effortless solutions at every crossroads of a user's financial life. I translate complex, provider-defined jargon into the user's natural language. By orchestrating the technical strengths of various squads, I build products that proactively suggest the financial actions users actually intended.<br><br>Finance is no longer a "homework assignment" you have to study for. With Toss, it becomes an effortless, natural part of everyday life. At MOMENT SILO, we are redrawing the map of finance so that every user’s moment flows without interruption.</p>
+      </div>
+      
+       <!-- 2. My Role -->
+      <div class="txt role-block">
+        <h2 id="s2-h2">My Role: As the DRI of the Moment Silo, I designed the end-to-end financial journey rather than individual features.</h2>
+        <p id="s2-p1">At Toss, a Silo is an independent agile organization where Product Owners, engineers, designers, and data analysts move around a shared goal as one team. As the DRI designer for the Moment Silo, my role extended far beyond improving the usability of a single feature. I was responsible for designing not only the individual moments in which users interact with financial services, but also the broader flow that connects those moments into one cohesive journey.<br><br>In close collaboration with 15 cross-functional squads, I uncovered overlooked user needs and VOC across services such as money transfer, cards, and insurance, areas where business priorities and feature-based structures often left meaningful pain points unresolved. I translated those findings into tangible experience improvements across the product.<br><br>My role was not to refine each functional “tree” in isolation, but to step back and shape the entire “forest” of the experience, rebuilding Toss from the user’s perspective as a more connected and intuitive financial journey.<br><br>Leading collaboration across product, engineering, and research, I took ownership of the full end-to-end design process, from problem definition and UX strategy to execution and iteration.</p>
       </div>
 
       <!-- GALLERY 2-col -->
@@ -183,28 +219,20 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
         </div>
       </div>
 
-      <!-- 2. My Role -->
-      <div class="txt">
-        <h2>My Role</h2>
-        <p>As the DRI on the Moment Silo, I owned the design end-to-end — from research strategy through shipping — while leading cross-squad collaboration with product, engineering, and the research team.</p>
-        <p>The Moment Silo operates differently from other squads at Toss. Where each squad owns a specific feature — individual trees — Moment owns the connective tissue across all of them. My responsibility was to design for the <em>gaps between features</em>, not within them. That meant the biggest risk wasn't building something unusable. It was building something that solved the wrong problem entirely.</p>
-      </div>
-
       <!-- 3. Redefining How We Listen — labeled -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag">Research</div>
-          <div class="lbl-title">Redefining How We Listen</div>
+          <div class="lbl-tag" id="s3-tag">Rationale</div>
+          <div class="lbl-title" id="s3-title">Evidence-Based Design</div>
         </div>
         <div class="lbl-content">
-          <h2>The first thing we changed was our research model.</h2>
-          <p>Traditional usability testing tells you where users struggle <em>with your product</em>. It can't tell you where your product isn't even in the room when users need help most.</p>
-          <p>Working with the research team, I co-led the design of a direct VOC (Voice of Customer) channel — a lightweight, in-app mechanism to ask users about real friction moments in their financial lives, not just their experience with Toss features. The design challenge was reducing the barrier to honest response: not a survey, but a conversation.</p>
-          <h3>What we got back shifted the project's direction.</h3>
-          <p>Users didn't describe usability problems. They described <em>moments</em> — specific situations where their financial life got harder, and where no product had ever showed up for them.</p>
-          <p>Two outcomes emerged beyond the data itself:<br><br>
-          <strong>Authentic voices:</strong> We heard genuine pain points that quantitative metrics had consistently masked.<br><br>
-          <strong>Co-creation:</strong> Users told us they felt like they were building Toss with us. That sense of participation builds trust in a way satisfaction scores don't capture.</p>
+          <h2 id="s3-h2">Why wasn’t Toss present in the moments when users found finance most difficult?</h2>
+          <p id="s3-p1">Traditional usability testing can uncover friction inside a product, but it cannot fully explain the real-world moments when users struggle with finance and the product is absent altogether.</p>
+          <p id="s3-p2">We realized that we had been looking at convenience from a provider-led perspective, optimizing functional ease without deeply understanding the lived reality of users.</p>
+          <p id="s3-p3">As the sole designer in the Moment Silo, I partnered with the research team to create a direct VOC channel through which users could share their financial frustrations in their own language. This was not designed as a simple feedback form. Rather, it was a mechanism for capturing the moments when users’ financial lives broke down, beyond product features, beyond interface-level friction.</p>
+          <p id="s3-p4">By collecting raw, unfiltered user voices, we gained access to needs that had previously been obscured by feature- and business-driven thinking. This allowed us not only to uncover what users truly needed, but also to translate those needs into meaningful product opportunities. At the same time, the initiative served a branding function: it gave users the sense that they were not just consuming Toss, but actively participating in shaping it.</p>
+          <p id="s3-p5">The insight was decisive: users do not think in features. They think in situations, limitations, emotions, and moments of frustration. These qualitative signals became a critical foundation for product direction and the strongest evidence for advocating user-centered priorities across the organization.<br><br>Ultimately, this domain around moments of financial need became more than a research effort. It functioned as research infrastructure, an internal persuasion tool, and a brand experience that made Toss’s customer-centricity visible and believable.</p>
+          <p id="s3-ref">References:<br><a href="https://toss.im/tossfeed/article/toss-every-moment" target="_blank" rel="noopener noreferrer">https://toss.im/tossfeed/article/toss-every-moment</a><br><a href="https://toss.im/tossfeed/article/toss-campaign" target="_blank" rel="noopener noreferrer">https://toss.im/tossfeed/article/toss-campaign</a></p>
         </div>
       </div>
 
@@ -221,21 +249,16 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 4. What We Built -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag">Design</div>
-          <div class="lbl-title">What We Built: Cardless ATM Withdrawal</div>
+          <div class="lbl-tag" id="s4-tag">Influence</div>
+          <div class="lbl-title" id="s4-title">Bridging the Gap: Cardless ATM</div>
         </div>
         <div class="lbl-content">
-          <h2>The insight that led to this feature wasn't subtle once we saw it.</h2>
-          
-              <p>Users didn't mentally separate "having a card" from "accessing their money." When the card was missing, the money felt unreachable — even with a phone in hand. The user's mental model was: <em>card = access</em>. And no one had redesigned that assumption.</p>
-              <blockquote><p>"I needed cash urgently but forgot my card. The ATM was right there, useless."</p></blockquote>
-              <p>This came up repeatedly in VOC — disproportionately in high-stress, time-pressured moments. Urgency made the friction worse.</p>
-              <p>The solution was cash withdrawal with just a phone. No physical card required.</p>
-              <p>I designed the end-to-end flow: in-app withdrawal initiation, OTP-based ATM authentication, and the surrounding UX handling edge cases — low balance states, authentication failures, nearby ATM lookup. The constraint was real: adding a step to a cash-access moment can't <em>feel</em> like adding a step.</p>
-            
-          <h3>After launch, it landed as one of the most positively received features in the Moment Silo's history.</h3>
-          <p>Users specifically cited it when asked what made Toss feel different from other fintech apps. It wasn't praised for being clever. It was praised for solving something that had been annoying people for years.</p>
-          <p>For context: Toss at the time had reached <strong>19.1M MAU</strong>, with users opening the app an average of <strong>270 times per month</strong>. A feature that reduces genuine financial anxiety compounds in value with every one of those sessions.</p>
+          <h2 id="s4-h2">Case Study 1. Solving a Physical Constraint in Finance with an MVP: Cardless ATM Withdrawal</h2>
+          <p id="s4-p1">Need cash unexpectedly, but left your wallet behind? You’re still okay.</p>
+          <p id="s4-p2">Unexpected moments of financial friction happen to everyone. When users leave their card behind or go out without a wallet, they often find themselves in a frustrating situation: they have money in their account, but no practical way to access it.</p>
+          <p id="s4-p3">Research showed us that users wanted a service that could solve this exact moment. To address that need, we designed an end-to-end cardless ATM withdrawal flow that enabled users to withdraw cash using only their smartphone.</p>
+          <p id="s4-p4">This was not simply about adding convenience. Despite complex security requirements and technical constraints, we focused on the user’s real goal: getting cash immediately and with confidence. Through intensive cross-functional collaboration, we developed a secure and intuitive flow that ultimately launched as a real product, turning a common everyday inconvenience into a solvable moment.</p>
+          <p id="s4-p5">At Toss, MVPs like this are not just feature experiments. They are fast, practical ways to remove friction from users’ financial lives and give them back a sense of control and freedom.</p>
         </div>
       </div>
 
@@ -258,13 +281,22 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 6. Lasting Impact -->
       <div class="txt">
-        <h2>Lasting Impact: A Framework That Stayed</h2>
-        <p>This process became the operating model for every product decision the Moment Silo made afterward.</p>
-        <p><strong>Listen → Validate → Solve</strong></p>
-        <p>Not: <em>what can we build efficiently?</em><br>
-        But: <em>where does a user's life get harder — and can Toss be there?</em></p>
-        <p>The distinction matters. Features built from business opportunity or technical capability get used. Features built from real user struggle get <em>relied on</em>. The cardless ATM wasn't a feature users discovered in a settings menu. It was something they reached for the moment they needed it.</p>
-        <p><strong>Beyond easy to use. Genuinely useful.</strong></p>
+        <h2 id="s5-h2">Representative Problems Solved by the Moment Silo</h2>
+        <p id="s5-p1"><strong>1. Transfer Maintenance Response (Problem Solve 01) - Solving the Golden Time of Transfers with an MVP</strong><br>Have you ever urgently needed to send money, only to be blocked by bank maintenance hours?<br><br>Daily bank maintenance windows may be brief, but for users who need to transfer money at that exact moment, the frustration is significant. We defined this not as a simple system maintenance issue, but as a failure experience in missing the golden time for a transfer.<br><br>Instead of pursuing a complex system overhaul, we designed a single bottom sheet MVP using the design system. At the exact moment users felt stuck, it clearly communicated the maintenance status and immediately suggested the next best action. By focusing not on building another feature, but on the user’s core goal of sending money when it matters most, we were able to quickly relieve one of the most frequent and painful moments of frustration.</p>
+        <p id="s5-p2"><strong>2. Preventing Credit Card Delinquency (Problem Solve 03) - Defining Mistakes as an Experience Problem, Not a Personal Failure</strong><br>Have you ever missed your card payment by just a moment, only to see your credit score affected?<br><br>Even in a world full of convenient financial apps, many users still miss card payments in the middle of busy daily lives and end up facing unnecessary risk. We saw this not as carelessness on the user’s part, but as a failure of financial information to connect with the context of everyday life.<br><br>Rather than stopping at a simple “upcoming payment” alert, we focused on designing information that helped users recognize what they were about to miss, and why it mattered, at the right moment. By restructuring payment timing and credit impact around the user’s mental model, we enabled users to go beyond merely using a feature and instead feel a greater sense of control over their financial state.</p>
+        <p id="s5-p3"><strong>3. Responding to Voice Phishing Anxiety (Problem Solve 05) - Designing a Psychological Safety Net Before Financial Action</strong><br>Have you ever received a message from an unknown number and wondered whether the transfer might be part of a scam?<br><br>Voice phishing schemes continue to grow more sophisticated, and financial anxiety remains widespread. We focused on the split second of doubt users experience just before tapping the transfer button. A generic warning message saying “Be careful” was never going to be enough.<br><br>We translated risk signals into contextual guidance that users could understand intuitively. By designing a flow that helped users pause, assess the situation, and make a safer decision for themselves, we positioned Toss not simply as a money transfer tool, but as the most trustworthy financial guide in moments of uncertainty.</p>
+        <p id="s5-p4"><strong>4. Insurance Claims and Coverage Check (Problem Solve 07) - Turning Forgotten Insurance into an Actionable Experience</strong><br>Have you ever paid for insurance every month, but felt lost about what support you could actually receive when you got sick?<br><br>For most people, insurance disappears from everyday life once they sign up. But when coverage is actually needed, complex policy language and difficult procedures often prevent users from taking action. This is not just a product problem; it is a breakdown in experience.<br><br>We reframed insurance not as a difficult financial product, but as a tool for resolving risks in everyday life. By translating coverage information into language users could easily understand and increasing the density of the experience so that action could happen immediately when needed, we pushed against a provider-centered insurance market and continued testing what it means to truly put user goals first.</p>
+        <p id="s5-p5"><strong>Meaningful Quality, Proven by Scale</strong><br><br>After launch, these features became some of the most positively received outcomes in the history of the Moment Silo. At the scale of 19.1 million MAU and an average of 270 app sessions per month, even the smallest difference in quality translated directly into user reassurance, and ultimately into business value.<br><br>This was never just about creating polished screens. By leaving behind a framework of Listen → Validate → Solve within the organization, we gave Toss a more complete visual and logical foundation for how it contributes to users’ everyday lives.</p>
+      </div>
+
+      <!-- Result data -->
+      <div class="txt">
+        <h2 id="s6-h2">Result Data</h2>
+        <p id="s6-note">Metrics as of January 2021, alongside the Moment Silo initiatives above.</p>
+        <p id="s6-p1"><strong>#1 banking service in Korea</strong> — 13.71M MAU, ahead of the closest competitor at 12.10M.</p>
+        <p id="s6-p2"><strong>D7 revisit rate 45% → 68%</strong> — retention after app install climbed as VOC-driven improvements and AHA-moment features shipped.</p>
+        <p id="s6-p3"><strong>NPS 89 → 93</strong> — 2021 vs. 2020.</p>
+        <p id="s6-p4"><strong>~2× CTR vs. promotional push</strong> — personalized financial-tip notifications based on user activity, which also lifted organic retention.</p>
       </div>
 
       <!-- 7. Financial Content Feed -->
@@ -275,8 +307,8 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
         </div>
         <div class="lbl-content">
           <h2>Making Finance Easy: Creating the World's Most Accessible Financial Articles</h2>
-          <p>Alongside the cash access work, Moment Silo addressed a different kind of friction: the intimidation users feel around financial knowledge itself. Many users described finance as a domain that wasn't built for them — too complex, too jargon-heavy, too easy to get wrong.</p>
-          <p>We designed an article feed that makes financial education approachable, and connects educational content directly to Toss's core services at the moment a user is ready to act — bridging understanding and action in a single flow.</p>
+          <p>Alongside the cash access work, Moment Silo addressed a different kind of friction: the intimidation users feel around financial knowledge itself. Many users described finance as a domain that wasn't built for them, too complex, too jargon-heavy, too easy to get wrong.</p>
+          <p>We designed an article feed that makes financial education approachable, and connects educational content directly to Toss's core services at the moment a user is ready to act, bridging understanding and action in a single flow.</p>
           <h3>The goal wasn't just content. It was reducing the distance between knowing and doing.</h3>
         </div>
       </div>
@@ -293,18 +325,154 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
     <h2 class="foot-h">Let's start creating together</h2>
     <a href="file:///cdn-cgi/l/email-protection#b3d7d6c0dad4ddd6c19dd7d2cad6f3d4ded2dadf9dd0dcde" class="foot-cta">Let's talk ↗</a>
     <div class="foot-bottom">
-      <nav class="foot-nav">
-        <a href="file:///">Home</a>
-        <a href="file:///work">Work</a>
-        <a href="file:///about">About</a>
-        <a href="file:///contact">Contact</a>
+      <nav class="foot-main-nav">
+        <div class="foot-logo">Daye.</div>
+        <div class="foot-nl">
+          <a href="index.html#work" id="ft-nav-work">Work</a>
+          <a href="index.html#about" id="ft-nav-about">About</a>
+          <a href="index.html" id="ft-nav-resume">Resume</a>
+          <button class="foot-lang-btn" id="foot-lang-toggle" onclick="toggleLang()">한국어</button>
+        </div>
       </nav>
-      <p class="foot-copy">2023 Pearl Framer template crafted with love by Dawid Pietrasiak</p>
+      <p class="foot-copy">© 2026 Daye Go. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script data-cfasync="false" src="file:///cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// LANG TOGGLE
+const TLANG={
+  en:{work:"Work",about:"About",resume:"Resume"},
+  ko:{work:"작업",about:"소개",resume:"이력서"}
+};
+const CONTENT={
+  en:{
+    "lang-toggle":"한국어",
+    "foot-lang-toggle":"한국어",
+    "t-nav-work":"Work","t-nav-about":"About","t-nav-resume":"Resume",
+    "ft-nav-work":"Work","ft-nav-about":"About","ft-nav-resume":"Resume",
+    "hero-meta-label-1":"Industry",
+    "hero-meta-value-1":"Fintech",
+    "hero-meta-label-2":"Client",
+    "hero-meta-value-2":"Toss",
+    "hero-meta-label-3":"Role",
+    "hero-meta-value-3":"Product Designer (DRI), Cross-squad Collaboration Lead",
+    "hero-h1":"Beyond Simple Usage,<br>Feel the ease in every financial moment.",
+    "s1-h2":"Redefining the Financial Journey: MOMENT SILO",
+    "s1-p1":"\"No one should lose out simply because finance is hard.\"<br>We rewrite every financial moment into the \"simplest experience in the world.\"",
+    "s1-p2":"While other silos at Toss focus on being the best-performing \"trees\" in their respective domains, the MOMENT SILO is the squad that designs the entire \"forest.\" We don’t get buried in specific features; instead, we move with a bold ambition: to take full responsibility for every single moment a user encounters finance in their daily life.",
+    "s1-p3":"<strong>From Product-Centric Functions to User Mental Models</strong><br>We refuse to think in industrial, functional units like \"Remittance,\" \"Payments,\" or \"Insurance.\" Instead, we obsess over the fundamental questions users face every day: \"Is this transaction safe?\" \"What if I’m short on cash right now?\" \"Am I missing out on benefits I’m entitled to?\"",
+    "s1-p4":"<strong>Bridging the Experience Gaps through Collaboration:</strong> MOMENT SILO overlooks the entire platform’s user experience, identifying the \"experience voids\" and backlogs that often fall between different silos.<br><br><strong>Cross-Silo Orchestration:</strong> To ensure a seamless organic flow that specific functional teams might overlook, we collaborate intensely with various squads. We integrate fragmented features into one cohesive, unified \"Financial Journey.\"",
+    "s1-p5":"<strong>The Role of a Designer Who Sees the Forest</strong><br>As a Product Designer in the MOMENT SILO, I’ve spent my time proposing the most intuitive and effortless solutions at every crossroads of a user's financial life. I translate complex, provider-defined jargon into the user's natural language. By orchestrating the technical strengths of various squads, I build products that proactively suggest the financial actions users actually intended.<br><br>Finance is no longer a \"homework assignment\" you have to study for. With Toss, it becomes an effortless, natural part of everyday life. At MOMENT SILO, we are redrawing the map of finance so that every user’s moment flows without interruption.",
+    "s2-h2":"My Role: As the DRI of the Moment Silo, I designed the end-to-end financial journey rather than individual features.",
+    "s2-p1":"At Toss, a Silo is an independent agile organization where Product Owners, engineers, designers, and data analysts move around a shared goal as one team. As the DRI designer for the Moment Silo, my role extended far beyond improving the usability of a single feature. I was responsible for designing not only the individual moments in which users interact with financial services, but also the broader flow that connects those moments into one cohesive journey.<br><br>In close collaboration with 15 cross-functional squads, I uncovered overlooked user needs and VOC across services such as money transfer, cards, and insurance, areas where business priorities and feature-based structures often left meaningful pain points unresolved. I translated those findings into tangible experience improvements across the product.<br><br>My role was not to refine each functional “tree” in isolation, but to step back and shape the entire “forest” of the experience, rebuilding Toss from the user’s perspective as a more connected and intuitive financial journey.<br><br>Leading collaboration across product, engineering, and research, I took ownership of the full end-to-end design process, from problem definition and UX strategy to execution and iteration.",
+    "s3-tag":"Rationale",
+    "s3-title":"Evidence-Based Design",
+    "s3-h2":"Why wasn’t Toss present in the moments when users found finance most difficult?",
+    "s3-p1":"Traditional usability testing can uncover friction inside a product, but it cannot fully explain the real-world moments when users struggle with finance and the product is absent altogether.",
+    "s3-p2":"We realized that we had been looking at convenience from a provider-led perspective, optimizing functional ease without deeply understanding the lived reality of users.",
+    "s3-p3":"As the sole designer in the Moment Silo, I partnered with the research team to create a direct VOC channel through which users could share their financial frustrations in their own language. This was not designed as a simple feedback form. Rather, it was a mechanism for capturing the moments when users’ financial lives broke down, beyond product features, beyond interface-level friction.",
+    "s3-p4":"By collecting raw, unfiltered user voices, we gained access to needs that had previously been obscured by feature- and business-driven thinking. This allowed us not only to uncover what users truly needed, but also to translate those needs into meaningful product opportunities. At the same time, the initiative served a branding function: it gave users the sense that they were not just consuming Toss, but actively participating in shaping it.",
+    "s3-p5":"The insight was decisive: users do not think in features. They think in situations, limitations, emotions, and moments of frustration. These qualitative signals became a critical foundation for product direction and the strongest evidence for advocating user-centered priorities across the organization.<br><br>Ultimately, this domain around moments of financial need became more than a research effort. It functioned as research infrastructure, an internal persuasion tool, and a brand experience that made Toss’s customer-centricity visible and believable.",
+    "s3-ref":"References:<br><a href=\"https://toss.im/tossfeed/article/toss-every-moment\" target=\"_blank\" rel=\"noopener noreferrer\">https://toss.im/tossfeed/article/toss-every-moment</a><br><a href=\"https://toss.im/tossfeed/article/toss-campaign\" target=\"_blank\" rel=\"noopener noreferrer\">https://toss.im/tossfeed/article/toss-campaign</a>",
+    "s4-tag":"Influence",
+    "s4-title":"Bridging the Gap: Cardless ATM",
+    "s4-h2":"Case Study 1. Solving a Physical Constraint in Finance with an MVP: Cardless ATM Withdrawal",
+    "s4-p1":"Need cash unexpectedly, but left your wallet behind? You’re still okay.",
+    "s4-p2":"Unexpected moments of financial friction happen to everyone. When users leave their card behind or go out without a wallet, they often find themselves in a frustrating situation: they have money in their account, but no practical way to access it.",
+    "s4-p3":"Research showed us that users wanted a service that could solve this exact moment. To address that need, we designed an end-to-end cardless ATM withdrawal flow that enabled users to withdraw cash using only their smartphone.",
+    "s4-p4":"This was not simply about adding convenience. Despite complex security requirements and technical constraints, we focused on the user’s real goal: getting cash immediately and with confidence. Through intensive cross-functional collaboration, we developed a secure and intuitive flow that ultimately launched as a real product, turning a common everyday inconvenience into a solvable moment.",
+    "s4-p5":"At Toss, MVPs like this are not just feature experiments. They are fast, practical ways to remove friction from users’ financial lives and give them back a sense of control and freedom.",
+    "s5-h2":"Representative Problems Solved by the Moment Silo",
+    "s5-p1":"<strong>1. Transfer Maintenance Response (Problem Solve 01) - Solving the Golden Time of Transfers with an MVP</strong><br>Have you ever urgently needed to send money, only to be blocked by bank maintenance hours?<br><br>Daily bank maintenance windows may be brief, but for users who need to transfer money at that exact moment, the frustration is significant. We defined this not as a simple system maintenance issue, but as a failure experience in missing the golden time for a transfer.<br><br>Instead of pursuing a complex system overhaul, we designed a single bottom sheet MVP using the design system. At the exact moment users felt stuck, it clearly communicated the maintenance status and immediately suggested the next best action. By focusing not on building another feature, but on the user’s core goal of sending money when it matters most, we were able to quickly relieve one of the most frequent and painful moments of frustration.",
+    "s5-p2":"<strong>2. Preventing Credit Card Delinquency (Problem Solve 03) - Defining Mistakes as an Experience Problem, Not a Personal Failure</strong><br>Have you ever missed your card payment by just a moment, only to see your credit score affected?<br><br>Even in a world full of convenient financial apps, many users still miss card payments in the middle of busy daily lives and end up facing unnecessary risk. We saw this not as carelessness on the user’s part, but as a failure of financial information to connect with the context of everyday life.<br><br>Rather than stopping at a simple “upcoming payment” alert, we focused on designing information that helped users recognize what they were about to miss, and why it mattered, at the right moment. By restructuring payment timing and credit impact around the user’s mental model, we enabled users to go beyond merely using a feature and instead feel a greater sense of control over their financial state.",
+    "s5-p3":"<strong>3. Responding to Voice Phishing Anxiety (Problem Solve 05) - Designing a Psychological Safety Net Before Financial Action</strong><br>Have you ever received a message from an unknown number and wondered whether the transfer might be part of a scam?<br><br>Voice phishing schemes continue to grow more sophisticated, and financial anxiety remains widespread. We focused on the split second of doubt users experience just before tapping the transfer button. A generic warning message saying “Be careful” was never going to be enough.<br><br>We translated risk signals into contextual guidance that users could understand intuitively. By designing a flow that helped users pause, assess the situation, and make a safer decision for themselves, we positioned Toss not simply as a money transfer tool, but as the most trustworthy financial guide in moments of uncertainty.",
+    "s5-p4":"<strong>4. Insurance Claims and Coverage Check (Problem Solve 07) - Turning Forgotten Insurance into an Actionable Experience</strong><br>Have you ever paid for insurance every month, but felt lost about what support you could actually receive when you got sick?<br><br>For most people, insurance disappears from everyday life once they sign up. But when coverage is actually needed, complex policy language and difficult procedures often prevent users from taking action. This is not just a product problem; it is a breakdown in experience.<br><br>We reframed insurance not as a difficult financial product, but as a tool for resolving risks in everyday life. By translating coverage information into language users could easily understand and increasing the density of the experience so that action could happen immediately when needed, we pushed against a provider-centered insurance market and continued testing what it means to truly put user goals first.",
+    "s5-p5":"<strong>Meaningful Quality, Proven by Scale</strong><br><br>After launch, these features became some of the most positively received outcomes in the history of the Moment Silo. At the scale of 19.1 million MAU and an average of 270 app sessions per month, even the smallest difference in quality translated directly into user reassurance, and ultimately into business value.<br><br>This was never just about creating polished screens. By leaving behind a framework of Listen → Validate → Solve within the organization, we gave Toss a more complete visual and logical foundation for how it contributes to users’ everyday lives.",
+    "hero-meta-label-4":"Duration",
+    "hero-meta-value-4":"DEC 2020 – MAR 2021",
+    "hero-meta-label-5":"Impact",
+    "hero-meta-value-5":"D7 revisit 45→68% · NPS 89→93",
+    "s6-h2":"Result Data",
+    "s6-note":"Metrics as of January 2021, alongside the Moment Silo initiatives above.",
+    "s6-p1":"<strong>#1 banking service in Korea</strong> — 13.71M MAU, ahead of the closest competitor at 12.10M.",
+    "s6-p2":"<strong>D7 revisit rate 45% → 68%</strong> — retention after app install climbed as VOC-driven improvements and AHA-moment features shipped.",
+    "s6-p3":"<strong>NPS 89 → 93</strong> — 2021 vs. 2020.",
+    "s6-p4":"<strong>~2× CTR vs. promotional push</strong> — personalized financial-tip notifications based on user activity, which also lifted organic retention.",
+  },
+  ko:{
+    "lang-toggle":"English",
+    "foot-lang-toggle":"English",
+    "t-nav-work":"작업","t-nav-about":"소개","t-nav-resume":"이력서",
+    "ft-nav-work":"작업","ft-nav-about":"소개","ft-nav-resume":"이력서",
+    "hero-meta-label-1":"산업",
+    "hero-meta-value-1":"핀테크",
+    "hero-meta-label-2":"클라이언트",
+    "hero-meta-value-2":"Toss",
+    "hero-meta-label-3":"역할",
+    "hero-meta-value-3":"프로덕트 디자이너(DRI), 크로스 스쿼드 협업 리드",
+    "hero-h1":"단순히 사용하기 쉬운 것을 넘어,<br>금융의 모든 순간에서 편리함이 체감되도록",
+    "s1-h2":"사용자 멘탈모델에 맞는 제품을 제공하여 개인화된 금융서비스 제공",
+    "s1-p1":"토스는 한국에서 가장 쓰기 편한 금융 앱을 만들었지만, 경쟁사들이 추격해오며 편리한 사용성은 더 이상 독보적인 무기가 아니었습니다. 진짜 문제는 '어떻게하면 유저에게 편리한 인터페이스를 제공하느냐'가 아니라, '왜 유저는 아직도 토스를 편리하게 이용하면서 금융이 어렵다고 느낄까에 집중했습니다. <strong>저는 단순히 \"사용하기 쉬운 앱\"을 넘어 \"금융의 모든 순간을 토스에서 해결 할 수 있는 앱\"이라는 관점으로 문제를 재정의했습니다.</strong> 단순히 필요한 서비스를 제공하는 토스가 아니라, 토스가 사용자에게 가장 필요한 순간에 왜 곁에 없었는지 그 '진짜 문제'를 파악하는 것이 모든 것의 출발이었습니다.",
+    "s1-p2":"",
+    "s1-p3":"",
+    "s1-p4":"",
+    "s1-p5":"",
+    "s2-h2":"토스의 비어 있던 순간을 연결한, 모먼트 사일로 디자이너",
+    "s2-p1":"저는 모먼트 사일로(Moment Silo)의 DRI를 가진 디자이너로서, 개별 기능이라는 '나무'가 아니라 기능 사이의 연결고리인 '숲'을 설계했습니다. 제품, 엔지니어링, 리서치 팀을 가로지르는 협업을 주도하며 디자인 엔드투엔드를 책임졌습니다. 그 과정에서 근거를 찾고 가설을 설정하여 프로젝트의 리듬을 주도하며 조직 내에서 디자인의 흐름을 만들었습니다.<br><br>MOMENT SILO는 플랫폼 전체의 사용자 경험을 조망하며, 여러 사일로 사이에 놓인 '경험의 공백'과 '백로그'를 찾아냅니다. 또한 기능에 집중한 특정 기능 조직이 놓치기 쉬운 유저의 유기적인 흐름을 위해 다양한 스쿼드와 긴밀히 협업했습니다. 이를 통해 파편화된 기능들을 하나의 일관된 '금융 여정'으로 통합하는 역할을 수행했습니다.<br><br>토스의 수많은 사일로들이 각자의 영역에서 최고의 성능을 내는 '나무'라면, 제가 속한 MOMENT SILO는 그 나무들이 모여 이루는 전체 '숲'을 설계하는 스쿼드입니다. 우리는 특정 기능에 매몰되지 않고, 사용자가 금융을 마주하는 삶의 모든 찰나를 책임지겠다는 큰 포부로 움직입니다. 그 과정을 설계하고 지휘하는 DRI를 가진 디자이너로 금융의 모든 불편한 순간들을 토스와 함께 개선해 나가고자했습니다.<br><br><strong>공급자의 기능이 아닌, 유저의 멘탈 모델로</strong><br>우리는 단순히 '송금', '결제', '보험'이라는 공업적인 기능 단위로 사고하지 않습니다. 사용자가 일상에서 느끼는 \"이거 안전할까?\", \"지금 돈이 부족하면 어떡하지?\", \"내가 놓치고 있는 혜택은 없을까?\"와 같은 근본적인 금융의 질문들에 집중했습니다.",
+    "s3-tag":"Rationale",
+    "s3-title":"리서치 모델의 재구축",
+    "s3-h2":"유저가 금융이 어렵다고 느끼는 순간 토스는 왜 곁에 없었을까",
+    "s3-p1":"기존 사용성 테스트는 제품 내부의 문제를 잘 보여줍니다. 하지만 제품 밖에서 벌어지는 사용자의 현실, 즉 토스가 실질적으로 금융생활을 하면서 불편한 순간까지는 포착하지 못했습니다. 저희는 공급자적인 마인드로 유저를 고려하지 못한채 기능적 편리함에만 집중했습니다.",
+    "s3-p2":"모먼트 사일로의 1인 디자이너로써 리서치 팀과 함께 사용자가 자신의 금융 불편을 직접 남길 수 있는 VOC 채널을 설계했습니다. 중요한 점은, 이 프로젝트가 단순한 피드백 수집 창구가 아니었다는 것입니다. 이 채널은 사용자가 제품의 기능을 평가하는 대신, 금융 생활이 무너지는 순간을 자신의 언어로 이야기하게 만드는 장치였습니다.",
+    "s3-p3":"이러한 프로젝트는 날 것의 VOC를 얻어 유저의 목소리를 듣고 실질적으로 필요로하는 기능을 제공하면서 유저의 가려움을 긁어줄 뿐만아니라 유저가 토스를 함께 만들어가고 있다는 브랜딩 또한 성공적으로 가져갈 수 있었습니다.",
+    "s3-p4":"그 결과 우리는 사용자가 서비스를 ‘기능’ 중심으로 인식하지 않는다는 점을 분명히 확인했습니다. 사용자는 금융을 사용할 때의 실제 맥락, 제약, 감정, 그리고 좌절의 순간을 말했습니다. 이 생생한 정성 데이터는 제품 방향성을 정의하는 강력한 근거가 되었고, 내부적으로도 사용자 중심의 우선순위를 설득하는 가장 직접적인 증거가 되었습니다.",
+    "s3-p5":"즉, 이 \"금융이 필요한 순간\" 이라는 도메인은 리서치 인프라이자 설득 도구이자, 토스의 고객 중심성을 체감하게 하는 브랜딩 장치로 남게되었습니다.",
+    "s3-ref":"참고:<br><a href=\"https://toss.im/tossfeed/article/toss-every-moment\" target=\"_blank\" rel=\"noopener noreferrer\">https://toss.im/tossfeed/article/toss-every-moment</a><br><a href=\"https://toss.im/tossfeed/article/toss-campaign\" target=\"_blank\" rel=\"noopener noreferrer\">https://toss.im/tossfeed/article/toss-campaign</a>",
+    "s4-tag":"Influence",
+    "s4-title":"카드 없는 ATM 출금 경험 설계",
+    "s4-h2":"물리적 제약을 넘어, 접근 가능한 출금 경험을 만들다",
+    "s4-p1":"갑자기 현금이 필요한데 지갑을 안 들고 나왔나요? 괜찮아요.",
+    "s4-p2":"예상치 못한 순간에 현금이 필요한 상황은 누구에게나 생깁니다. 하지만 실수로 카드를 두고 나왔거나 지갑이 없을 때, 사용자는 내 계좌에 돈이 분명히 있는데도 당장 쓸 수 없다는 불편함과 강한 불안과 좌절을 경험합니다.",
+    "s4-p3":"우리는 리서치를 통해 사용자의 멘탈 모델 속에서 이러한 상황을 해결해줄 금융서비스를 원하는 구나 깨달았습니다. 이러한 불편한 순간들을 해소하기 위해, 우리는 물리적인 카드가 없어도 스마트폰만 있으면 세상의 모든 ATM에서 내 돈을 찾을 수 있는 <strong>엔드투엔드(End-to-End) 출금 플로우</strong>를 설계했습니다.",
+    "s4-p4":"단순히 편리한 기능을 추가하는 것이 아니었습니다. 복잡한 보안 정책과 기술적 제약이라는 높은 벽 앞에서, 우리는 \"사용자가 지금 당장 돈을 뽑아야 한다\"는 목적 하나에만 집중했습니다. 유관 부서와의 치열한 협업 끝에 보안성을 유지하면서도 가장 간결한 출금 흐름을 찾아냈고, 이는 단순히 하드디스크 속의 시안이 아닌 <strong>실질적으로 출시되어 유저의 삶을 바꾸는 임팩트</strong>로 이어졌습니다.",
+    "s4-p5":"토스는 이처럼 누구나 겪을 수 있는 일상 속 금융 문제를 '스마트 ATM 출금 서비스'와 같은 MVP를 통해 가장 빠르고 확실하게 해결하고 있습니다. 우리는 수단이 아닌 목적 중심의 사고로, 사용자가 당연히 누려야 할 금융의 자유를 되찾아주는 경험을 계속해서 만들어가고 있습니다.",
+    "s5-h2":"모먼트 사일로가 풀어낸 대표 문제들",
+    "s5-p1":"<strong>1. 송금 점검 대응 (Problem Solve 01)- MVP로 해결한 송금의 골든타임</strong><br>급하게 돈을 보내야 하는데, 은행 점검 시간이라 발이 묶인 적 있으신가요?<br><br>매일 반복되는 은행 점검 시간은 짧지만, 그 순간 송금이 절실한 사용자가 겪는 좌절은 치명적입니다. 우리는 이를 단순한 서버 점검의 문제가 아니라, '송금의 골든타임을 놓치는 실패 경험'으로 정의했습니다.<br><br>복잡한 시스템 개편 대신, 디자인 시스템을 활용한 단 하나의 바텀시트 MVP를 설계했습니다. 사용자가 막막해하는 순간에 점검 상황을 명확히 인지시키고, 다음 행동을 즉시 제안했습니다. 기능을 만드는 대신 사용자의 '보내야 하는 목적'에 집중한 결과, 가장 빈번하고 불편했던 순간의 좌절을 즉각적으로 해소할 수 있었습니다.",
+    "s5-p2":"<strong>2. 카드 연체 예방 (Problem Solve 03)- 실수를 실력이 아닌 경험의 문제로 정의하다</strong><br>카드값 납부일을 아주 잠깐 놓쳤을 뿐인데, 신용점수가 떨어지는 불이익을 겪어보셨나요?<br><br>편리한 금융 앱이 넘쳐나는데도 여전히 많은 이들이 바쁜 일상 속에서 카드 대금을 놓치고 리스크를 감수합니다. 우리는 이것이 사용자의 부주의가 아니라, 금융 정보가 사용자의 생활 맥락과 닿아있지 않기 때문이라고 보았습니다.<br><br>'납부 예정'이라는 단순 알림을 넘어, 사용자가 무엇을 놓치고 있는지 제때 인지하게 만드는 정보 설계에 집중했습니다. 신용도에 미치는 영향과 결제 일정을 사용자 멘탈 모델에 맞춰 재구성하여, 사용자가 단순히 기능을 쓰는 것을 넘어 자신의 금융 상태를 완벽히 통제하고 있다는 확신을 갖게 만들었습니다.",
+    "s5-p3":"<strong>3. 보이스피싱 불안 대응 (Problem Solve 05)- 금융 행동 이전의 '심리적 안전망' 설계</strong><br>모르는 번호로 온 연락, 이 송금이 혹시 보이스피싱은 아닐까 불안했던 적 있으신가요?<br><br>보이스피싱 수법은 날로 교묘해지고, 금융 불안은 여전히 만연합니다. 우리는 사용자가 송금 버튼을 누르기 직전 마주하는 '찰나의 불안'을 해결하고자 했습니다. 단순히 \"주의하세요\"라는 경고 문구를 띄우는 것은 해결책이 될 수 없습니다.<br><br>우리는 위험 신호를 사용자가 직관적으로 이해할 수 있는 맥락형 안내로 풀어냈습니다. 사용자가 스스로 상황을 점검하고 멈춰 설 수 있도록 돕는 흐름을 설계하여, 토스가 단순한 송금 수단이 아닌 '가장 신뢰할 수 있는 금융 가이드'로서 존재하게 만들었습니다.",
+    "s5-p4":"<strong>4. 보험 청구/보장 확인 (Problem Solve 07)- 방치되던 보험을 '행동 가능한 경험'으로</strong><br>보험을 매달 납부하면서도, 정작 아플 때 내가 어떤 도움을 받을 수 있는지 몰라 당황하신 적 있나요?<br><br>대부분의 보험은 가입 이후 사용자의 삶에서 잊혀집니다. 정작 보장이 필요한 순간에는 복잡한 약관과 절차에 가로막혀 서비스를 활용하지 못합니다. 이것은 '상품'의 문제가 아니라 '경험의 단절'입니다.<br><br>우리는 보험을 어려운 금융 상품이 아닌, <strong>'내 삶의 리스크를 해결하는 도구'</strong>로 재정의했습니다. 보장 내용을 사용자 관점에서 쉽게 풀어내고, 필요한 순간에 즉시 행동으로 이어질 수 있도록 경험의 밀도를 높였습니다. 공급자 중심의 보험 시장에서 사용자의 목적을 최우선으로 두는 실험을 계속하고 있습니다.",
+    "s5-p5":"<strong>실질적인 퀄리티와 영향력: 숫자로 증명된 디자인</strong><br><br>출시 후 이 기능은 모먼트 사일로 역사상 가장 긍정적인 반응을 얻은 기능 중 하나가 되었습니다. <strong>1,910만 명의 MAU, 월평균 270회의 앱 접속</strong>이라는 거대한 스케일 안에서, 한 끗 차이의 퀄리티가 사용자에게 주는 안도감은 비즈니스 가치로 직결되었습니다. <strong>단순히 예쁜 화면이 아니라 '듣고, 검증하고, 해결한다'는 프레임워크를 조직에 남김으로써, 토스가 사용자의 삶에 기여하는 방식을 시각적, 논리적으로 완결 지었습니다.</strong>",
+    "hero-meta-label-4":"Duration",
+    "hero-meta-value-4":"2020.12 – 2021.06",
+    "hero-meta-label-5":"Impact",
+    "hero-meta-value-5":"7일 재방문율 45→68% · NPS 89→93",
+    "s6-h2":"Result Data",
+    "s6-note":"2021년 1월 기준, 위 모먼트 사일로 활동과 함께 확인된 지표입니다.",
+    "s6-p1":"<strong>국내 뱅킹 서비스 1위</strong> — MAU 1,371만 명으로 경쟁사(1,210만 명)를 앞섰습니다.",
+    "s6-p2":"<strong>앱 설치 7일 후 재방문율 45% → 68%</strong> — VOC 기반 개선과 AHA Moment 기능이 쌓이며 리텐션이 올랐습니다.",
+    "s6-p3":"<strong>NPS 89점 → 93점</strong> — 2020년 대비 2021년.",
+    "s6-p4":"<strong>맞춤 금융 팁 푸시 CTR, 광고성 푸시 대비 약 2배</strong> — 유저 행동 기반으로 필요한 금융 정보를 제공해 오가닉 리텐션도 함께 향상됐습니다."
+  }
+};
+let currentLang = localStorage.getItem('daye-lang') || 'en';
+function toggleLang(){
+  currentLang=currentLang==='en'?'ko':'en';
+  localStorage.setItem('daye-lang', currentLang);
+  applyLang(currentLang);
+}
+function applyLang(lang){
+  document.documentElement.lang=lang;
+  const data=CONTENT[lang];
+  Object.entries(data).forEach(([id,text])=>{
+    const el=document.getElementById(id);
+    if(el){
+      el.innerHTML=text;
+      el.style.display=text===''?'none':'';
+    }
+  });
+}
+
 // CAROUSEL
 const track = document.getElementById('ct');
 const dotsEl = document.getElementById('cdots');
@@ -333,21 +501,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight')goTo(cur+1);
 });
 
-// IMAGE SELF-EMBED
-async function loadImgs(){
-  const imgs=document.querySelectorAll('img[data-src]');
-  const PROXY='https://api.allorigins.win/raw?url=';
-  for(const img of imgs){
-    const src=img.dataset.src;
-    img.src=src;
-    img.onload=()=>img.parentElement.classList.add('loaded');
-    img.onerror=async()=>{
-      try{
-        const res=await fetch(PROXY+encodeURIComponent(src));
-        if(!res.ok)throw new Error();
-        const blob=await res.blob();
-        const b64=await new Promise(r=>{const fr=new FileReader();fr.onloadend=()=>r(fr.result);fr.readAsDataURL(blob);});
-        img.src=b64;
-        img.onload=()=>img.parentElement.classList.add('loaded');
-      }catch(e){
-        img.parentElement.style.background='#f</script></body></html>
+// daye-resize: 뷰포트 폭이 바뀌면 카드 폭이 달라지므로 위치를 다시 계산합니다
+let __rzT;
+window.addEventListener('resize',()=>{clearTimeout(__rzT);__rzT=setTimeout(()=>goTo(cur),120);});
+applyLang(currentLang);
+document.querySelectorAll('.img-wrap img').forEach(img=>{
+  if(img.complete&&img.naturalWidth) img.parentElement.classList.add('loaded');
+  img.addEventListener('load',()=>img.parentElement.classList.add('loaded'));
+});
+</script>
+</body>
+</html>

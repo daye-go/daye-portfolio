@@ -3,10 +3,17 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vpos — Daye Go Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./Vpos — Daye Go Portfolio_files/css2" rel="stylesheet">
+<title>Customizable Karaoke POS System — Daye Go Portfolio</title>
+<meta name="description" content="직관적으로 커스터마이징 가능한 노래방 POS 시스템 · 시간 관리, 음료 주문, 예약, 매출과 스케줄 확인">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Customizable Karaoke POS System | Daye Go">
+<meta property="og:description" content="A customizable POS system for karaoke venues, designed around time management, drink orders, reservations, sales, and staff schedules.">
+<!-- 배포 시 절대 URL로 교체하세요 (상대 경로는 링크 미리보기가 생성되지 않습니다) -->
+<meta property="og:image" content="./Vpos — Daye Go Portfolio_files/886pj77HJMhgfOutvUiibA1TlTI.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <style>
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -14,20 +21,18 @@
   --bg:#ffffff;--text:#000000;--muted:#888888;
   --border:#e8e8e8;--pill-bg:#000000;--pill-text:#ffffff;
   --footer-bg:#0a0a0a;--footer-text:#ffffff;
-  --sp:80px;--cw:1200px;
+  --sp:80px;--cw:1520px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'IBM Plex Sans KR','Manrope','Open Sans',sans-serif;background:#ffffff;color:#000000;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;border-bottom:1px solid var(--border)}
-.nav-inner{width:100%;max-width:calc(var(--cw) + var(--sp)*2);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
-.nav-logo-text{font-size:20px;font-weight:700;color:#000;letter-spacing:-0.5px;text-decoration:none}
-.nav-links{display:flex;align-items:center;gap:40px}
-.nav-links a{font-size:16px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
-.nav-links a:hover{opacity:.45}
-.btn-nav{padding:10px 22px;border-radius:100px;background:#000;color:#fff;font-size:15px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;transition:opacity .2s}
-.btn-nav:hover{opacity:.75}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;align-items:center;justify-content:center;background:#ffffff;transition:background .35s}
+.ni{width:100%;max-width:var(--cw);padding:0 var(--sp);display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:700;color:#000;cursor:default;transition:color .35s}
+.nl{display:flex;align-items:center;gap:40px}
+.nl a{font-size:18px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s,color .35s}
+.nl a:hover{opacity:.5}
 
 /* PAGE */
 .page{width:100%;background:#ffffff;display:flex;flex-direction:column;align-items:center}
@@ -39,7 +44,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;ali
 .meta-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
 .meta-value{font-size:20px;font-weight:600;color:#000}
 .hero-divider{width:100%;height:1px;background:var(--border)}
-.hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:880px}
+.hero-h1{font-size:clamp(38px,4vw,64px);font-weight:500;line-height:1.08;letter-spacing:0;color:#000;max-width:none;width:100%;white-space:nowrap}
+.lang-ko .hero-h1{font-size:clamp(34px,3.4vw,52px)}
 
 /* IMAGE */
 .img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
@@ -98,15 +104,23 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 .foot-h{font-size:clamp(44px,6vw,96px);font-weight:500;line-height:1.04;letter-spacing:-0.035em;color:#fff;margin-bottom:48px;max-width:760px}
 .foot-cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;background:#fff;color:#000;font-size:17px;font-weight:500;font-family:inherit;border:none;cursor:pointer;text-decoration:none;margin-bottom:120px;transition:opacity .2s}
 .foot-cta:hover{opacity:.8}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;align-items:center;justify-content:space-between}
-.foot-nav{display:flex;gap:28px}
-.foot-nav a{font-size:14px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
-.foot-nav a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:40px;display:flex;flex-direction:column;gap:32px}
+.foot-main-nav{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:24px 80px;border-radius:24px;background:#fff}
+.foot-logo{font-size:24px;font-weight:700;color:#000}
+.foot-nl{display:flex;align-items:center;gap:40px}
+.foot-nl a{font-size:18px;font-weight:500;color:#000;text-decoration:none;transition:opacity .2s}
+.foot-nl a:hover{opacity:.5}
+.foot-lang-btn{background:rgb(243,244,245);border:none;border-radius:30px;padding:11px 16px;cursor:pointer;font-size:13px;font-weight:600;color:rgb(58,62,68);transition:opacity .2s;min-width:80px;font-family:inherit}
+.foot-lang-btn:hover{opacity:.7}
 .foot-copy{font-size:12px;color:rgba(255,255,255,.25)}
 
 /* RESPONSIVE */
-@media(max-width:1100px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
-@media(max-width:800px){:root{--sp:24px}.hero-meta{gap:32px}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-bottom{flex-direction:column;gap:20px;align-items:flex-start}.nav-links{display:none}}
+.lang-btn{background:rgb(243,244,245);border:none;border-radius:30px;padding:11px 16px;cursor:pointer;font-size:13px;font-weight:600;color:rgb(58,62,68);transition:0.2s;min-width:80px;font-family:inherit}
+.lang-btn:hover{opacity:.7}
+@media(max-width:1200px){:root{--sp:48px}.labeled{grid-template-columns:160px 1fr;gap:48px}}
+@media(max-width:900px){:root{--sp:32px}.hero-meta{gap:32px}.hero-h1{white-space:normal}.grid2{grid-template-columns:1fr}.img-wrap.half-w{width:100%}.labeled{grid-template-columns:1fr;gap:20px}.carousel-track .img-wrap{width:100%}.foot-main-nav{flex-direction:column;align-items:flex-start;gap:20px}.foot-nl{flex-wrap:wrap;gap:20px}}
+@media(max-width:600px){.nl{display:none}}
+@media(max-width:600px){.foot-nl{display:none}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .hero{animation:fadeUp .6s ease both}
 
@@ -122,14 +136,14 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 <body>
 
 <nav>
-  <div class="nav-inner">
-    <a href="file:///" class="nav-logo-text">Daye.</a>
-    <div class="nav-links">
-      <a href="file:///work">Work</a>
-      <a href="file:///about">About</a>
-      <a href="file:///contact">Contact</a>
+  <div class="ni">
+    <div class="logo">Daye.</div>
+    <div class="nl">
+      <a href="index.html#work" id="t-nav-work">Work</a>
+      <a href="index.html#about" id="t-nav-about">About</a>
+      <a href="index.html" id="t-nav-resume">Resume</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">한국어</button>
     </div>
-    <a href="mailto:designer.daye@gmail.com" class="btn-nav">Contact</a>
   </div>
 </nav>
 
@@ -141,7 +155,7 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <div class="hero-meta">
         <div>
           <div class="meta-label">Industry</div>
-          <div class="meta-value">Restaurant POS</div>
+          <div class="meta-value">Karaoke / POS</div>
         </div>
         <div>
           <div class="meta-label">Client</div>
@@ -151,8 +165,16 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
           <div class="meta-label">Role</div>
           <div class="meta-value">Product Designer, End-to-End UX</div>
         </div>
+        <div>
+          <div class="meta-label">Scope</div>
+          <div class="meta-value">Time · Orders · Reservations · Reports</div>
+        </div>
+        <div>
+          <div class="meta-label">Focus</div>
+          <div class="meta-value">Lower training burden for new staff</div>
+        </div>
       </div>
-      <h1 class="hero-h1">A restaurant POS designed around natural service workflows — minimizing the learning curve through user-centered design.</h1>
+      <h1 class="hero-h1">Customizable Karaoke POS System</h1>
       <div class="hero-divider"></div>
     </div>
   </div>
@@ -160,7 +182,7 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
   <!-- HERO IMAGE -->
   <div class="col">
     <div class="img-wrap full loaded">
-      <img src="./Vpos — Daye Go Portfolio_files/886pj77HJMhgfOutvUiibA1TlTI.png" alt="Vpos restaurant POS system hero">
+      <img src="./Vpos — Daye Go Portfolio_files/886pj77HJMhgfOutvUiibA1TlTI.png" alt="노래방용으로 커스터마이징한 Vpos POS 메인 화면">
     </div>
   </div>
 
@@ -169,66 +191,62 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 1. The Problem -->
       <div class="txt">
-        <h2>The Problem Nobody Was Talking About Out Loud</h2>
-        <p>Most restaurant POS systems were designed in a conference room, not a kitchen. They were optimized for feature lists and procurement decisions — not for the server who's managing three tables during a Saturday dinner rush, or the new hire who needs to process their first order in under five minutes with no trainer nearby.</p>
-        <p>The result was a category of software that required significant training, created friction at peak service hours, and punished restaurants every time they hired someone new. The POS was supposed to make service faster. It was making it slower.</p>
-        <p>Vpos asked a different question: what if we designed around <em>how restaurants actually operate</em> — including the chaos?</p>
+        <h2>Background</h2>
+        <p id="pr-p1">Vpos is a customizable POS system whose screens and features can adapt to different store types. This project defined the karaoke version, where staff manage room time, drink orders, reservations, sales, and schedules from the same device.</p>
+        <p id="pr-p2">The existing product was based on a restaurant flow: select menu items, send orders, and take payment. Karaoke venues work differently. They sell time first, room status changes continuously, and drink orders are added on top of each room's session. The restaurant-based POS did not have a time selection or time management function.</p>
+        <p id="pr-p3">The largest operational issue was onboarding. Karaoke venues often rely on part-time staff, so a new employee needs to understand the POS quickly from the first shift. Reducing training time and lowering the entry barrier became the main design problem.</p>
       </div>
 
       <!-- GALLERY 2-col -->
       <div class="grid2">
         <div class="img-wrap wide loaded">
-          <img src="./Vpos — Daye Go Portfolio_files/nomWc3raY5Rha7DYLEPnHsqquhE.png" alt="Vpos order management interface">
+          <img src="./Vpos — Daye Go Portfolio_files/nomWc3raY5Rha7DYLEPnHsqquhE.png" alt="방별 시간 관리 화면">
         </div>
         <div class="img-wrap wide loaded">
-          <img src="./Vpos — Daye Go Portfolio_files/ZWHPCP202iI6of2SAcI2HFOcAI.png" alt="Vpos table management and floor view">
+          <img src="./Vpos — Daye Go Portfolio_files/ZWHPCP202iI6of2SAcI2HFOcAI.png" alt="매장 구조를 반영한 방 배치 화면">
         </div>
       </div>
 
       <!-- 2. Design Approach -->
       <div class="txt">
-        <h2>Designed for the Chaotic Realities of Restaurants</h2>
-        <p>We designed for <strong>hot kitchens, peak-hour rush, and inexperienced new staff</strong> — so the system stays usable under pressure. That framing shaped every decision: navigation depth, touch target sizing, error recovery, order confirmation flows, and the mental model of the entire interface.</p>
-        <p>If a design choice added a second of friction during a busy dinner service, it was wrong — regardless of how clean it looked on a desk.</p>
+        <h2>Approach</h2>
+        <p id="ap-p1">One design criterion held everything together: someone seeing the screen for the first time should understand what to do next. The screen needed to be direct enough for a first-day employee, while still flexible enough for different karaoke venue layouts.</p>
+        <p id="ap-p2">That criterion set the order of work. First, make the daily repetitions — room time management and drink orders — easy to enter without training. Then bring reservation management into the POS. Finally, make sales and staff schedules visible from the same system.</p>
       </div>
 
       <!-- 3. Speed Optimization -->
       <div class="labeled">
         <div class="lbl-col">
           <div class="lbl-tag">Feature 01</div>
-          <div class="lbl-title">Solving Restaurant-Specific Complexity</div>
+          <div class="lbl-title">Time management & drink orders</div>
         </div>
         <div class="lbl-content">
-          <h2>Speed isn't just about fast taps. It's about never having to think.</h2>
-          <p><strong>Speed Optimization</strong><br>
-          The navigation structure was rebuilt around the tasks servers actually repeat: opening a table, adding items, modifying an order, sending to kitchen, processing payment. Each of these flows was timed and iterated until it required the fewest possible decisions under pressure.</p>
-          <p>Toast Flex hardware adapts to any restaurant setup — screen rotation, height adjustment, and wall-mount support mean the POS works in a cramped bar, a full-service dining room, or a fast-casual counter without configuration changes.</p>
-          <p><strong>Handling Complex Orders</strong><br>
-          Real restaurant orders are messy. "No mayo, add onions, dressing on the side, one plate but split the bill three ways" — this is a normal request, and the system needed to handle it without a workaround.</p>
-          <blockquote><p>"A reliable order flow that ensures accurate, no-miss communication from front-of-house to kitchen — even when the order has six modifications."</p></blockquote>
-          <p>We designed a modification system that matched how servers actually verbalize customizations, and a kitchen display integration that surfaced modifications clearly rather than burying them in a text string. The goal was zero missed modifiers — because in a restaurant, a missed modifier is a returned dish, a frustrated guest, and a comped item.</p>
+          <h2>Room time and drink orders were designed as one connected flow</h2>
+          <p id="f1-p1"><strong>Time selection and remaining time</strong><br>I designed the time selection the restaurant POS never had. Tap a room, choose the session length, and the remaining time counts down live once it starts. Extensions and early closes are handled on the same screen.</p>
+          <p id="f1-p2">The layout is organized by room, mirroring the physical floor. Which rooms are occupied and which are free reads at a glance, without parsing a list.</p>
+          <p id="f1-p3"><strong>Drink orders</strong><br>Orders are added with the room already selected. Time and orders stay bound to the same room, so the session fee and the drinks total are combined automatically at checkout.</p>
+          <blockquote><p id="f1-quote">"A first-day employee should be able to open a room, start the clock, add drinks, and take payment without needing a walkthrough."</p></blockquote>
+          <p id="f1-p4">The frequent actions sit one tap away on the first screen: open a room, select time, extend time, add an order, and take payment. Fewer actions buried in menus means the next step can be inferred rather than taught.</p>
         </div>
       </div>
 
       <!-- WIDE IMAGE -->
       <div class="img-wrap wide loaded">
-        <img src="./Vpos — Daye Go Portfolio_files/SgvqARIHuUjITUjpnxv58F9vQw.png" alt="Vpos order modification and kitchen communication flow">
+        <img src="./Vpos — Daye Go Portfolio_files/SgvqARIHuUjITUjpnxv58F9vQw.png" alt="음료 주문과 이용 요금 합산 흐름">
       </div>
 
       <!-- 4. Learning Curve -->
       <div class="labeled">
         <div class="lbl-col">
           <div class="lbl-tag">Feature 02</div>
-          <div class="lbl-title">Minimizing the Learning Curve</div>
+          <div class="lbl-title">Reservations, sales & schedules</div>
         </div>
         <div class="lbl-content">
-          <h2>A new hire should be able to process their first order without a trainer. That was the benchmark.</h2>
-          <p><strong>Fast Onboarding</strong><br>
-          Restaurant turnover is high. Training time is a real cost — not just in hours, but in errors made during the learning period. We designed in-app, step-by-step tutorials that activate contextually when a new user encounters a flow for the first time.</p>
-          <p>Rather than a separate training mode that users skip, guidance appears inline at the moment of first use: the first time a server opens a table, splits a check, or processes a refund, the system walks them through it. Each tutorial is dismissible and never appears twice. An interface that's easy to learn regardless of experience level means restaurants don't need to factor in POS training as a significant onboarding cost.</p>
-          <p><strong>A Single Integrated Solution</strong><br>
-          One of the most persistent pain points for restaurant operators was managing multiple disconnected tools: a separate system for reservations, another for inventory, another for payroll reporting. Every additional tool is another thing to learn, maintain, and reconcile.</p>
-          <p>Vpos was designed as a <strong>cloud-based, real-time management platform with offline mode</strong> — so operations continue even when the internet drops, a common reality in older restaurant buildings. No need to learn or maintain separate tools or systems. One interface, one data source, one place to look when something goes wrong.</p>
+          <h2>Reservations, sales, and schedules moved into the POS employees already use</h2>
+          <p id="f2-p1"><strong>Reservation management</strong><br>Reservations arrived by phone and lived on paper or in messenger threads. Details leaked whenever the person on duty changed, and double bookings happened. I brought reservations into the POS — room, time, and party size recorded together, surfacing on the room itself when the slot comes up.</p>
+          <p id="f2-p2">Reservations and current occupancy share one screen, so checking whether a room can be taken right now doesn't require opening anything else.</p>
+          <p id="f2-p3"><strong>Sales and schedule access</strong><br>Staff can check sales figures and their own shift schedule from the POS. Previously this meant asking the owner or looking it up through a separate channel.</p>
+          <p id="f2-p4">This was the largest piece of the project. It moved the information staff check every day, but which previously lived outside the POS, into the device they already use during each shift.</p>
         </div>
       </div>
 
@@ -236,10 +254,10 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <div class="carousel-outer">
         <div class="carousel-vp">
           <div class="carousel-track" id="ct" style="transform: translateX(0px);">
-            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/shXBEcIcnJSpqi2wrlxRI5I0FVE.png" alt="Vpos in-app onboarding tutorial flow"></div>
-            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/nomWc3raY5Rha7DYLEPnHsqquhE.png" alt="Vpos payment and split check interface"></div>
-            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/ZWHPCP202iI6of2SAcI2HFOcAI.png" alt="Vpos floor plan and table management"></div>
-            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/SgvqARIHuUjITUjpnxv58F9vQw.png" alt="Vpos cloud dashboard and reporting"></div>
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/shXBEcIcnJSpqi2wrlxRI5I0FVE.png" alt="시간 선택과 연장 화면"></div>
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/nomWc3raY5Rha7DYLEPnHsqquhE.png" alt="예약 등록 화면"></div>
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/ZWHPCP202iI6of2SAcI2HFOcAI.png" alt="예약과 이용 현황을 함께 보는 화면"></div>
+            <div class="img-wrap loaded"><img src="./Vpos — Daye Go Portfolio_files/SgvqARIHuUjITUjpnxv58F9vQw.png" alt="직원용 매출·스케줄 확인 화면"></div>
           </div>
         </div>
         <div class="carousel-ctrls">
@@ -251,11 +269,11 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 5. What I Learned -->
       <div class="txt">
-        <h2>What I Learned: Designing for Environments That Don't Forgive Friction</h2>
-        <p>This project taught me that user-centered design has an additional dimension in high-stress operational environments: it's not enough to design for the average case. You have to design for the worst case — the dinner rush, the new hire, the dropped connection, the complicated order from table 12.</p>
-        <p>The standard usability heuristics still apply, but they're not sufficient. <em>Speed</em> isn't just a nice-to-have — it's the entire value proposition. <em>Error recovery</em> isn't an edge case — it's a nightly occurrence. <em>Learnability</em> isn't about onboarding flow completion rates — it's about whether a new server can handle their first shift without calling for help.</p>
-        <p>Designing the system around those constraints, rather than retrofitting them onto a conventional POS information architecture, was what made Vpos feel fundamentally different from the tools restaurant operators had experienced before.</p>
-        <p><strong>Built for how restaurants actually work. Not how software teams imagine they work.</strong></p>
+        <h2>Learning</h2>
+        <p id="lr-p1">Changing the business type wasn't a matter of swapping screens. A restaurant POS rests on the premise that you sell menu items; karaoke rests on the premise that you sell time. When the premise changes, the information architecture has to be rebuilt. That's why adding a time picker was never going to be enough.</p>
+        <p id="lr-p2">Cutting training time didn't have to mean cutting features. Putting frequent actions on the first screen and letting the layout communicate sequence kept the feature set intact while keeping first-time users from getting lost.</p>
+        <p id="lr-p3"><strong>What's left</strong><br>The project closed without quantitative measurement. Given another run, I'd compare training time, time-to-first-completed-payment for a new hire, and double-booking incidents before and after release. All three were already felt as problems in the venue, so they wouldn't have been hard to instrument.</p>
+        <p id="lr-p4"><strong>Change the business and you change what's being sold; change what's being sold and you change how the screen is structured.</strong></p>
       </div>
 
     </div>
@@ -270,18 +288,126 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
     <h2 class="foot-h">Let's start creating together</h2>
     <a href="mailto:designer.daye@gmail.com" class="foot-cta">Let's talk ↗</a>
     <div class="foot-bottom">
-      <nav class="foot-nav">
-        <a href="file:///">Home</a>
-        <a href="file:///work">Work</a>
-        <a href="file:///about">About</a>
-        <a href="file:///contact">Contact</a>
+      <nav class="foot-main-nav">
+        <div class="foot-logo">Daye.</div>
+        <div class="foot-nl">
+          <a href="index.html#work" id="ft-nav-work">Work</a>
+          <a href="index.html#about" id="ft-nav-about">About</a>
+          <a href="index.html" id="ft-nav-resume">Resume</a>
+          <button class="foot-lang-btn" id="foot-lang-toggle" onclick="toggleLang()">한국어</button>
+        </div>
       </nav>
-      <p class="foot-copy">© 2024 Daye Go. All rights reserved.</p>
+      <p class="foot-copy">© 2026 Daye Go. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script>
+const TLANG={en:{work:"Work",about:"About",resume:"Resume"},ko:{work:"작업",about:"소개",resume:"이력서"}};
+const PAGE_LANG={
+  en:{
+    metaLabels:["Industry","Client","Role","Scope","Focus"],
+    metaValues:["Karaoke / POS","Vpos","Product Designer, End-to-End UX","Time · Orders · Reservations · Reports","Lower training burden for new staff"],
+    hero:"Customizable Karaoke POS System",
+    txtH2:["Background","Approach","Learning"],
+    labeledTags:["Feature 01","Feature 02"],
+    labeledTitles:["Time management & drink orders","Reservations, sales & schedules"],
+    labeledH2:["Room time and drink orders were designed as one connected flow","Reservations, sales, and schedules moved into the POS employees already use"],
+    labeledH3:[],
+    footerTag:"Contact",
+    footerHeading:"Let's start creating together",
+    footerCta:"Let's talk ↗"
+  },
+  ko:{
+    metaLabels:["산업","클라이언트","역할","범위","핵심 과제"],
+    metaValues:["노래방 / POS","Vpos","프로덕트 디자이너, 엔드 투 엔드 UX","시간 · 주문 · 예약 · 리포트","신규 직원 교육 부담 완화"],
+    hero:"직관적으로 커스터마이징 가능한 노래방 POS 시스템",
+    txtH2:["Background","Approach","Learning"],
+    labeledTags:["Feature 01","Feature 02"],
+    labeledTitles:["시간 관리와 음료 주문","예약·매출·스케줄"],
+    labeledH2:["시간 관리와 음료 주문을 하나의 흐름으로 설계했습니다","예약, 매출, 스케줄을 직원이 매일 쓰는 POS 안으로 옮겼습니다"],
+    labeledH3:[],
+    footerTag:"연락처",
+    footerHeading:"함께 만들어갑니다",
+    footerCta:"이야기 나누기 ↗"
+  }
+};
+const BODY={
+  en:{
+ "pr-p1": "Vpos is a customizable POS system whose screens and features can adapt to different store types. This project defined the karaoke version, where staff manage room time, drink orders, reservations, sales, and schedules from the same device.",
+ "pr-p2": "The existing product was based on a restaurant flow: select menu items, send orders, and take payment. Karaoke venues work differently. They sell time first, room status changes continuously, and drink orders are added on top of each room's session. The restaurant-based POS did not have a time selection or time management function.",
+ "pr-p3": "The largest operational issue was onboarding. Karaoke venues often rely on part-time staff, so a new employee needs to understand the POS quickly from the first shift. Reducing training time and lowering the entry barrier became the main design problem.",
+ "ap-p1": "One design criterion held everything together: someone seeing the screen for the first time should understand what to do next. The screen needed to be direct enough for a first-day employee, while still flexible enough for different karaoke venue layouts.",
+ "ap-p2": "That criterion set the order of work. First, make the daily repetitions — room time management and drink orders — easy to enter without training. Then bring reservation management into the POS. Finally, make sales and staff schedules visible from the same system.",
+ "f1-p1": "<strong>Time selection and remaining time</strong><br>I designed the time selection the restaurant POS never had. Tap a room, choose the session length, and the remaining time counts down live once it starts. Extensions and early closes are handled on the same screen.",
+ "f1-p2": "The layout is organized by room, mirroring the physical floor. Which rooms are occupied and which are free reads at a glance, without parsing a list.",
+ "f1-p3": "<strong>Drink orders</strong><br>Orders are added with the room already selected. Time and orders stay bound to the same room, so the session fee and the drinks total are combined automatically at checkout.",
+ "f1-quote": "\"A first-day employee should be able to open a room, start the clock, add drinks, and take payment without needing a walkthrough.\"",
+ "f1-p4": "The frequent actions sit one tap away on the first screen: open a room, select time, extend time, add an order, and take payment. Fewer actions buried in menus means the next step can be inferred rather than taught.",
+ "f2-p1": "<strong>Reservation management</strong><br>Reservations arrived by phone and lived on paper or in messenger threads. Details leaked whenever the person on duty changed, and double bookings happened. I brought reservations into the POS — room, time, and party size recorded together, surfacing on the room itself when the slot comes up.",
+ "f2-p2": "Reservations and current occupancy share one screen, so checking whether a room can be taken right now doesn't require opening anything else.",
+ "f2-p3": "<strong>Sales and schedule access</strong><br>Staff can check sales figures and their own shift schedule from the POS. Previously this meant asking the owner or looking it up through a separate channel.",
+ "f2-p4": "This was the largest piece of the project. It moved the information staff check every day, but which previously lived outside the POS, into the device they already use during each shift.",
+ "lr-p1": "Changing the business type wasn't a matter of swapping screens. A restaurant POS rests on the premise that you sell menu items; karaoke rests on the premise that you sell time. When the premise changes, the information architecture has to be rebuilt. That's why adding a time picker was never going to be enough.",
+ "lr-p2": "Cutting training time didn't have to mean cutting features. Putting frequent actions on the first screen and letting the layout communicate sequence kept the feature set intact while keeping first-time users from getting lost.",
+ "lr-p3": "<strong>What's left</strong><br>The project closed without quantitative measurement. Given another run, I'd compare training time, time-to-first-completed-payment for a new hire, and double-booking incidents before and after release. All three were already felt as problems in the venue, so they wouldn't have been hard to instrument.",
+ "lr-p4": "<strong>Change the business and you change what's being sold; change what's being sold and you change how the screen is structured.</strong>"
+},
+  ko:{
+ "pr-p1": "Vpos는 매장 업종에 맞춰 화면과 기능을 바꿀 수 있는 커스터마이징 POS입니다. 이번 프로젝트는 그중 노래방(가라오케) 매장을 위한 버전을 정의하는 일이었습니다.",
+ "pr-p2": "기존 제품은 레스토랑 운영 흐름을 기준으로 만들어져 있었습니다. 메뉴를 고르고, 주문을 넘기고, 결제하는 구조입니다. 노래방은 다릅니다. 먼저 파는 것은 시간이고, 방마다 이용 상태와 남은 시간이 계속 바뀌며, 음료 주문은 각 방의 이용 시간 위에 더해집니다. 레스토랑 기반 POS에는 시간을 선택하고 관리하는 기능 자체가 없었습니다.",
+ "pr-p3": "가장 크게 풀어야 할 문제는 신규 직원의 진입장벽이었습니다. 노래방 매장은 아르바이트 비중이 높고 사람이 자주 바뀌기 때문에, 처음 출근한 직원도 POS를 빠르게 이해해야 합니다. 교육에 드는 시간을 줄이고 첫 근무의 부담을 낮추는 것이 이 프로젝트의 핵심 과제였습니다.",
+ "ap-p1": "설계 기준은 명확했습니다. 처음 보는 사람이 다음에 무엇을 해야 하는지 바로 알 수 있어야 한다. 동시에 매장마다 다른 방 구성과 운영 방식에 맞춰 직관적으로 커스터마이징할 수 있어야 했습니다.",
+ "ap-p2": "이 기준으로 우선순위를 정했습니다. 먼저 매일 반복되는 방 시간 관리와 음료 주문을 학습 없이 입력할 수 있게 만들고, 그다음 예약 관리를 POS 안으로 가져왔습니다. 마지막으로 직원이 매출과 자신의 근무 스케줄을 같은 시스템에서 확인할 수 있게 했습니다.",
+ "f1-p1": "<strong>시간 선택과 잔여 시간</strong><br>레스토랑 POS에 없던 시간 선택 기능을 새로 설계했습니다. 방을 누르면 이용 시간을 고르고, 시작하면 남은 시간이 실시간으로 줄어듭니다. 연장과 조기 종료도 같은 화면에서 처리합니다.",
+ "f1-p2": "화면은 방 단위로 배치했습니다. 매장 구조를 그대로 옮긴 배치라, 어떤 방이 사용 중이고 어디가 비었는지 목록을 읽지 않고 알 수 있습니다.",
+ "f1-p3": "<strong>음료 주문</strong><br>주문은 방을 선택한 상태에서 바로 담습니다. 시간과 주문이 하나의 방에 묶여 있어, 계산할 때 이용 요금과 음료 금액이 자동으로 합산됩니다.",
+ "f1-quote": "“처음 출근한 직원도 방을 열고, 시간을 걸고, 음료를 담고, 결제하는 흐름을 설명 없이 따라갈 수 있어야 했습니다.”",
+ "f1-p4": "자주 쓰는 동작은 첫 화면에서 한 번에 닿도록 뒀습니다. 방 열기, 시간 선택, 시간 연장, 주문 추가, 결제입니다. 메뉴 안으로 들어가야 하는 동작을 줄여, 교육 없이도 다음 순서를 짐작할 수 있게 했습니다.",
+ "f2-p1": "<strong>예약 관리</strong><br>예약은 전화로 받아 종이나 메신저로 관리하고 있었습니다. 담당자가 바뀌면 내용이 새고, 중복 예약도 생겼습니다. 예약을 POS 안으로 들여와 방·시간·인원을 함께 기록하고, 예약 시간이 되면 해당 방에 표시되도록 했습니다.",
+ "f2-p2": "예약과 현재 이용 현황을 같은 화면에 두었습니다. 지금 받을 수 있는 방이 있는지 확인하는 데 다른 도구를 열 필요가 없습니다.",
+ "f2-p3": "<strong>매출과 스케줄 확인</strong><br>직원이 POS에서 매출과 자신의 근무 스케줄을 확인할 수 있게 했습니다. 이전에는 사장에게 묻거나 별도 채널로 확인해야 하던 정보입니다.",
+ "f2-p4": "이번 개편에서 비중이 가장 큰 기능이었습니다. 매장에서 매일 확인하지만 POS 밖에 흩어져 있던 예약, 매출, 스케줄 정보를 직원이 이미 매일 쓰는 기기 안으로 옮긴 작업이기 때문입니다.",
+ "lr-p1": "업종을 바꾸는 일은 화면을 갈아 끼우는 일이 아니었습니다. 레스토랑 POS는 메뉴를 판다는 전제 위에 서 있고, 노래방은 시간을 판다는 전제 위에 섭니다. 전제가 다르면 정보 구조부터 다시 짜야 합니다. 시간 선택 기능을 더하는 것으로 끝나지 않았던 이유입니다.",
+ "lr-p2": "교육 시간을 줄이는 데 기능을 덜어내는 것만이 답은 아니었습니다. 자주 하는 동작을 첫 화면에 두고 순서를 화면 배치로 알려주면, 기능 수를 유지하면서도 처음 쓰는 사람이 헤매지 않습니다.",
+ "lr-p3": "<strong>남은 과제</strong><br>이 프로젝트는 정량 지표를 측정하지 않은 채 마무리됐습니다. 다시 한다면 교육에 걸린 시간, 신규 직원이 첫 결제를 끝내기까지 걸린 시간, 예약 중복 발생 건수를 배포 전후로 비교했을 것입니다. 세 가지 모두 매장에서 이미 불편으로 체감하던 항목이라 지표로 잡기 어렵지 않았을 것입니다.",
+ "lr-p4": "<strong>업종이 바뀌면 파는 것이 바뀌고, 파는 것이 바뀌면 화면의 구조가 바뀝니다.</strong>"
+}
+};
+let tLang = localStorage.getItem('daye-lang') || 'en';
+function applyNavLang(lang){
+  document.documentElement.lang=lang;
+  const L=TLANG[lang];
+  document.getElementById('lang-toggle').textContent=lang==='en'?'한국어':'English';
+  document.getElementById('foot-lang-toggle').textContent=lang==='en'?'한국어':'English';
+  document.getElementById('t-nav-work').textContent=L.work;
+  document.getElementById('t-nav-about').textContent=L.about;
+  document.getElementById('t-nav-resume').textContent=L.resume;
+  document.getElementById('ft-nav-work').textContent=L.work;
+  document.getElementById('ft-nav-about').textContent=L.about;
+  document.getElementById('ft-nav-resume').textContent=L.resume;
+}
+function applyPageLang(lang){
+  const P=PAGE_LANG[lang];
+  document.querySelectorAll('.meta-label').forEach((el,i)=>{if(P.metaLabels[i])el.textContent=P.metaLabels[i];});
+  document.querySelectorAll('.meta-value').forEach((el,i)=>{if(P.metaValues[i])el.textContent=P.metaValues[i];});
+  document.querySelector('.hero-h1').textContent=P.hero;
+  document.querySelectorAll('.txt h2').forEach((el,i)=>{if(P.txtH2[i])el.textContent=P.txtH2[i];});
+  document.querySelectorAll('.lbl-tag').forEach((el,i)=>{if(P.labeledTags[i])el.textContent=P.labeledTags[i];});
+  document.querySelectorAll('.lbl-title').forEach((el,i)=>{if(P.labeledTitles[i])el.textContent=P.labeledTitles[i];});
+  document.querySelectorAll('.lbl-content h2').forEach((el,i)=>{if(P.labeledH2[i])el.textContent=P.labeledH2[i];});
+  const B=BODY[lang];
+  Object.entries(B).forEach(([id,html])=>{const el=document.getElementById(id); if(el) el.innerHTML=html;});
+  document.querySelector('.foot-tag').textContent=P.footerTag;
+  document.querySelector('.foot-h').textContent=P.footerHeading;
+  document.querySelector('.foot-cta').textContent=P.footerCta;
+}
+function toggleLang(){
+  tLang=tLang==='en'?'ko':'en';
+  localStorage.setItem('daye-lang', tLang);
+  applyNavLang(tLang);
+  applyPageLang(tLang);
+}
 const track = document.getElementById('ct');
 const dotsEl = document.getElementById('cdots');
 let cur = 0;
@@ -307,6 +433,12 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft')goTo(cur-1);
   if(e.key==='ArrowRight')goTo(cur+1);
 });
+
+// daye-resize: 뷰포트 폭이 바뀌면 카드 폭이 달라지므로 위치를 다시 계산합니다
+let __rzT;
+window.addEventListener('resize',()=>{clearTimeout(__rzT);__rzT=setTimeout(()=>goTo(cur),120);});
+applyNavLang(tLang);
+applyPageLang(tLang);
 document.querySelectorAll('.img-wrap img').forEach(img=>{
   if(img.complete&&img.naturalWidth)img.parentElement.classList.add('loaded');
   img.addEventListener('load',()=>img.parentElement.classList.add('loaded'));
