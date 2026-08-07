@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- 언어 기본값: URL의 ?lang= 이 있으면 그 값, 없으면 저장된 값, 그것도 없으면 한국어.
+     페이지별 스크립트보다 먼저 실행되어 daye-lang 을 seed 합니다. -->
+<script>(function(){try{var p=new URLSearchParams(location.search).get('lang');if(p==='ko'||p==='en'){localStorage.setItem('daye-lang',p);}else if(!localStorage.getItem('daye-lang')){localStorage.setItem('daye-lang','ko');}}catch(e){}})();</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daye Go — Product Designer</title>
