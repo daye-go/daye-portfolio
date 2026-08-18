@@ -7,11 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customizable Karaoke POS System — Daye Go Portfolio</title>
-<meta name="description" content="직관적으로 커스터마이징 가능한 노래방 POS 시스템 · 시간 관리, 음료 주문, 예약, 매출과 스케줄 확인">
+<title>V-pos Karaoke Operations POS System Design — Daye Go Portfolio</title>
+<meta name="description" content="V-pos 노래방 운영 POS 시스템 설계 · 방과 시간을 기준으로 첫 근무자도 따라갈 수 있는 POS 흐름">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Customizable Karaoke POS System | Daye Go">
-<meta property="og:description" content="A customizable POS system for karaoke venues, designed around time management, drink orders, reservations, sales, and staff schedules.">
+<meta property="og:title" content="V-pos Karaoke Operations POS System Design | Daye Go">
+<meta property="og:description" content="A karaoke POS redesigned around rooms, time, orders, reservations, sales, and schedules.">
 <!-- 배포 시 절대 URL로 교체하세요 (상대 경로는 링크 미리보기가 생성되지 않습니다) -->
 <meta property="og:image" content="./Vpos — Daye Go Portfolio_files/886pj77HJMhgfOutvUiibA1TlTI.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -158,27 +158,27 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
     <div class="hero">
       <div class="hero-meta">
         <div>
-          <div class="meta-label">Industry</div>
-          <div class="meta-value">Karaoke / POS</div>
+          <div class="meta-label">Client</div>
+          <div class="meta-value">COHANT LLC · V-pos</div>
         </div>
         <div>
-          <div class="meta-label">Client</div>
-          <div class="meta-value">Vpos</div>
+          <div class="meta-label">Duration</div>
+          <div class="meta-value">Jan 2025 – Jan 2026</div>
         </div>
         <div>
           <div class="meta-label">Role</div>
-          <div class="meta-value">Product Designer, End-to-End UX</div>
+          <div class="meta-value">Product Design Lead · End-to-End UX</div>
         </div>
         <div>
           <div class="meta-label">Scope</div>
-          <div class="meta-value">Time · Orders · Reservations · Reports</div>
+          <div class="meta-value">Time · Drink orders · Reservations · Sales · Schedules</div>
         </div>
         <div>
           <div class="meta-label">Focus</div>
-          <div class="meta-value">Lower training burden for new staff</div>
+          <div class="meta-value">Lower training burden for first-day staff</div>
         </div>
       </div>
-      <h1 class="hero-h1">Customizable Karaoke POS System</h1>
+      <h1 class="hero-h1">V-pos Karaoke Operations POS System Design</h1>
       <div class="hero-divider"></div>
     </div>
   </div>
@@ -195,10 +195,10 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 1. The Problem -->
       <div class="txt">
-        <h2>Background</h2>
-        <p id="pr-p1">Vpos is a customizable POS system whose screens and features can adapt to different store types. This project defined the karaoke version, where staff manage room time, drink orders, reservations, sales, and schedules from the same device.</p>
-        <p id="pr-p2">The existing product was based on a restaurant flow: select menu items, send orders, and take payment. Karaoke venues work differently. They sell time first, room status changes continuously, and drink orders are added on top of each room's session. The restaurant-based POS did not have a time selection or time management function.</p>
-        <p id="pr-p3">The largest operational issue was onboarding. Karaoke venues often rely on part-time staff, so a new employee needs to understand the POS quickly from the first shift. Reducing training time and lowering the entry barrier became the main design problem.</p>
+        <h2>DIAGNOSIS</h2>
+        <p id="pr-p1">V-pos is a POS system whose screens and features can be customized by store type. In this project, I rebuilt a restaurant-based POS into a karaoke operations flow where staff could manage rooms, time, drink orders, reservations, sales, and schedules from one device.</p>
+        <p id="pr-p2">The existing POS followed a restaurant model: choose menu items, send orders, and take payment. Karaoke works differently. Staff first check room status, open a room, set the session time, add drink orders during use, and combine the time fee and order total at checkout.</p>
+        <p id="pr-p3">The problem was not that a few karaoke features were missing. The product was trying to run a time-based business with a menu-based structure. So I defined the core challenge as rebuilding the information architecture around rooms and time, while making the first shift understandable without long training.</p>
       </div>
 
       <!-- GALLERY 2-col -->
@@ -213,24 +213,24 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 2. Design Approach -->
       <div class="txt">
-        <h2>Approach</h2>
-        <p id="ap-p1">One design criterion held everything together: someone seeing the screen for the first time should understand what to do next. The screen needed to be direct enough for a first-day employee, while still flexible enough for different karaoke venue layouts.</p>
-        <p id="ap-p2">That criterion set the order of work. First, make the daily repetitions — room time management and drink orders — easy to enter without training. Then bring reservation management into the POS. Finally, make sales and staff schedules visible from the same system.</p>
+        <h2>APPROACH</h2>
+        <p id="ap-p1">The design direction was simple: match the POS structure to the way karaoke staff actually work. The first screen had to read like a room map, frequent actions had to stay visible, and time, orders, reservations, and payment had to remain connected to the same room.</p>
+        <p id="ap-p2"><strong>Room status → session time → drink order → reservation check → payment → sales and schedule check.</strong><br>This became the operating sequence for the product. The goal was not to add more functions, but to make the next action obvious from the screen.</p>
       </div>
 
       <!-- 3. Speed Optimization -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag">Feature 01</div>
-          <div class="lbl-title">Time management & drink orders</div>
+          <div class="lbl-tag">DESIGN 01</div>
+          <div class="lbl-title">Room time & drink orders</div>
         </div>
         <div class="lbl-content">
-          <h2>Room time and drink orders were designed as one connected flow</h2>
-          <p id="f1-p1"><strong>Time selection and remaining time</strong><br>I designed the time selection the restaurant POS never had. Tap a room, choose the session length, and the remaining time counts down live once it starts. Extensions and early closes are handled on the same screen.</p>
-          <p id="f1-p2">The layout is organized by room, mirroring the physical floor. Which rooms are occupied and which are free reads at a glance, without parsing a list.</p>
-          <p id="f1-p3"><strong>Drink orders</strong><br>Orders are added with the room already selected. Time and orders stay bound to the same room, so the session fee and the drinks total are combined automatically at checkout.</p>
-          <blockquote><p id="f1-quote">"A first-day employee should be able to open a room, start the clock, add drinks, and take payment without needing a walkthrough."</p></blockquote>
-          <p id="f1-p4">The frequent actions sit one tap away on the first screen: open a room, select time, extend time, add an order, and take payment. Fewer actions buried in menus means the next step can be inferred rather than taught.</p>
+          <h2>I changed the POS starting point from menu selection to room and time.</h2>
+          <p id="f1-p1"><strong>Time selection and remaining time</strong><br>I designed the time-management flow the restaurant POS did not have. When staff tap a room, they can choose the session length and start the clock. Once the session begins, the remaining time counts down live on the room screen.</p>
+          <p id="f1-p2">I placed room status at the center of the interface. Instead of reading a list, staff can understand which rooms are empty, occupied, or nearly finished through a layout that mirrors the physical venue.</p>
+          <p id="f1-p3"><strong>Extensions, early closes, and drink orders</strong><br>Karaoke sessions change often. Guests extend time, leave early, or add drinks mid-session. I kept these actions inside the selected room context so staff did not have to leave the flow and reinterpret the room state.</p>
+          <blockquote><p id="f1-quote">“Good karaoke POS UX should not make staff memorize how to use it. The room status should naturally reveal what to do next.”</p></blockquote>
+          <p id="f1-p4">Drink orders are added while the room is already selected. This binds time and orders to the same room, so checkout can combine the session fee and drink total without manual calculation.</p>
         </div>
       </div>
 
@@ -242,15 +242,15 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 4. Learning Curve -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag">Feature 02</div>
-          <div class="lbl-title">Reservations, sales & schedules</div>
+          <div class="lbl-tag">DESIGN 02</div>
+          <div class="lbl-title">Reservations · Sales · Schedules</div>
         </div>
         <div class="lbl-content">
-          <h2>Reservations, sales, and schedules moved into the POS employees already use</h2>
-          <p id="f2-p1"><strong>Reservation management</strong><br>Reservations arrived by phone and lived on paper or in messenger threads. Details leaked whenever the person on duty changed, and double bookings happened. I brought reservations into the POS — room, time, and party size recorded together, surfacing on the room itself when the slot comes up.</p>
-          <p id="f2-p2">Reservations and current occupancy share one screen, so checking whether a room can be taken right now doesn't require opening anything else.</p>
-          <p id="f2-p3"><strong>Sales and schedule access</strong><br>Staff can check sales figures and their own shift schedule from the POS. Previously this meant asking the owner or looking it up through a separate channel.</p>
-          <p id="f2-p4">This was the largest piece of the project. It moved the information staff check every day, but which previously lived outside the POS, into the device they already use during each shift.</p>
+          <h2>I moved the information staff checked every day into the POS they already used.</h2>
+          <p id="f2-p1"><strong>Reservation management</strong><br>Reservations were often taken by phone and recorded on paper or in messenger threads. When the person on duty changed, details could leak, and duplicate bookings could happen. I moved room, time, and party size into the POS so reservations appeared where operations actually happened.</p>
+          <p id="f2-p2">Reservations and current occupancy share the same context. Staff can see not only which room is free now, but also which room has an upcoming reservation before assigning guests.</p>
+          <p id="f2-p3"><strong>Sales and schedule access</strong><br>Sales and shift schedules were information staff checked every day, but they lived outside the POS. I brought them into the device staff already used throughout the shift, reducing the number of places they had to check.</p>
+          <p id="f2-p4">The final delivery connected room layout, session time, remaining time, extensions, early closes, drink orders, reservations, sales, and schedules into one operating flow. The karaoke version of V-pos became a POS organized around rooms and time, not menus.</p>
         </div>
       </div>
 
@@ -273,11 +273,11 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 5. What I Learned -->
       <div class="txt">
-        <h2>Learning</h2>
-        <p id="lr-p1">Changing the business type wasn't a matter of swapping screens. A restaurant POS rests on the premise that you sell menu items; karaoke rests on the premise that you sell time. When the premise changes, the information architecture has to be rebuilt. That's why adding a time picker was never going to be enough.</p>
-        <p id="lr-p2">Cutting training time didn't have to mean cutting features. Putting frequent actions on the first screen and letting the layout communicate sequence kept the feature set intact while keeping first-time users from getting lost.</p>
-        <p id="lr-p3"><strong>What's left</strong><br>The project closed without quantitative measurement. Given another run, I'd compare training time, time-to-first-completed-payment for a new hire, and double-booking incidents before and after release. All three were already felt as problems in the venue, so they wouldn't have been hard to instrument.</p>
-        <p id="lr-p4"><strong>Change the business and you change what's being sold; change what's being sold and you change how the screen is structured.</strong></p>
+        <h2>LEARNING</h2>
+        <p id="lr-p1">Changing the business type was not a matter of swapping screens. A restaurant POS rests on the premise that the store sells menu items; a karaoke POS rests on the premise that the store sells time. When the premise changes, the information structure has to change with it.</p>
+        <p id="lr-p2">Reducing training burden did not mean reducing functionality. By placing frequent actions on the first screen and letting the layout explain sequence, the product could keep the full operating flow while helping new staff choose the next action faster.</p>
+        <p id="lr-p3"><strong>What I would validate next</strong><br>The project was led through launch, but it did not close with quantitative measurement. For the next step, I would track first-shift training time, time to first completed payment, duplicate reservation incidents, and sales or schedule questions before and after release.</p>
+        <p id="lr-p4"><strong>When what the business sells changes, the screen must change what it makes obvious.</strong></p>
       </div>
 
     </div>
@@ -309,74 +309,124 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 <script>
 const TLANG={en:{work:"Work",about:"About",resume:"Resume"},ko:{work:"작업",about:"소개",resume:"이력서"}};
 const PAGE_LANG={
-  en:{
-    metaLabels:["Industry","Client","Role","Scope","Focus"],
-    metaValues:["Karaoke / POS","Vpos","Product Designer, End-to-End UX","Time · Orders · Reservations · Reports","Lower training burden for new staff"],
-    hero:"Customizable Karaoke POS System",
-    txtH2:["Background","Approach","Learning"],
-    labeledTags:["Feature 01","Feature 02"],
-    labeledTitles:["Time management & drink orders","Reservations, sales & schedules"],
-    labeledH2:["Room time and drink orders were designed as one connected flow","Reservations, sales, and schedules moved into the POS employees already use"],
-    labeledH3:[],
-    footerTag:"Contact",
-    footerHeading:"Let's start creating together",
-    footerCta:"Let's talk ↗"
+  "en": {
+    "metaLabels": [
+      "Client",
+      "Duration",
+      "Role",
+      "Scope",
+      "Focus"
+    ],
+    "metaValues": [
+      "COHANT LLC · V-pos",
+      "Jan 2025 – Jan 2026",
+      "Product Design Lead · End-to-End UX",
+      "Time · Drink orders · Reservations · Sales · Schedules",
+      "Lower training burden for first-day staff"
+    ],
+    "hero": "V-pos Karaoke Operations POS System Design",
+    "txtH2": [
+      "DIAGNOSIS",
+      "APPROACH",
+      "LEARNING"
+    ],
+    "labeledTags": [
+      "DESIGN 01",
+      "DESIGN 02"
+    ],
+    "labeledTitles": [
+      "Room time & drink orders",
+      "Reservations · Sales · Schedules"
+    ],
+    "labeledH2": [
+      "I changed the POS starting point from menu selection to room and time.",
+      "I moved the information staff checked every day into the POS they already used."
+    ],
+    "labeledH3": [],
+    "footerTag": "Contact",
+    "footerHeading": "Let's start creating together",
+    "footerCta": "Let's talk ↗"
   },
-  ko:{
-    metaLabels:["산업","클라이언트","역할","범위","핵심 과제"],
-    metaValues:["노래방 / POS","Vpos","프로덕트 디자이너, 엔드 투 엔드 UX","시간 · 주문 · 예약 · 리포트","신규 직원 교육 부담 완화"],
-    hero:"직관적으로 커스터마이징 가능한 노래방 POS 시스템",
-    txtH2:["Background","Approach","Learning"],
-    labeledTags:["Feature 01","Feature 02"],
-    labeledTitles:["시간 관리와 음료 주문","예약·매출·스케줄"],
-    labeledH2:["시간 관리와 음료 주문을 하나의 흐름으로 설계했습니다","예약, 매출, 스케줄을 직원이 매일 쓰는 POS 안으로 옮겼습니다"],
-    labeledH3:[],
-    footerTag:"연락처",
-    footerHeading:"함께 만들어갑니다",
-    footerCta:"이야기 나누기 ↗"
+  "ko": {
+    "metaLabels": [
+      "클라이언트",
+      "기간",
+      "역할",
+      "범위",
+      "핵심 과제"
+    ],
+    "metaValues": [
+      "COHANT LLC · V-pos",
+      "2025.01 – 2026.01",
+      "Product Design Lead · End-to-End UX",
+      "시간 관리 · 음료 주문 · 예약 · 매출 · 스케줄",
+      "첫 근무자 교육 부담 완화"
+    ],
+    "hero": "V-pos 노래방 운영 POS 시스템 설계",
+    "txtH2": [
+      "DIAGNOSIS",
+      "APPROACH",
+      "LEARNING"
+    ],
+    "labeledTags": [
+      "DESIGN 01",
+      "DESIGN 02"
+    ],
+    "labeledTitles": [
+      "방 시간과 음료 주문",
+      "예약 · 매출 · 스케줄"
+    ],
+    "labeledH2": [
+      "메뉴 선택이 아니라 방과 시간을 기준으로 POS 시작점을 바꿨습니다.",
+      "POS 밖에 흩어져 있던 정보를 근무 흐름 안으로 가져왔습니다."
+    ],
+    "labeledH3": [],
+    "footerTag": "연락처",
+    "footerHeading": "함께 만들어갑니다",
+    "footerCta": "이야기 나누기 ↗"
   }
 };
 const BODY={
-  en:{
- "pr-p1": "Vpos is a customizable POS system whose screens and features can adapt to different store types. This project defined the karaoke version, where staff manage room time, drink orders, reservations, sales, and schedules from the same device.",
- "pr-p2": "The existing product was based on a restaurant flow: select menu items, send orders, and take payment. Karaoke venues work differently. They sell time first, room status changes continuously, and drink orders are added on top of each room's session. The restaurant-based POS did not have a time selection or time management function.",
- "pr-p3": "The largest operational issue was onboarding. Karaoke venues often rely on part-time staff, so a new employee needs to understand the POS quickly from the first shift. Reducing training time and lowering the entry barrier became the main design problem.",
- "ap-p1": "One design criterion held everything together: someone seeing the screen for the first time should understand what to do next. The screen needed to be direct enough for a first-day employee, while still flexible enough for different karaoke venue layouts.",
- "ap-p2": "That criterion set the order of work. First, make the daily repetitions — room time management and drink orders — easy to enter without training. Then bring reservation management into the POS. Finally, make sales and staff schedules visible from the same system.",
- "f1-p1": "<strong>Time selection and remaining time</strong><br>I designed the time selection the restaurant POS never had. Tap a room, choose the session length, and the remaining time counts down live once it starts. Extensions and early closes are handled on the same screen.",
- "f1-p2": "The layout is organized by room, mirroring the physical floor. Which rooms are occupied and which are free reads at a glance, without parsing a list.",
- "f1-p3": "<strong>Drink orders</strong><br>Orders are added with the room already selected. Time and orders stay bound to the same room, so the session fee and the drinks total are combined automatically at checkout.",
- "f1-quote": "\"A first-day employee should be able to open a room, start the clock, add drinks, and take payment without needing a walkthrough.\"",
- "f1-p4": "The frequent actions sit one tap away on the first screen: open a room, select time, extend time, add an order, and take payment. Fewer actions buried in menus means the next step can be inferred rather than taught.",
- "f2-p1": "<strong>Reservation management</strong><br>Reservations arrived by phone and lived on paper or in messenger threads. Details leaked whenever the person on duty changed, and double bookings happened. I brought reservations into the POS — room, time, and party size recorded together, surfacing on the room itself when the slot comes up.",
- "f2-p2": "Reservations and current occupancy share one screen, so checking whether a room can be taken right now doesn't require opening anything else.",
- "f2-p3": "<strong>Sales and schedule access</strong><br>Staff can check sales figures and their own shift schedule from the POS. Previously this meant asking the owner or looking it up through a separate channel.",
- "f2-p4": "This was the largest piece of the project. It moved the information staff check every day, but which previously lived outside the POS, into the device they already use during each shift.",
- "lr-p1": "Changing the business type wasn't a matter of swapping screens. A restaurant POS rests on the premise that you sell menu items; karaoke rests on the premise that you sell time. When the premise changes, the information architecture has to be rebuilt. That's why adding a time picker was never going to be enough.",
- "lr-p2": "Cutting training time didn't have to mean cutting features. Putting frequent actions on the first screen and letting the layout communicate sequence kept the feature set intact while keeping first-time users from getting lost.",
- "lr-p3": "<strong>What's left</strong><br>The project closed without quantitative measurement. Given another run, I'd compare training time, time-to-first-completed-payment for a new hire, and double-booking incidents before and after release. All three were already felt as problems in the venue, so they wouldn't have been hard to instrument.",
- "lr-p4": "<strong>Change the business and you change what's being sold; change what's being sold and you change how the screen is structured.</strong>"
-},
-  ko:{
- "pr-p1": "Vpos는 매장 업종에 맞춰 화면과 기능을 바꿀 수 있는 커스터마이징 POS입니다. 이번 프로젝트는 그중 노래방(가라오케) 매장을 위한 버전을 정의하는 일이었습니다.",
- "pr-p2": "기존 제품은 레스토랑 운영 흐름을 기준으로 만들어져 있었습니다. 메뉴를 고르고, 주문을 넘기고, 결제하는 구조입니다. 노래방은 다릅니다. 먼저 파는 것은 시간이고, 방마다 이용 상태와 남은 시간이 계속 바뀌며, 음료 주문은 각 방의 이용 시간 위에 더해집니다. 레스토랑 기반 POS에는 시간을 선택하고 관리하는 기능 자체가 없었습니다.",
- "pr-p3": "가장 크게 풀어야 할 문제는 신규 직원의 진입장벽이었습니다. 노래방 매장은 아르바이트 비중이 높고 사람이 자주 바뀌기 때문에, 처음 출근한 직원도 POS를 빠르게 이해해야 합니다. 교육에 드는 시간을 줄이고 첫 근무의 부담을 낮추는 것이 이 프로젝트의 핵심 과제였습니다.",
- "ap-p1": "설계 기준은 명확했습니다. 처음 보는 사람이 다음에 무엇을 해야 하는지 바로 알 수 있어야 한다. 동시에 매장마다 다른 방 구성과 운영 방식에 맞춰 직관적으로 커스터마이징할 수 있어야 했습니다.",
- "ap-p2": "이 기준으로 우선순위를 정했습니다. 먼저 매일 반복되는 방 시간 관리와 음료 주문을 학습 없이 입력할 수 있게 만들고, 그다음 예약 관리를 POS 안으로 가져왔습니다. 마지막으로 직원이 매출과 자신의 근무 스케줄을 같은 시스템에서 확인할 수 있게 했습니다.",
- "f1-p1": "<strong>시간 선택과 잔여 시간</strong><br>레스토랑 POS에 없던 시간 선택 기능을 새로 설계했습니다. 방을 누르면 이용 시간을 고르고, 시작하면 남은 시간이 실시간으로 줄어듭니다. 연장과 조기 종료도 같은 화면에서 처리합니다.",
- "f1-p2": "화면은 방 단위로 배치했습니다. 매장 구조를 그대로 옮긴 배치라, 어떤 방이 사용 중이고 어디가 비었는지 목록을 읽지 않고 알 수 있습니다.",
- "f1-p3": "<strong>음료 주문</strong><br>주문은 방을 선택한 상태에서 바로 담습니다. 시간과 주문이 하나의 방에 묶여 있어, 계산할 때 이용 요금과 음료 금액이 자동으로 합산됩니다.",
- "f1-quote": "“처음 출근한 직원도 방을 열고, 시간을 걸고, 음료를 담고, 결제하는 흐름을 설명 없이 따라갈 수 있어야 했습니다.”",
- "f1-p4": "자주 쓰는 동작은 첫 화면에서 한 번에 닿도록 뒀습니다. 방 열기, 시간 선택, 시간 연장, 주문 추가, 결제입니다. 메뉴 안으로 들어가야 하는 동작을 줄여, 교육 없이도 다음 순서를 짐작할 수 있게 했습니다.",
- "f2-p1": "<strong>예약 관리</strong><br>예약은 전화로 받아 종이나 메신저로 관리하고 있었습니다. 담당자가 바뀌면 내용이 새고, 중복 예약도 생겼습니다. 예약을 POS 안으로 들여와 방·시간·인원을 함께 기록하고, 예약 시간이 되면 해당 방에 표시되도록 했습니다.",
- "f2-p2": "예약과 현재 이용 현황을 같은 화면에 두었습니다. 지금 받을 수 있는 방이 있는지 확인하는 데 다른 도구를 열 필요가 없습니다.",
- "f2-p3": "<strong>매출과 스케줄 확인</strong><br>직원이 POS에서 매출과 자신의 근무 스케줄을 확인할 수 있게 했습니다. 이전에는 사장에게 묻거나 별도 채널로 확인해야 하던 정보입니다.",
- "f2-p4": "이번 개편에서 비중이 가장 큰 기능이었습니다. 매장에서 매일 확인하지만 POS 밖에 흩어져 있던 예약, 매출, 스케줄 정보를 직원이 이미 매일 쓰는 기기 안으로 옮긴 작업이기 때문입니다.",
- "lr-p1": "업종을 바꾸는 일은 화면을 갈아 끼우는 일이 아니었습니다. 레스토랑 POS는 메뉴를 판다는 전제 위에 서 있고, 노래방은 시간을 판다는 전제 위에 섭니다. 전제가 다르면 정보 구조부터 다시 짜야 합니다. 시간 선택 기능을 더하는 것으로 끝나지 않았던 이유입니다.",
- "lr-p2": "교육 시간을 줄이는 데 기능을 덜어내는 것만이 답은 아니었습니다. 자주 하는 동작을 첫 화면에 두고 순서를 화면 배치로 알려주면, 기능 수를 유지하면서도 처음 쓰는 사람이 헤매지 않습니다.",
- "lr-p3": "<strong>남은 과제</strong><br>이 프로젝트는 정량 지표를 측정하지 않은 채 마무리됐습니다. 다시 한다면 교육에 걸린 시간, 신규 직원이 첫 결제를 끝내기까지 걸린 시간, 예약 중복 발생 건수를 배포 전후로 비교했을 것입니다. 세 가지 모두 매장에서 이미 불편으로 체감하던 항목이라 지표로 잡기 어렵지 않았을 것입니다.",
- "lr-p4": "<strong>업종이 바뀌면 파는 것이 바뀌고, 파는 것이 바뀌면 화면의 구조가 바뀝니다.</strong>"
-}
+  "en": {
+    "pr-p1": "V-pos is a POS system whose screens and features can be customized by store type. In this project, I rebuilt a restaurant-based POS into a karaoke operations flow where staff could manage rooms, time, drink orders, reservations, sales, and schedules from one device.",
+    "pr-p2": "The existing POS followed a restaurant model: choose menu items, send orders, and take payment. Karaoke works differently. Staff first check room status, open a room, set the session time, add drink orders during use, and combine the time fee and order total at checkout.",
+    "pr-p3": "The problem was not that a few karaoke features were missing. The product was trying to run a time-based business with a menu-based structure. So I defined the core challenge as rebuilding the information architecture around rooms and time, while making the first shift understandable without long training.",
+    "ap-p1": "The design direction was simple: match the POS structure to the way karaoke staff actually work. The first screen had to read like a room map, frequent actions had to stay visible, and time, orders, reservations, and payment had to remain connected to the same room.",
+    "ap-p2": "<strong>Room status → session time → drink order → reservation check → payment → sales and schedule check.</strong><br>This became the operating sequence for the product. The goal was not to add more functions, but to make the next action obvious from the screen.",
+    "f1-p1": "<strong>Time selection and remaining time</strong><br>I designed the time-management flow the restaurant POS did not have. When staff tap a room, they can choose the session length and start the clock. Once the session begins, the remaining time counts down live on the room screen.",
+    "f1-p2": "I placed room status at the center of the interface. Instead of reading a list, staff can understand which rooms are empty, occupied, or nearly finished through a layout that mirrors the physical venue.",
+    "f1-p3": "<strong>Extensions, early closes, and drink orders</strong><br>Karaoke sessions change often. Guests extend time, leave early, or add drinks mid-session. I kept these actions inside the selected room context so staff did not have to leave the flow and reinterpret the room state.",
+    "f1-quote": "“Good karaoke POS UX should not make staff memorize how to use it. The room status should naturally reveal what to do next.”",
+    "f1-p4": "Drink orders are added while the room is already selected. This binds time and orders to the same room, so checkout can combine the session fee and drink total without manual calculation.",
+    "f2-p1": "<strong>Reservation management</strong><br>Reservations were often taken by phone and recorded on paper or in messenger threads. When the person on duty changed, details could leak, and duplicate bookings could happen. I moved room, time, and party size into the POS so reservations appeared where operations actually happened.",
+    "f2-p2": "Reservations and current occupancy share the same context. Staff can see not only which room is free now, but also which room has an upcoming reservation before assigning guests.",
+    "f2-p3": "<strong>Sales and schedule access</strong><br>Sales and shift schedules were information staff checked every day, but they lived outside the POS. I brought them into the device staff already used throughout the shift, reducing the number of places they had to check.",
+    "f2-p4": "The final delivery connected room layout, session time, remaining time, extensions, early closes, drink orders, reservations, sales, and schedules into one operating flow. The karaoke version of V-pos became a POS organized around rooms and time, not menus.",
+    "lr-p1": "Changing the business type was not a matter of swapping screens. A restaurant POS rests on the premise that the store sells menu items; a karaoke POS rests on the premise that the store sells time. When the premise changes, the information structure has to change with it.",
+    "lr-p2": "Reducing training burden did not mean reducing functionality. By placing frequent actions on the first screen and letting the layout explain sequence, the product could keep the full operating flow while helping new staff choose the next action faster.",
+    "lr-p3": "<strong>What I would validate next</strong><br>The project was led through launch, but it did not close with quantitative measurement. For the next step, I would track first-shift training time, time to first completed payment, duplicate reservation incidents, and sales or schedule questions before and after release.",
+    "lr-p4": "<strong>When what the business sells changes, the screen must change what it makes obvious.</strong>"
+  },
+  "ko": {
+    "pr-p1": "V-pos는 매장 유형에 맞게 화면과 기능을 커스터마이징할 수 있는 POS 시스템입니다. 이 프로젝트에서는 레스토랑 중심으로 설계되어 있던 기존 POS를 노래방 운영에 맞게 재구성했습니다.",
+    "pr-p2": "노래방은 메뉴를 먼저 고르는 매장이 아닙니다. 먼저 방을 열고, 이용 시간을 설정하고, 이용 중 음료 주문을 추가하고, 시간이 끝나면 이용료와 주문 금액을 함께 결제합니다. 예약, 매출, 직원 스케줄도 같은 근무 흐름 안에서 확인되어야 합니다.",
+    "pr-p3": "문제는 노래방에 필요한 기능이 몇 개 빠진 것이 아니었습니다. 레스토랑처럼 메뉴를 파는 구조로 시간을 파는 매장을 운영하려 했다는 점이었습니다. 그래서 이 프로젝트를 방과 시간을 기준으로 POS의 정보 구조를 다시 세우는 작업으로 정의했습니다.",
+    "ap-p1": "설계 방향은 단순했습니다. 노래방 직원이 실제로 일하는 순서에 맞춰 POS의 정보 구조를 다시 잡는 것입니다. 첫 화면은 매장 지도처럼 읽혀야 하고, 자주 쓰는 행동은 메뉴 안에 숨지 않아야 하며, 시간·주문·예약·결제는 같은 방에 묶여야 했습니다.",
+    "ap-p2": "<strong>방 상태 확인 → 이용 시간 설정 → 주문 추가 → 예약 확인 → 결제 → 매출·스케줄 확인.</strong><br>이 흐름을 제품의 기준으로 잡았습니다. 핵심은 새로운 기능을 많이 넣는 것이 아니라, 직원이 실제 매장에서 하는 일을 POS 화면의 순서로 옮기는 것이었습니다.",
+    "f1-p1": "<strong>시간 선택과 잔여 시간</strong><br>레스토랑 POS에는 없던 시간 관리 흐름을 설계했습니다. 직원이 방을 누르면 이용 시간을 선택하고 바로 세션을 시작할 수 있습니다. 시간이 시작되면 남은 시간이 실시간으로 줄어들어 현재 방 상태를 다시 계산할 필요가 없습니다.",
+    "f1-p2": "화면의 기준을 메뉴가 아니라 방으로 바꿨습니다. 실제 매장 구조에 가깝게 방을 배치해, 어떤 방이 비었고 어떤 방이 사용 중이며 어느 방이 곧 끝나는지 한눈에 판단할 수 있게 했습니다.",
+    "f1-p3": "<strong>연장, 조기 종료, 음료 주문</strong><br>노래방 운영에서는 이용 시간이 자주 바뀝니다. 손님이 시간을 연장하거나 빨리 나가고, 이용 중 음료를 추가하기도 합니다. 이 행동들을 모두 선택된 방의 맥락 안에 두어 직원이 다른 메뉴로 이동하지 않아도 처리할 수 있게 했습니다.",
+    "f1-quote": "“좋은 노래방 POS UX는 직원에게 사용법을 외우게 하는 것이 아니라, 방 상태를 보면 다음 행동이 자연스럽게 보이게 하는 것이었습니다.”",
+    "f1-p4": "음료 주문은 방이 선택된 상태에서 바로 추가되도록 했습니다. 시간 요금과 음료 주문이 같은 방에 묶이고, 결제 시 자동으로 합산됩니다. 직원이 방 이용료와 주문 금액을 따로 계산하거나 기억할 필요를 줄였습니다.",
+    "f2-p1": "<strong>예약 관리</strong><br>예약은 전화로 들어오고 종이나 메신저에 따로 기록되는 경우가 많았습니다. 담당자가 바뀌면 예약 시간이 누락되거나 방 배정이 겹칠 수 있었습니다. 그래서 예약된 방, 시간, 인원을 POS 안에 기록하고 실제 방 운영과 연결했습니다.",
+    "f2-p2": "예약과 현재 이용 현황은 같은 맥락에서 보여야 했습니다. 직원은 지금 비어 있는 방뿐 아니라 곧 예약이 있는 방까지 함께 확인한 뒤 손님을 받을 수 있습니다.",
+    "f2-p3": "<strong>매출과 스케줄 확인</strong><br>매출과 직원 스케줄은 매일 확인하는 정보지만 기존에는 POS 밖에 있었습니다. 직원이 사장에게 묻거나 별도 채널을 열지 않도록, 근무 중 계속 보는 POS 안으로 가져왔습니다.",
+    "f2-p4": "최종적으로 방 배치 기반 메인 화면, 이용 시간 선택, 잔여 시간 카운트다운, 연장·조기 종료, 방과 연결된 음료 주문, 예약 현황, 매출과 스케줄 확인을 하나의 운영 흐름으로 연결했습니다. V-pos 노래방 버전은 메뉴가 아니라 방과 시간을 중심으로 움직이는 POS가 되었습니다.",
+    "lr-p1": "업종을 바꾸는 일은 화면을 갈아 끼우는 일이 아니었습니다. 레스토랑 POS는 메뉴를 판다는 전제 위에 있고, 노래방 POS는 시간을 판다는 전제 위에 있습니다. 전제가 바뀌면 정보 구조도 함께 바뀌어야 합니다.",
+    "lr-p2": "교육 부담을 줄이는 것은 기능을 줄이는 일이 아니었습니다. 자주 쓰는 행동을 첫 화면에 두고, 화면 배치가 순서를 말하게 하면 운영에 필요한 기능은 유지하면서도 신규 직원이 다음 행동을 더 쉽게 선택할 수 있습니다.",
+    "lr-p3": "<strong>다음에 검증할 지표</strong><br>이 프로젝트는 출시까지 디자인을 리드했지만 정량 지표를 측정한 상태로 마무리되지는 않았습니다. 후속 검증에서는 첫 근무 교육 시간, 신규 직원의 첫 결제 완료 시간, 중복 예약·예약 누락 건수, 매출·스케줄 관련 문의 횟수를 배포 전후로 확인하는 것이 좋다고 보았습니다.",
+    "lr-p4": "<strong>업종이 파는 것이 달라지면, 화면이 당연하게 보여줘야 하는 것도 달라집니다.</strong>"
+  }
 };
 let tLang = localStorage.getItem('daye-lang') || 'en';
 function applyNavLang(lang){

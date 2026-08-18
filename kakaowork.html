@@ -7,11 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kakao Work — Daye Go Portfolio</title>
-<meta name="description" content="카카오워크 2.0 근태관리 전면 개편 · 고다예 포트폴리오">
+<title>카카오워크 2.0 근태관리 전면 개편 — Daye Go Portfolio</title>
+<meta name="description" content="복잡한 근무 제도를 근무자가 외우지 않아도 되는 근태 경험 · 고다예 포트폴리오">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kakao Work 2.0 — Attendance Revamp | Daye Go">
-<meta property="og:description" content="Rebuilding attendance management for flexible work. 82.85% CBT satisfaction, +40% dev velocity.">
+<meta property="og:title" content="카카오워크 2.0 근태관리 전면 개편 | Daye Go">
+<meta property="og:description" content="복잡한 근무 제도를 근무자가 외우지 않아도 되는 근태 경험. CBT 만족도 82.85%, 디자인 시스템 통합으로 개발 속도 약 40% 개선.">
 <!-- 배포 시 절대 URL로 교체하세요 (상대 경로는 링크 미리보기가 생성되지 않습니다) -->
 <meta property="og:image" content="./Kakao Work — Daye Go Portfolio_files/Y4AcrP3o9idE443RDX1HQ4Ju8w.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -49,6 +49,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;ali
 .meta-value{font-size:20px;font-weight:600;color:#000}
 .hero-divider{width:100%;height:1px;background:var(--border)}
 .hero-h1{font-size:clamp(38px,4.2vw,68px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:1280px}
+.hero-subtitle{margin-top:-22px;font-size:clamp(19px,1.7vw,28px);font-weight:400;line-height:1.45;letter-spacing:-0.01em;color:rgba(0,0,0,.58);max-width:960px}
 
 /* IMAGE */
 .img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
@@ -167,7 +168,7 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
         </div>
         <div>
           <div class="meta-label">역할</div>
-          <div class="meta-value">리드 프로덕트 디자이너 · 엔드투엔드 UX</div>
+          <div class="meta-value">리드 프로덕트 디자이너 · End-to-End UX</div>
         </div>
         <div>
           <div class="meta-label">기간</div>
@@ -175,10 +176,11 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
         </div>
         <div>
           <div class="meta-label">성과</div>
-          <div class="meta-value">CBT 만족도 82.85% · 개발 속도 +40%</div>
+          <div class="meta-value">CBT 만족도 82.85% · 불만 15.13% · 개발 속도 약 40% 개선</div>
         </div>
       </div>
       <h1 class="hero-h1">카카오워크 2.0 근태관리 전면 개편</h1>
+      <p class="hero-subtitle">복잡한 근무 제도를 근무자가 외우지 않아도 되는 근태 경험</p>
       <div class="hero-divider"></div>
     </div>
   </div>
@@ -195,12 +197,12 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 1. The Problem -->
       <div class="txt">
-        <h2 class="section-main">한눈에 보기</h2>
-        <p id="overview-p1">카카오워크는 카카오톡의 익숙함을 바탕으로 만든 협업 플랫폼입니다. 하지만 1.0에서는 타사 워크 플랫폼과 다른 점이 잘 보이지 않았고, 제품마다 경험이 달라 카카오워크만의 가치도 선명하게 드러나지 않았습니다. 회사는 MAU 5만 규모의 1.0을 근태관리·설문·할일관리 등 워크 엔진 전반을 고도화한 2.0으로 바꾸기로 했고, 저는 그중 사용 빈도와 VOC가 가장 높았던 근태관리를 맡았습니다.</p>
-        <p id="overview-p2">기존 근태관리는 고정근무제를 기준으로 만든 초기 MVP였습니다. 출시 초기에는 기본 운영 도구로 충분했지만, 조직의 근무 방식이 바뀌면서 구조적인 한계가 보이기 시작했습니다.</p>
-        <p id="overview-p3">유연근무제, 자율 선택 근무제, 원격근무, 해외 리모트 근무, 시간선택제, 하이브리드 워크 2.0처럼 근무 형태는 다양해졌습니다. 하지만 제품은 여전히 정해진 시간과 장소에서 일하는 상황을 기준으로 동작했습니다. 시스템이 흡수하지 못한 복잡함은 구성원과 관리자가 직접 처리해야 했습니다.</p>
-        <p id="overview-p4">구성원은 비슷한 근무 정보를 매일 다시 입력했고, 근무 현황과 남은 휴가를 확인하려면 여러 정보를 직접 해석해야 했습니다. 관리자는 새 근무 제도와 예외를 시스템 밖에서 수기로 처리했습니다.</p>
-        <p id="overview-p5">그래서 저는 이 프로젝트를 단순한 입력 UI 개선이 아니라, <strong>복잡한 근무 제도를 시스템이 먼저 이해하고 처리하는 경험</strong>으로 정의했습니다.<br><br>리드 디자이너로서 사용자를 조사하고, 문제를 정의하고, 정보 구조와 인터랙션을 다시 설계했습니다. 와이어프레임과 하이파이 목업을 만들고 PM·개발·QA와 함께 실제 운영에 맞게 제품을 다듬었습니다.</p>
+        <h2 class="section-main">OVERVIEW</h2>
+        <p id="overview-p1">카카오워크 2.0의 근태관리 서비스를 전면 개편한 프로젝트입니다. 기존 1.0 근태관리는 고정근무제를 기준으로 빠르게 출시된 MVP였지만, 유연근무제·자율 선택 근무제·원격근무·해외 리모트 근무·하이브리드 워크처럼 근무 방식이 다양해지면서 근무자와 관리자 모두에게 복잡함이 전가되고 있었습니다.</p>
+        <p id="overview-p2">이 프로젝트의 목표는 근태 입력 화면을 조금 더 쉽게 만드는 것이 아니었습니다. 달라진 근무 제도와 예외 규칙을 시스템이 먼저 이해하고, 근무자는 자신의 상태와 다음 행동만 빠르게 확인할 수 있는 근태 경험을 만드는 것이었습니다.</p>
+        <p id="overview-p3">카카오워크는 카카오톡의 익숙함을 바탕으로 만든 협업 플랫폼입니다. 1.0 단계에서는 메신저 중심의 기본 업무 기능을 빠르게 제공했지만, 근태관리·설문·할일관리처럼 워크 엔진이 확장될수록 제품마다 경험이 달라지고 카카오워크만의 일관된 가치가 흐려지는 문제가 있었습니다.</p>
+        <p id="overview-p4">그중 근태관리는 사용 빈도와 VOC가 가장 높은 영역이었습니다. 기존 근태관리 MVP는 정해진 시간과 장소에서 일하는 고정근무제를 기준으로 설계되어 있었습니다. 그러나 실제 조직의 근무 방식은 이미 바뀌고 있었습니다. 코어타임 없이 자율적으로 근무하거나, 장소를 선택하거나, 원격근무와 하이브리드 워크를 병행하는 회사가 늘었습니다.</p>
+        <p id="overview-p5">제품이 이 복잡함을 흡수하지 못하자, 근무자는 매일 비슷한 근무 정보를 다시 입력해야 했고 관리자는 새 근무 제도와 예외를 시스템 밖에서 수기로 처리해야 했습니다.<br><br><strong>문제는 근태를 입력하기 어려운 화면 하나가 아니라, 달라진 근무 제도를 근무자와 관리자가 직접 해석하고 처리해야 하는 구조였습니다.</strong><br><br>그래서 저는 이 프로젝트를 단순한 UI 개선이 아니라, <strong>근무 규칙은 시스템이 처리하고 근무자는 필요한 상태와 다음 행동만 이해하는 경험</strong>으로 재정의했습니다.</p>
       </div>
 
       <!-- GALLERY 2-col -->
@@ -215,10 +217,10 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 2. product-->
       <div class="txt">
-        <h2 class="section-main">문제</h2>
-        <p id="problem-p1"><strong>구성원의 문제</strong><br><br>구성원은 근태관리에서 내 근무 현황을 빠르게 확인하고, 필요할 때 근무를 입력하거나 수정하고 싶어 했습니다. 하지만 기존 제품은 이 흐름을 한 번에 이어주지 못했습니다.<br><br>1. 월 근무 현황, 남은 근무시간, 남은 휴가를 확인하려면 여러 화면을 오가야 했습니다.<br>2. 시간을 드롭다운으로 하나씩 골라야 해서 입력이 오래 걸렸습니다.<br>3. 같은 근무 패턴도 매일 다시 입력해야 했습니다.<br>4. 휴일이나 입력할 수 있는 시간을 미리 알기 어려워 여러 번 다시 시도해야 했습니다.<br><br><strong>관리자의 문제</strong><br><br>관리자는 제도가 바뀌고 예외가 늘어날수록 제품 밖에서 더 많은 일을 처리했습니다.<br><br>1. 새 유연근무 제도를 관리자 화면과 운영 흐름에 바로 담기 어려웠습니다.<br>2. 자동으로 처리해야 할 운영 업무를 수기로 관리했습니다.<br>3. 시스템이 처리하지 못한 예외를 메신저 같은 별도 채널에서 반복해서 해결했습니다.<br><br>정리하면, 화면 몇 개를 고쳐서 풀 문제가 아니었습니다.<br><br><strong>근태관리 시스템이 실제 근무 방식에 맞춰 다시 설계되어야 했습니다.</strong></p>
-        <h2 id="problem-subhead">리서치 &amp; 인사이트</h2>
-        <p id="problem-p2">설계하기 전에 기존 카카오워크 1.0이 어디에서 흐름을 끊는지 확인했습니다. 구성원과 관리자를 대상으로 설문과 심층 인터뷰를 진행해 실제 운영과 제품 경험 사이의 차이를 찾았습니다.<br><br><strong>설문 주요 결과</strong><br><br>개선된 근태관리에 기대한 점:<br><br>- <strong>근태를 더 쉽게 입력하기</strong> 68.7%<br>- <strong>새 근무제도를 자동으로 적용하기</strong> 71.7%<br><br>기존 서비스 이용 경험:<br><br>- 불편을 느꼈다 <strong>69.1%</strong><br>- 주요 불편 요소: <strong>근태 입력이 어려움 &gt; 정보 확인이 어려움 &gt; 휴가 신청이 어려움</strong><br><br><strong>인터뷰 핵심 인사이트</strong><br><br><strong>1) 사용자는 더 많은 입력 단계보다 빠른 확인을 원했습니다</strong><br><br>사용자는 복잡한 제도를 공부하려고 근태관리에 들어오지 않습니다. 알고 싶은 것은 네 가지였습니다.<br><br>- 오늘 내 근무가 어떻게 기록되어 있는지<br>- 이번 달에 얼마나 일했는지<br>- 휴가가 얼마나 남았는지<br>- 지금 더 입력할 것이 있는지<br><br>필요한 것은 <strong>바로 확인하고 빠르게 끝내는 경험</strong>이었습니다.<br><br><strong>2) 관리자의 진짜 문제는 운영이었습니다</strong><br><br>관리자를 힘들게 한 것은 제도의 복잡함 자체가 아니라, 제품이 제도를 처리하지 못해 생기는 반복적인 수기 작업이었습니다. 유연근무 제도와 예외 규칙이 관리자 화면과 운영 흐름에 자연스럽게 이어져야 했습니다.<br><br><strong>결론</strong><br><br>- 사용자는 쉽게 입력하고 빠르게 확인하고 싶어 합니다.<br>- 관리자는 수기 작업을 줄이고 자동으로 운영되는 시스템을 원합니다.<br>- 둘 다에게 필요한 것은 기능 추가보다, <strong>복잡한 제도를 대신 처리해 주는 제품 구조</strong>였습니다.<br><br>좋은 UX는 사용자에게 규칙을 외우게 하지 않습니다. 시스템이 먼저 이해하고 처리합니다.</p>
+        <h2 class="section-main">DIAGNOSIS</h2>
+        <p id="problem-p1"><strong>1. 근태관리 MVP는 바뀐 근무제도를 담지 못하고 있었습니다</strong><br><br>기존 제품은 빠르게 근무를 등록하고 현황을 보는 데 초점을 둔 초기 MVP였습니다. 출시 초기에는 기본 운영 도구로 충분했지만, 유연근무제와 원격근무가 확산되면서 제품 구조가 실제 근무 방식을 따라가지 못했습니다.<br><br>시간선택제, 투명한 근무제, 자율 선택 근무제, 해외 리모트 근무, 하이브리드 워크 2.0처럼 제도는 늘어났지만 화면은 여전히 정해진 시간과 장소에서 일하는 상황을 기준으로 움직이고 있었습니다.<br><br><strong>2. 근무자는 근무현황 확인과 근무입력 사이에서의 다른 UX 경험을 겪고 있었습니다</strong><br><br>근무자는 근태관리에서 복잡한 제도를 배우고 싶어 하지 않았습니다. 업무 전에 정보 입력 및 정보 습득을 간편하게 하고 싶어 하는 경향이 강했습니다.<br><br>- 오늘 내 근무가 어떻게 기록되어 있는지<br>- 이번 달에 얼마나 일했는지<br>- 남은 휴가가 얼마나 있는지<br>- 지금 더 입력해야 할 것이 있는지<br><br>하지만 기존 제품은 근무현황을 확인하는 경험과 근무시간을 입력하는 경험이 서로 다르게 느껴졌습니다. 현황 화면에서는 월 근무시간과 남은 휴가를 직접 해석해야 했고, 입력 화면에서는 시간을 드롭다운으로 하나씩 골라야 했습니다. 입력 가능한 날짜와 시간이 미리 안내되지 않아 여러 번 다시 시도해야 하는 일도 생겼습니다.<br><br><strong>3. 관리자는 근무제도와 예외를 시스템 밖에서 처리하고 있었습니다</strong><br><br>관리자의 문제는 화면 사용성보다 운영에 가까웠습니다. 새로운 근무제도를 반영하거나 연차·대체휴무·보상휴가처럼 다양한 경우의 수를 관리하려면 시스템 밖에서 확인하고 수기로 처리해야 했습니다.<br><br>자동화되지 않은 요소가 많을수록 HR 운영자는 같은 일을 반복했고, 근무자에게 안내해야 할 내용도 늘어났습니다. 관리자는 제도를 설정하고, 근무자는 그 제도를 이해하고, 제품은 두 흐름을 자연스럽게 이어줘야 했습니다.<br><br><strong>4. 카카오워크 제품군은 서로 다른 디자인 언어를 사용하고 있었습니다</strong><br><br>근태관리만의 문제도 있었지만, 더 큰 문제는 카카오워크의 여러 워크 제품군이 서로 다른 디자인 언어를 사용하고 있다는 점이었습니다. 근무자는 제품을 오갈 때마다 다른 규칙을 다시 학습해야 했고, 개발 조직도 버티컬마다 따로 시스템을 유지해야 했습니다.<br><br>결론은 분명했습니다. 근태관리는 화면 몇 개를 고쳐서 해결할 수 있는 문제가 아니라, <strong>근무제도·입력·운영·상태 공유가 하나의 시스템으로 연결되어야 하는 문제</strong>였습니다.</p>
+        <h2 id="problem-subhead">RESEARCH</h2>
+        <p id="problem-p2">카카오워크 2.0 근태관리 설계를 위해 기존 1.0 근무자와 관리자를 대상으로 설문과 심층 인터뷰를 진행했습니다. 목표는 근무자가 어디에서 막히는지, 관리자가 어떤 운영 부담을 제품 밖에서 처리하고 있는지 확인하는 것이었습니다.<br><br><strong>설문에서 확인한 기대와 불편</strong><br><br>- <strong>더 쉬운 근태관리 등록</strong> 68.7%<br>- <strong>새로운 근무제도 자동화 적용</strong> 71.7%<br>- 기존 근태관리 사용 경험에서 <strong>불편을 느꼈다</strong> 69.1%<br><br>주요 불편 요소는 근태 등록이 어려움, 정보 파악이 힘듦, 휴가 등록이 어려움 순으로 나타났습니다.<br><br><strong>근무자는 규칙 학습보다 빠른 확인을 원했습니다.</strong><br><br>근무자는 근태관리 안에서 복잡한 근무 제도를 공부하려고 하지 않습니다. 오늘 내 상태와 이번 달 누적 근무, 남은 휴가, 지금 필요한 액션을 빠르게 알고 싶어 했습니다.<br><br><strong>관리자는 복잡한 제도보다 반복 운영이 더 힘들었습니다.</strong><br><br>관리자는 제도 자체가 복잡한 것보다, 제품이 제도를 자동으로 처리하지 못해 생기는 반복 수기 작업을 더 큰 문제로 느꼈습니다. 새 근무 제도가 어디에 반영되고, 어떤 예외가 자동 처리되며, 근무자 화면에는 어떻게 보이는지가 중요했습니다.<br><br><strong>근무자와 관리자에게 필요한 것은 기능 추가가 아니라 구조 변화였습니다.</strong><br><br>근무자에게는 쉬운 입력과 빠른 확인이 필요했고, 관리자에게는 수기 작업 없이 운영되는 시스템이 필요했습니다. 좋은 근태 UX는 근무자에게 규칙을 외우게 하지 않습니다. 시스템이 먼저 이해하고 처리해야 합니다.</p>
       </div>
 
       <!-- WIDE IMAGE -->
@@ -229,11 +231,11 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 3. Design Process -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="dir-tag">설계 방향</div>
-          <div class="lbl-title" id="dir-title">학습 없이 바로 쓰는 근태 경험</div>
+          <div class="lbl-tag" id="dir-tag">APPROACH</div>
+          <div class="lbl-title" id="dir-title">규칙은 시스템이 처리하고, 근무자는 필요한 행동만 확인합니다</div>
         </div>
         <div class="lbl-content">
-          <p id="dir-p">리서치 인사이트를 바탕으로 세 가지 설계 방향을 정했습니다.<br><br><strong>1) 달라진 근무제도를 담는 구조</strong><br><br>고정근무제 중심 구조를 다양한 근무 제도를 수용하는 구조로 다시 설계합니다.<br><br><strong>2) 빠르게 끝나는 입력 경험</strong><br><br>제도를 몰라도 보자마자 쓸 수 있는 입력 흐름을 만듭니다.<br><br><strong>3) 제품 안에서 이어지는 운영</strong><br><br>시스템 밖에서 처리하던 반복 작업과 예외 대응을 제품 안으로 가져옵니다.<br><br>이번 개편의 목표는 <strong>달라진 근무 제도가 구성원과 관리자 모두에게 자연스럽게 작동하는 경험</strong>을 만드는 것이었습니다.<br><br><strong>Design Principles</strong><br><br><strong>원칙 1. 중요한 정보부터 보여줍니다</strong><br><br>기존 첫 화면은 정보와 기능이 흩어져 있어 어디서 무엇을 해야 할지 판단하기 어려웠습니다. 사용자가 자주 확인하는 정보는 명확했습니다. 내 근무 현황, 남은 휴가, 오늘 필요한 액션입니다. 홈 화면은 기능을 나열하는 대신 이 세 가지가 가장 먼저 보이도록 정보 구조를 다시 정리했습니다.<br><br><strong>원칙 2. 입력은 설명 없이 끝납니다</strong><br><br>기존에는 드롭다운으로 시간을 일일이 맞춰야 했고, 허용 범위를 벗어나면 뒤늦게 에러가 났습니다. 근태 입력은 보자마자 할 수 있어야 합니다. 그래서 시간 입력을 타임라인 위에서 드래그와 클릭으로 조작하는 방식으로 바꾸고, 입력할 수 있는 날짜와 시간을 먼저 보여줬습니다.<br><br><strong>원칙 3. 반복은 시스템이 맡습니다</strong><br><br>구성원 대부분은 일정한 패턴으로 일합니다. 그런데 기존 시스템은 같은 패턴을 매일 새로 입력하게 했습니다. 자주 쓰는 근무 패턴을 템플릿으로 저장하면 기본값이 자동으로 적용되도록 설계해, 사용자는 <strong>예외가 있는 날만 수정</strong>하면 되도록 했습니다.</p>
+          <p id="dir-p">리서치 결과를 바탕으로 세 가지 설계 방향을 정했습니다.<br><br><strong>1. 달라진 근무제도를 담는 구조</strong><br><br>고정근무제 중심 구조가 실제 근무 방식을 따라가지 못하고 있었습니다. 그래서 유연근무·원격근무·시간선택제·하이브리드 워크를 수용하는 정보 구조로 다시 설계했습니다.<br><br><strong>2. 빠르게 끝나는 입력 경험</strong><br><br>드롭다운과 반복 입력 때문에 근태 등록이 오래 걸렸습니다. 그래서 타임라인 조작, 기본값 적용, 입력 가능 상태 선노출을 기준으로 입력 흐름을 다시 만들었습니다.<br><br><strong>3. 제품 안에서 이어지는 운영</strong><br><br>관리자가 예외와 연차를 수기로 처리하고 있었습니다. 그래서 정책 설정, 자동 부여·소멸, 근무자 화면 즉시 반영이 하나의 흐름으로 이어지도록 설계했습니다.<br><br>이번 개편의 핵심은 “근태를 더 많이 입력하게 하는 것”이 아니었습니다. 근무자가 신경 써야 하는 계산, 반복, 판단을 제품이 대신 처리하게 만드는 것이었습니다.<br><br><strong>Design Principles</strong><br><br><strong>1. 중요한 정보부터 보여줍니다</strong><br><br>기존 첫 화면은 정보와 기능이 흩어져 있어 근무자가 어디에서 무엇을 해야 하는지 판단하기 어려웠습니다. 근무자가 자주 확인하는 정보는 명확했습니다. 내 근무 현황, 남은 휴가, 오늘 필요한 액션입니다. 그래서 홈 화면은 기능을 나열하는 대신 이 세 가지가 가장 먼저 보이도록 정보 구조를 다시 정리했습니다.<br><br><strong>2. 입력은 설명 없이 끝나야 합니다</strong><br><br>기존에는 시간을 드롭다운으로 하나씩 맞춰야 했고, 허용 범위를 벗어나면 입력이 끝난 뒤에야 에러가 나타났습니다. 근태 입력은 근무자가 제도를 해석하지 않아도 보자마자 할 수 있어야 했습니다. 그래서 근무 시간을 24시간 타임라인 위에서 드래그와 클릭으로 조정하게 만들고, 입력할 수 없는 날짜와 시간은 먼저 보여주도록 했습니다.<br><br><strong>3. 반복은 시스템이 맡습니다</strong><br><br>근무자 대부분은 일정한 패턴으로 일합니다. 하지만 기존 시스템은 같은 패턴을 매일 새로 입력하게 했습니다. 자주 쓰는 근무 패턴을 템플릿으로 저장하면 기본값이 자동으로 적용되도록 설계했습니다. 근무자는 매일 다시 입력하는 대신, 예외가 있는 날만 수정하면 됩니다.</p>
         </div>
       </div>
 
@@ -256,39 +258,39 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 5. Impact -->
       <div class="txt">
-        <h2 class="section-main">결과</h2>
-        <p id="impact-p1"><strong>무엇을 만들었나</strong><br><br>상태 중심 홈 화면, 타임라인 근무 입력, 근무 템플릿, 팀 현황, 프로필 상태 자동 연동까지 구성원과 관리자 화면 전반을 개편했습니다. 기존 시스템이 사용자에게 넘기던 유연근무 제도의 복잡함을 제품이 흡수하도록 만들었습니다.</p>
-        <p id="impact-p2"><strong>측정한 임팩트</strong><br><br>개편 후 카카오워크 내부 설문 시스템으로 CBT를 진행했고 <strong>만족도 82.85%</strong>를 확인했습니다. 참여자들은 어려웠던 UI가 이해하기 쉬워져 도움 없이 근태를 관리할 수 있게 됐다고 평가했습니다. 업무 동선을 다시 짜 반복 업무의 클릭 수를 3–5회 줄였고, 디자인 시스템 2.0으로 디자인 부채를 줄여 제품 개발 속도를 약 40% 높였습니다.</p>
-        <p id="impact-p3"><strong>어떻게 검증했나</strong><br><br>격주 사용성 테스트로 사용자 피드백을 제품 의사결정에 담았습니다. HR 관리자와 구성원을 대상으로 필드 리서치를 진행해 제도 운영의 페인 포인트를 찾고, 이를 디자인 방향과 로드맵에 연결했습니다. CBT에서 받은 불만 피드백 15.13%는 대부분 ‘기존 UI에 익숙해 새 화면을 배우는 시간이 든다’는 내용이었고, 이를 2차 개선 백로그로 정리해 다음 업데이트를 계획했습니다.</p>
-        <p id="impact-p4"><strong>무엇을 배웠나</strong><br><br>가장 큰 개선은 일을 없애는 데서 나왔습니다. 시스템이 해석·반복·판단을 대신하면 구성원과 관리자 모두 시간을 돌려받습니다. 근태 정책의 복잡함은 화면 몇 개보다 시스템 차원에서 풀어야 하는 문제였고, 그 관점이 제품을 단순하게 만들었습니다.</p>
-        <p id="impact-p5"></p>
-        <p id="impact-p6"></p>
-        <p id="impact-p7"></p>
+        <h2 class="section-main">VALIDATION / OUTCOME</h2>
+        <p id="impact-p1"><strong>VALIDATION</strong><br><br>개편 후 카카오워크 내부 설문 시스템으로 CBT를 진행했습니다. 목표는 새로운 근태관리 구조가 실제 근무자와 관리자에게 이해 가능한지, 도움 없이 근태를 관리할 수 있는지 확인하는 것이었습니다.</p>
+        <p id="impact-p2"><strong>CBT 결과</strong><br><br>- <strong>만족도 82.85%</strong><br>- 매우 만족 43%<br>- 만족 39.83%<br>- 조금 불만 8.95%<br>- 불만 6.18%<br>- 불만 피드백 합계 15.13%<br><br>근무자와 관리자는 기존의 어려웠던 UI가 이해하기 쉬운 UI로 바뀌어, 도움 없이 근태관리를 할 수 있게 됐다고 평가했습니다.</p>
+        <p id="impact-p3"><strong>OUTCOME</strong><br><br>근무자와 관리자 화면 전반을 함께 개편했습니다. 상태 중심 홈 화면, 타임라인 근무 입력, 근무 템플릿, 팀 현황, 프로필 상태 자동 연동, 연차 자동 부여·소멸, 관리자 설정 화면, 디자인 시스템 2.0까지 연결했습니다.<br><br>프로젝트 기간 동안 전달한 산출물은 근태관리 2.0 문제 정의, 리서치 인사이트, 근무자용 근태 홈, 관리자용 정책 설정, 프로필 상태 자동 연동 플로우, CBT 결과 분석, 디자인 시스템 2.0 원칙과 공통 컴포넌트였습니다.</p>
+        <p id="impact-p4"><strong>상태 확인 → 쉬운 조정 → 반복 자동화 → 운영 연결</strong><br><br>근무자는 자신의 근무 상태와 남은 휴가를 빠르게 확인하고, 근무시간은 타임라인 위에서 조정하며, 반복되는 근무 패턴은 템플릿으로 자동 적용됩니다. 관리자는 복잡한 연차와 근무 정책을 한 번 설정하고, 시스템은 그 규칙을 근무자 화면과 운영 흐름에 이어줍니다.</p>
+        <p id="impact-p5"><strong>LEARNING 01</strong><br><br>B2B SaaS의 UX는 화면보다 운영 구조를 정리하는 일에 가까웠습니다. 근태관리의 복잡함은 UI 요소가 많아서 생긴 문제가 아니라, 실제 회사 제도와 예외가 제품 안에서 처리되지 못해 생긴 문제였습니다. 그래서 화면을 단순하게 만드는 것보다 먼저, 어떤 규칙을 시스템이 맡고 어떤 판단만 사용자에게 남길지 정하는 것이 중요했습니다.</p>
+        <p id="impact-p6"><strong>LEARNING 02</strong><br><br>가장 큰 개선은 기능을 더하는 것이 아니라 일을 없애는 데서 나왔습니다. 반복 입력, 수기 확인, 상태 공유, 연차 계산처럼 근무자와 관리자가 매번 처리하던 일을 시스템의 기본 동작으로 흡수했을 때 경험이 단순해졌습니다. 좋은 자동화는 사람을 대체하는 것이 아니라, 근무자와 관리자가 신경 쓰지 않아도 되는 일을 줄여줍니다.</p>
+        <p id="impact-p7"><strong>LEARNING 03</strong><br><br>디자인 시스템은 제품 확장을 위한 운영 장치입니다. 카카오워크처럼 여러 워크 엔진이 함께 커지는 서비스에서는 각 기능이 따로 잘 만들어지는 것만으로는 부족합니다. 같은 컴포넌트, 같은 언어, 같은 상호작용 규칙으로 연결되어야 근무자는 하나의 제품으로 인식하고, 팀은 더 빠르게 만들 수 있습니다.</p>
       </div>
 
       <!-- 4. What We Built -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="design-tag">주요 설계</div>
-          <div class="lbl-title" id="design-title"></div>
+          <div class="lbl-tag" id="design-tag">DESIGN DECISIONS</div>
+          <div class="lbl-title" id="design-title">상태 확인 → 쉬운 조정 → 반복 자동화 → 운영 연결</div>
         </div>
         <div class="lbl-content">
-          <h2 id="design-h2">1. 근무 상태를 계산 없이 확인합니다</h2>
-          <p id="design-p1">근태관리 홈의 목표는 사용자가 <strong>지금 내 상태를 바로 이해하게 하는 것</strong>입니다. 기존 화면에서는 사용자가 근무한 시간과 앞으로 근무해야 하는 시간을 직접 계산해야 했습니다. 개편한 메인 화면에는 월 근무 현황과 남은 휴가를 함께 배치했습니다. 사용자는 소정 근무 시간, 총 근무 시간, 실 근무 시간, 유급 휴가를 한눈에 확인할 수 있습니다. 연차·가족돌봄·건강검진·난임휴가처럼 헷갈리기 쉬운 휴가별 잔여 시간도 쉬운 문구로 풀어 숫자를 해석하는 부담을 줄였습니다.</p>
-          <h2 id="design-h2-2">2. 근무 입력은 ‘설정’보다 ‘조정’에 가깝습니다</h2>
-          <p id="design-p2">실제 사용자의 하루는 대부분 기본 근무 패턴에서 조금씩만 달라집니다. 그래서 근무 입력을 매번 처음부터 설정하게 하지 않고, <strong>기본값을 필요할 때만 고치는 방식</strong>으로 바꿨습니다. 24시간 타임라인 위에서 근무 블록을 드래그하거나 클릭하면 기본 근무, 재택, 추가 근무를 바로 수정할 수 있습니다. 텍스트 입력 중심의 설정을 시각적인 조정으로 바꾸자, 하루 근무 구성을 훨씬 쉽게 확인하고 고칠 수 있었습니다.</p>
-          <h2 id="design-h2-3">3. 실수한 뒤가 아니라, 실수하기 전에 알려줍니다</h2>
-          <p id="design-p3">회사마다 제도와 규칙이 달라 사용자가 모든 조건을 기억하기는 어렵습니다. 그래서 휴일이나 제한 시간이 있는 날짜에는 선택할 수 있는 액션을 먼저 보여줍니다. 입력이 끝난 뒤 에러를 띄우기보다, <strong>사용자가 가능한 선택지를 먼저 보게 하는 구조</strong>입니다. 규칙을 외우고 판단하는 일은 시스템이 대신합니다.</p>
-          <h2 id="design-h2-4">4. 반복 입력은 템플릿이 대신합니다</h2>
-          <p id="design-p4">매일 같은 근무 시간을 입력하는 일은 리서치에서 가장 자주 나온 불편이었습니다. 팀과 근무 방식에 맞는 템플릿을 저장해 두면 매일 기본 근무값이 자동으로 적용됩니다. 출근 시간이 달라지거나 재택으로 바뀌는 날에는 해당 부분만 수정하면 됩니다. <strong>반복되던 행동을 제품의 기본 동작으로 흡수해</strong>, 사용자가 신경 쓸 일을 줄였습니다.</p>
-          <h2 id="design-h2-5">5. 팀 근무 현황에서 협업 가능 여부를 바로 확인합니다</h2>
-          <p id="design-p5">유연근무 환경에서 협업은 동료의 상태를 아는 데서 시작합니다. 팀 근무 현황 화면은 구성원별 근무 시간을 타임라인으로 보여주고, 현재 상태를 출근·재택·휴가·근무 대기로 구분합니다. 화면의 기준은 <strong>‘지금 이 사람과 협업할 수 있는가’</strong>를 바로 확인할 수 있는가였습니다. 상세한 운영 정보보다 상태 확인에 집중해, 하이브리드 환경에서 팀의 시간을 공유하는 협업 도구로 만들었습니다.</p>
-          <h2 id="design-h2-6">6. 근태 입력과 상태 공유를 한 번에 끝냅니다</h2>
-          <p id="design-p6">기존에는 근태를 입력한 뒤 카카오워크 프로필 상태도 따로 바꿔야 했습니다. 같은 정보를 두 번 입력하지 않도록, 근태관리에 입력한 근무 정보가 프로필 상태에 자동으로 이어지게 설계했습니다. 따로 체크인하지 않아도 근무 중·휴가·자리비움 상태가 팀에 공유됩니다. 자동 연동이 불안하게 느껴지지 않도록 언제 어떤 정보가 공유되는지 명확히 안내했습니다. 이 지점에서 UX 라이팅은 <strong>자동화에 대한 불안을 줄이는 신뢰 장치</strong>가 됐습니다.</p>
-          <h2 id="design-h2-7">7. 연차는 시스템이 자동으로 관리합니다</h2>
-          <p id="design-p7">관리자에게 가장 큰 부담은 연차였습니다. 입사일 기준인지 회계일 기준인지, 해마다 쌓이는 가산 연차와 소멸 규칙까지 근로기준법에 맞춰 따져야 했고, 시스템이 처리하지 못한 부분은 수기로 관리했습니다. 그래서 연차 발생 기준과 자동 소멸 규칙을 한 번만 설정하면 이후 부여·소멸·잔여 현황을 시스템이 자동으로 계산하도록 설계했습니다. 어려운 노무 정보는 설정에 필요한 항목만 남기고, 통일된 컴포넌트와 쉬운 캡션으로 읽기 쉽게 만들었습니다. 관리자가 설정한 제도는 구성원 화면에 바로 보여줘, 구성원도 우리 회사 제도를 쉽게 이해하고 쓸 수 있습니다.</p>
-          <h2 id="design-h2-8">8. 디자인 시스템 2.0으로 제품 경험을 하나로 맞췄습니다</h2>
-          <p id="design-p8">개편을 진행하며 더 큰 문제도 보였습니다. 버티컬마다 디자인 시스템이 달라 카카오워크가 하나의 제품처럼 느껴지지 않았습니다. 그래서 세 가지 원칙으로 디자인 시스템 2.0을 함께 구축했습니다. <strong>Familiarity</strong> — 새 디자인 언어를 도입하기보다 기존 제품에서 쓰던 패턴을 찾아 컴포넌트로 정의했습니다. <strong>Consistency</strong> — 모든 제품군이 같은 디자인 언어를 쓰게 해, 제품을 오갈 때 이질감이 줄었습니다. <strong>Efficiency</strong> — 버티컬마다 따로 쓰던 시스템을 통일해 개발 리소스가 흩어지는 문제를 줄였습니다. 이 시스템이 개발 속도를 약 40% 높인 기반입니다.</p>
+          <h2 id="design-h2">01. 근무 상태를 계산 없이 확인하게 했습니다</h2>
+          <p id="design-p1">근태관리 홈의 목표는 근무자가 지금 내 상태를 바로 이해하게 하는 것입니다. 기존 화면에서는 근무자가 근무한 시간과 앞으로 근무해야 하는 시간을 직접 계산해야 했습니다.<br><br>개편한 메인 화면에는 월 근무 현황과 남은 휴가를 함께 배치했습니다. 소정 근무 시간, 총 근무 시간, 실 근무 시간, 유급 휴가를 한눈에 볼 수 있게 하고, “136시간 남았어요”처럼 해석이 필요한 숫자를 쉬운 문장으로 바꿨습니다.<br><br>연차·가족돌봄·건강검진·난임휴가처럼 헷갈리기 쉬운 휴가별 잔여 시간도 쉬운 문구로 풀어 숫자를 해석하는 부담을 줄였습니다.</p>
+          <h2 id="design-h2-2">02. 근무 입력을 설정이 아니라 조정에 가깝게 만들었습니다</h2>
+          <p id="design-p2">실제 사용자의 하루는 대부분 기본 근무 패턴에서 조금씩만 달라집니다. 그래서 근무 입력을 매번 처음부터 설정하게 하지 않고, 기본값을 필요할 때만 고치는 방식으로 바꿨습니다.<br><br>24시간 타임라인 위에서 근무 블록을 드래그하거나 클릭하면 기본 근무, 재택, 추가 근무를 바로 수정할 수 있습니다. 텍스트 입력 중심의 설정을 시각적인 조정으로 바꾸자, 하루 근무 구성을 훨씬 쉽게 확인하고 고칠 수 있었습니다.</p>
+          <h2 id="design-h2-3">03. 실수한 뒤가 아니라, 실수하기 전에 알려줬습니다</h2>
+          <p id="design-p3">회사마다 제도와 규칙이 다르기 때문에 근무자가 모든 조건을 기억하기는 어렵습니다. 그래서 휴일이나 제한 시간이 있는 날짜에는 선택할 수 있는 액션을 먼저 보여줬습니다.<br><br>입력이 끝난 뒤 에러를 띄우기보다, 근무자가 가능한 선택지를 먼저 보게 하는 구조입니다. 규칙을 외우고 판단하는 일은 시스템이 대신합니다.</p>
+          <h2 id="design-h2-4">04. 반복 입력은 템플릿이 대신하게 했습니다</h2>
+          <p id="design-p4">매일 같은 근무 시간을 입력하는 일은 리서치에서 가장 자주 나온 불편이었습니다. 팀과 근무 방식에 맞는 템플릿을 저장해 두면 매일 기본 근무값이 자동으로 적용됩니다.<br><br>출근 시간이 달라지거나 재택으로 바뀌는 날에는 해당 부분만 수정하면 됩니다. 반복되던 행동을 제품의 기본 동작으로 흡수해, 근무자가 신경 쓸 일을 줄였습니다.</p>
+          <h2 id="design-h2-5">05. 팀 근무 현황에서 협업 가능 여부를 바로 확인하게 했습니다</h2>
+          <p id="design-p5">유연근무 환경에서 협업은 동료의 상태를 아는 데서 시작합니다. 기존 화면은 정보가 많고 복잡해 팀원의 출근시간을 한눈에 파악하기 어려웠습니다.<br><br>팀 근무 현황 화면은 근무자별 근무 시간을 타임라인으로 보여주고, 현재 상태를 출근·재택·휴가·근무 대기로 구분했습니다. 화면의 기준은 “지금 이 사람과 협업할 수 있는가”를 바로 확인할 수 있는가였습니다.</p>
+          <h2 id="design-h2-6">06. 근태 입력과 프로필 상태 공유를 한 번에 끝냈습니다</h2>
+          <p id="design-p6">기존에는 근태를 입력한 뒤 카카오워크 프로필 상태도 따로 바꿔야 했습니다. 같은 정보를 두 번 입력하지 않도록, 근태관리에 입력한 근무 정보가 프로필 상태에 자동으로 이어지게 설계했습니다.<br><br>따로 체크인하지 않아도 근무 중·휴가·자리비움 상태가 팀에 공유됩니다. 자동 연동이 불안하게 느껴지지 않도록 언제 어떤 정보가 공유되는지 명확히 안내했습니다. 이 지점에서 UX 라이팅은 자동화에 대한 불안을 줄이는 신뢰 장치가 됐습니다.</p>
+          <h2 id="design-h2-7">07. 연차 관리는 관리자가 한 번 설정하면 시스템이 자동으로 처리하게 했습니다</h2>
+          <p id="design-p7">관리자에게 가장 큰 부담은 연차였습니다. 입사일 기준인지 회계일 기준인지, 매년 발생하는 가산 연차와 소멸 규칙까지 근로기준법에 맞춰 따져야 했고, 시스템이 처리하지 못한 부분은 수기로 관리했습니다.<br><br>그래서 연차 발생 기준과 자동 소멸 규칙을 한 번만 설정하면 이후 부여·소멸·잔여 현황을 시스템이 자동으로 계산하도록 설계했습니다. 어려운 노무 정보는 설정에 필요한 항목만 남기고, 통일된 컴포넌트와 쉬운 캡션으로 읽기 쉽게 만들었습니다.<br><br>관리자가 설정한 제도는 근무자 화면에 바로 반영됩니다. 근무자도 우리 회사 제도를 따로 물어보지 않고 제품 안에서 이해하고 사용할 수 있습니다.</p>
+          <h2 id="design-h2-8">08. 디자인 시스템 2.0으로 제품 경험을 하나로 맞췄습니다</h2>
+          <p id="design-p8">개편을 진행하며 더 큰 문제도 함께 보였습니다. 카카오워크 안의 다양한 기능들이 워크 플랫폼이라는 공통 성격을 갖고 있음에도, 디자인 정렬이 맞지 않아 제품군마다 다른 서비스처럼 보였습니다.<br><br>그래서 디자인 시스템 2.0을 세 가지 원칙으로 정리했습니다.<br><br><strong>Familiarity</strong> — 완전히 새로운 언어를 만들기보다 기존 제품에서 쓰이던 익숙한 패턴을 컴포넌트로 정의합니다.<br><strong>Consistency</strong> — 모든 제품군이 같은 디자인 언어를 사용해 근무자가 제품을 오갈 때 이질감을 느끼지 않게 합니다.<br><strong>Efficiency</strong> — 버티컬마다 따로 쓰던 시스템을 통합해 개발 리소스가 흩어지는 문제를 줄입니다.<br><br>디자인 시스템은 화면을 예쁘게 맞추는 작업이 아니라, 제품이 확장될 때 같은 속도와 품질로 움직이게 하는 기반이었습니다.</p>
         </div>
       </div>
 
@@ -322,116 +324,149 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 <script>
 const TLANG={en:{work:"Work",about:"About",resume:"Resume"},ko:{work:"프로젝트",about:"소개",resume:"이력서"}};
 const PAGE_LANG={
-  en:{
-    metaLabels:["Industry","Client","Role","Duration","Impact"],
-    metaValues:["B2B SaaS","Kakao Enterprise · Design Center","Lead Product Designer, End-to-End UX","AUG 2021 – JAN 2023","82.85% CBT satisfaction · +40% dev velocity"],
-    hero:"Kakao Work 2.0 Attendance Management Revamp",
-    txtH2:["Overview","Problem","Outcome"],
-    problemSubhead:"Research & Insight",
-    overviewPs:[
-      "Kakao Work is a collaboration platform built on the familiarity of KakaoTalk. At the 1.0 stage, however, it lacked a clear edge over competing work platforms, and inconsistency across its products kept its value from showing. The company decided to rebuild the 50K-MAU 1.0 into a more complete 2.0 across the work engine — attendance, surveys, task management — and I took on attendance management, the most frequently used and most complained-about module.",
-      "Kakao Work’s original attendance management tool was an early MVP built around a fixed working-hour model. While it initially functioned as a basic operational tool, its structure became increasingly outdated as the organization’s working model evolved.",
-      "As flexible work schedules, self-selected working hours, remote work, overseas remote work, part-time schedules, and Hybrid Work 2.0 were introduced, the product continued to operate around the assumption that employees worked at fixed times and in fixed locations. As a result, the complexity the system could not absorb was pushed directly onto both employees and administrators.",
-      "Employees had to repeatedly enter similar work schedules every day and found it difficult to understand their work status and remaining leave at a glance. Administrators, meanwhile, had to manually handle new work policies and exceptions because the system could not fully support them.",
-      "I did not approach this project as a simple UI improvement for easier attendance input. I defined the real challenge as transforming attendance management into an experience where complex work policies could be handled naturally, without requiring users to understand the rules themselves.<br><br>As the lead designer, I led the project end-to-end, including user research, problem definition, information architecture redesign, interaction design, wireframing, and high-fidelity mockups. In close collaboration with PMs, engineers, and QA, I focused on rebuilding the product into an operational system that could support evolving work policies in practice.",
-      ""
+  "en": {
+    "metaLabels": [
+      "Industry",
+      "Client",
+      "Role",
+      "Duration",
+      "Impact"
     ],
-    problemPs:[
-      "<strong>Problems employees faced</strong><br><br>Employees came to the attendance tool primarily to quickly check their work status and enter or edit attendance when needed. However, the product failed to support this core flow naturally.<br><br>• It was difficult to view monthly work status, remaining work hours, and remaining leave on a single screen.<br>• The dropdown-based time input created a long and error-prone input flow.<br>• Repetitive work patterns had to be manually entered every day, increasing user fatigue.<br>• Since unavailable dates or restricted input times were not clearly communicated in advance, users frequently encountered unnecessary trial and error.<br><br><strong>Problems administrators faced</strong><br><br>For administrators, the issue was more structural. As policies became more complex and exceptions increased, unresolved operational issues accumulated outside the system.<br><br>• Newly introduced flexible work policies were not fully reflected in the system.<br>• Operational tasks that should have been automated had to be handled manually.<br>• Exceptions that could not be processed within the system had to be managed repeatedly through separate channels.<br><br>In other words, the core issue went beyond usability.<br>The attendance management system itself was no longer aligned with the actual way the organization worked.",
-      "To design the new Attendance Management 2.0, I first examined how Kakao Work 1.0 was creating friction for both employees and administrators. Through surveys and in-depth interviews, I identified the gap between real operational needs and the existing product experience.<br><br><strong>Key Survey Findings</strong><br><br>When asked what they expected from an improved attendance management service, respondents highlighted the following:<br>• Easier attendance registration 68.7%<br>• Automated support for new work policies 71.7%<br><br>In addition, survey responses about the existing experience showed the following:<br>• Found it inconvenient: 69.1%<br>• Main pain points:<br>Difficult attendance input &gt; Difficulty understanding information &gt; Difficult leave registration<br><br><strong>Key Interview Insights</strong><br><br><strong>1) Users wanted quick understanding and easy handling, not more input steps</strong><br><br>Users did not want to spend time understanding complicated work rules inside the product.<br><br>Instead, they wanted quick answers to questions such as:<br>• What is my work status today?<br>• How many hours have I worked this month?<br>• How much leave do I have left?<br>• Do I need to enter anything else right now?<br><br>Their core need was not for more features, but for an experience that was easy to understand and quick to complete.<br><br><strong>2) Administrators saw operational inefficiency as the bigger problem</strong><br><br>For administrators, the issue was not simply policy complexity itself, but the repeated manual work caused by the product’s inability to process policies properly. They needed new flexible work rules and exceptions to be reflected naturally in both the admin interface and the operational flow.<br><br><strong>Key Interpretation</strong><br><br>The conclusion from the research was clear.<br>• Users wanted to input attendance easily and check their status quickly.<br>• Administrators wanted a system that could be operated without manual work.<br>• What both groups needed was not more functionality, but a product structure that could handle complexity naturally.<br><br>Ultimately, the core challenge of the project was this:<br><br><strong>Do not make users memorize rules and make judgments themselves. Let the system calculate and handle them instead.</strong>"
+    "metaValues": [
+      "B2B SaaS",
+      "Kakao Enterprise · Design Center",
+      "Lead Product Designer · End-to-End UX",
+      "Aug 2021 – Jan 2023",
+      "82.85% CBT satisfaction · 15.13% negative feedback · ~40% faster development"
     ],
-    dirTag:"Research",
-    dirTitle:"Zero Learning Curve UX Design",
-    dirP:"Based on the research insights, I defined three key directions for the redesign:<br>1. Build an attendance management system that supports evolving work policies<br>2. Create a simple and efficient attendance input experience<br>3. Enable seamless operations without manual work through system integration<br><br>→ Make attendance management easy and practical for both employees and administrators<br><br><strong>Three Design Principles</strong><br><br><strong>Principle 1 — Prioritize the most important functions</strong><br><br><strong>Problem</strong><br>The information architecture was fragmented, making it difficult for users to understand what functions were available and where to find what they needed. As a result, the experience felt difficult from the very first screen.<br><br><strong>Solution</strong><br>I prioritized the most essential functions and surfaced them on the home screen, so users could immediately identify the actions they needed and complete them without hesitation.<br><br><strong>Principle 2 — Guide core actions through intuitive input</strong><br><br><strong>Problem</strong><br>Too many steps were required within a single flow, creating unnecessary effort for users. In addition, the criteria for valid work-hour input were not clearly communicated, which often resulted in error states.<br><br><strong>Solution</strong><br>I designed a UI flow that could be understood at a glance, reducing unnecessary actions. I also made unavailable times and dates clearly visible in advance, minimizing preventable errors and trial-and-error.<br><br><strong>Principle 3 — Reduce repetitive actions</strong><br><br><strong>Problem</strong><br>Users with consistent or routine work schedules were forced to enter the same attendance patterns repeatedly, which created unnecessary friction.<br><br><strong>Solution</strong><br>I introduced a template feature that allowed users to save and reuse their preferred work patterns, reducing the need to manually enter the same schedule every day.<br><br><strong>AS-IS → TO-BE</strong><br><br>The biggest issue with the existing system was its complex information architecture and dropdown-based input. Although it contained many functions and buttons, the relationships between them were unclear, making the product difficult to use without prior explanation.<br><br><strong>AS-IS</strong><br>• Complex IA and too many buttons made the system difficult to understand<br>• Dropdown-based work-hour input caused errors when users selected values outside the allowed range<br>• Team attendance status was difficult to understand due to information overload<br><br><strong>TO-BE</strong><br>• A clear and intuitive UI with consistent structure and easily discoverable functions<br>• Flexible time-setting interactions that support work policies without core hours<br>• A simplified main screen that presents only the most relevant functions and information",
-    designTag:"Design",
-    designTitle:"One-click templates.<br>Intuitive UX writing.",
-    designH2s:[
-      "1. A home screen that shows work status without mental math",
-      "2. Work input as adjustment, not setup",
-      "3. Guidance before mistakes, not errors after",
-      "4. Templates that absorb repetitive input",
-      "5. Team status built around one question: can we collaborate right now?",
-      "6. Attendance input that doubles as status sharing",
-      "7. An admin that manages annual leave after one setup",
-      "8. Design System 2.0 — one product across verticals"
+    "hero": "Kakao Work 2.0 Attendance Management Revamp",
+    "heroSubtitle": "An attendance experience where employees do not need to memorize complex work policies",
+    "txtH2": [
+      "OVERVIEW",
+      "DIAGNOSIS",
+      "VALIDATION / OUTCOME"
     ],
-    designPs:[
-      "The core goal of the attendance management screen was not to show more information, but to help users immediately understand their current work status. In the previous experience, users had to calculate on their own how many hours they had worked and how many hours they still needed to work. I redesigned the main screen to place monthly work status and remaining leave together, so users could check scheduled work hours, total work hours, actual work hours, and paid leave at a glance. I also replaced difficult-to-interpret leave numbers with clearer, more approachable wording for leave types such as annual leave, family care leave, health checkup leave, and fertility treatment leave. As a result, users no longer had to decode complex attendance data; they could quickly understand and judge their current work status.",
-      "The previous work input flow required users to set their work hours from scratch every time. However, in real life, most workdays are not completely new schedules; they are usually small changes based on a default work pattern. Based on this insight, I redesigned work input as an experience where users adjust an existing default only when needed, rather than creating a new schedule every day. Users can drag or click work blocks on a 24-hour timeline to quickly edit regular work, remote work, or overtime. By replacing complex text-based input with a visual adjustment method, users can understand and modify their daily work schedule much more intuitively.",
-      "Attendance management often involves different company policies and rules, which makes it difficult for users to remember every condition. To reduce this burden, I designed the system to guide users before they make an incorrect action. For example, on holidays or dates where work registration is not allowed, the interface provides a clear message such as, “Work cannot be registered on holidays.” Instead of showing an error after the user makes a mistake, the experience was designed to prevent incorrect actions from happening in the first place. The goal was to let the system understand the context first and naturally guide users toward the available actions, rather than forcing users to memorize and judge the rules themselves.",
-      "Entering the same work hours every day was one of the biggest sources of unnecessary effort. To solve this, I introduced a template feature that allows users to save work patterns based on their team and work style. Once a template is set, the default work schedule is automatically applied each day. When there is an exception, such as a different start time or a switch to remote work, users only need to adjust the necessary parts with a click or drag. The core value of this feature was not simply convenience, but a structural solution that absorbed repeated user actions into the product’s default behavior.",
-      "In a flexible work environment, quickly knowing whether a teammate is working, working remotely, on leave, or waiting to start work is the starting point of collaboration. I redesigned the team work status screen to visualize each member’s work hours in a timeline format and use clear status indicators for working in the office, working remotely, on leave, or waiting to work. Rather than prioritizing detailed administrative information, the screen focused on helping users quickly answer one key question: “Can I collaborate with this person right now?” As a result, this screen became more than a simple status lookup feature; it was redefined as a collaboration tool that makes team availability transparent in a hybrid work environment.",
-      "Previously, even after entering attendance information, users still had to update their Kakao Work profile status separately. This created unnecessary duplicate actions, as users had to reflect the same information again in another place. To reduce this friction, I designed a flow where the work information entered in attendance management is automatically reflected in the Kakao Work profile status. Without any additional check-in, statuses such as working, on leave, or away can be naturally shared with teammates. At the same time, I made sure automation would not create anxiety by clearly explaining when the status would be linked and what information would be shared. In this flow, UX writing was not just a functional explanation; it worked as a trust-building device that reduced users’ anxiety around automation.",
-      "The heaviest burden on admins was annual leave. Accrual can follow hire date or fiscal year, extra days accumulate each year, and expiration rules vary — many legally defined cases to get right, and everything the system couldn't process was handled manually. I designed the policy setup so admins configure accrual criteria and auto-expiration rules once, and granting, expiring, and balance tracking run automatically from then on. Complex labor-law details were trimmed to only the fields admins actually need, with unified components and plain-language captions. Policies set by admins appear on employee screens immediately, so employees can also understand their company's rules and use them correctly.",
-      "The revamp surfaced a bigger problem: each vertical ran on its own design system, so Kakao Work didn't feel like one product. I helped rebuild it as Design System 2.0 around three principles. <strong>Familiarity</strong> — instead of introducing a new design language, we extracted patterns already used in the product and defined them as components. <strong>Consistency</strong> — every product line now speaks the same design language, so switching between them feels seamless. <strong>Efficiency</strong> — unifying the per-vertical systems ended the split in development resources. This system is the foundation behind the ~40% gain in development velocity."
+    "problemSubhead": "RESEARCH",
+    "overviewPs": [
+      "This project was a full revamp of Kakao Work 2.0 attendance management. The 1.0 attendance tool had been launched quickly as an MVP for fixed working hours, but as flexible work, self-selected hours, remote work, overseas remote work, and hybrid work expanded, complexity was being pushed onto both employees and administrators.",
+      "The goal was not simply to make attendance input easier. It was to create an experience where the system understands changing work policies and exceptions first, while employees only need to check their status and next actions quickly.",
+      "Kakao Work is a collaboration platform built on the familiarity of KakaoTalk. As its work engine expanded into attendance, surveys, and task management, inconsistencies across product experiences weakened the sense of one coherent Kakao Work platform.",
+      "Attendance management had especially high usage and VOC. The original MVP assumed fixed times and fixed locations, but actual work had already changed: employees could work without core time, choose locations, work remotely, or combine hybrid schedules.",
+      "Because the product could not absorb that complexity, employees repeatedly entered similar work information every day, while administrators handled new policies and exceptions manually outside the system.<br><br><strong>The issue was not one difficult input screen. It was a structure where employees and administrators had to interpret and process changing work policies themselves.</strong><br><br>I reframed the project as an experience where <strong>the system handles work rules, and employees understand only the status and next action they need.</strong>"
     ],
-    impactPs:[
-      "<strong>What shipped</strong><br><br>A full revamp of the attendance module across employee and admin surfaces: a status-first home screen, timeline-based work input, reusable work templates, a team status view, and automatic profile-status sync — all built to absorb the flexible work policies the previous system pushed onto users.",
-      "<strong>Measured impact</strong><br><br>A closed beta test run through Kakao Work's internal survey system showed <strong>82.85% satisfaction</strong> — users said the once-difficult UI became easy enough to manage attendance without help. Routine tasks were completed with 3–5 fewer clicks after the workflow restructuring, and Design System 2.0 reduced design debt while accelerating development velocity by roughly 40%.",
-      "<strong>How it was validated</strong><br><br>Bi-weekly usability testing embedded user feedback into every product decision, and field research with HR managers and employees surfaced the policy-management pain points that shaped both the design direction and the roadmap. The CBT also returned 15.13% negative feedback — mostly users accustomed to the old UI needing time to relearn — which we turned into a second-phase improvement backlog for the next update.",
-      "<strong>What I learned</strong><br><br>The biggest wins came from removing work, not adding features. When the system absorbs interpretation, repetition, and judgment, both employees and admins get time back. Attendance policy complexity turned out to be a systems problem, not a screens problem — and designing for that distinction is what made the product feel simple.",
-      "",
-      "",
-      ""
+    "problemPs": [
+      "<strong>1. The attendance MVP could not support changed work policies.</strong><br><br>The original product focused on quickly registering work time and checking status. It was enough as a basic operating tool at launch, but as flexible work and remote work spread, its structure no longer matched how people actually worked.<br><br><strong>2. Employees experienced different UX patterns between checking status and entering work time.</strong><br><br>Employees did not want to learn complicated rules before work. They strongly preferred simple information input and quick understanding before starting work.<br><br>- How is my work recorded today?<br>- How many hours have I worked this month?<br>- How much leave do I have left?<br>- Is there anything else I need to enter?<br><br>However, checking work status and entering work time felt like different experiences. Status screens required interpretation, while input screens forced users to select time through dropdowns. Unavailable dates and time ranges were not clear upfront, causing repeated trial and error.<br><br><strong>3. Administrators were handling work policies and exceptions outside the system.</strong><br><br>New work policies, annual leave, substitute holidays, and compensatory leave had to be checked and handled manually. The more unautomated cases accumulated, the more HR operators repeated the same work and explained rules to employees.<br><br><strong>4. Kakao Work product lines were using different design languages.</strong><br><br>Beyond attendance, different work products used different design rules. Employees had to relearn patterns across products, and development teams maintained separate systems by vertical.<br><br>The conclusion was clear. Attendance management was not a problem that could be solved by fixing a few screens. <strong>Work policy, input, operations, and status sharing had to be connected as one system.</strong>",
+      "To design Kakao Work 2.0 attendance, I conducted surveys and in-depth interviews with 1.0 employees and administrators. The goal was to understand where employees were blocked and what operational burden administrators handled outside the product.<br><br><strong>Survey findings</strong><br><br>- <strong>Easier attendance registration</strong> 68.7%<br>- <strong>Automatic support for new work policies</strong> 71.7%<br>- <strong>Found the existing service inconvenient</strong> 69.1%<br><br>The top pain points were difficult attendance input, difficulty understanding information, and difficult leave registration.<br><br><strong>Employees wanted quick understanding, not policy study.</strong><br><br>Employees did not enter attendance management to learn complicated work policies. They wanted to quickly understand today’s status, monthly work accumulation, remaining leave, and required actions.<br><br><strong>Administrators struggled more with repeated operations than with policy complexity itself.</strong><br><br>The key issue was repetitive manual work caused by the product failing to process policies automatically. They needed to know where policies are reflected, which exceptions are automated, and how the results appear on employee screens.<br><br><strong>Both groups needed a structural change, not just more features.</strong><br><br>Employees needed easier input and faster confirmation. Administrators needed operations without manual work. Good attendance UX does not ask employees to memorize rules. The system should understand and process them first."
     ],
-    footerTag:"Contact",
-    footerHeading:"Let's start creating together",
-    footerCta:"Let's talk ↗"
+    "dirTag": "APPROACH",
+    "dirTitle": "Let the system handle rules, and let employees see only the action they need",
+    "dirP": "Based on the research, I defined three design directions.<br><br><strong>1. A structure that supports changed work policies</strong><br><br>The fixed-hours structure no longer matched real work. I redesigned the information architecture to support flexible work, remote work, self-selected hours, and hybrid schedules.<br><br><strong>2. Input that finishes quickly</strong><br><br>Dropdowns and repeated input made attendance registration slow. I redesigned the flow around timeline editing, default values, and upfront visibility of available actions.<br><br><strong>3. Operations connected inside the product</strong><br><br>Administrators were handling exceptions and annual leave manually. I connected policy setup, automatic granting and expiration, and immediate reflection on employee screens.<br><br>The point was not to make employees enter more attendance data. It was to let the product handle calculation, repetition, and judgment.<br><br><strong>Design Principles</strong><br><br><strong>1. Show important information first</strong><br><br>The first screen had to show work status, remaining leave, and today’s needed actions before listing features.<br><br><strong>2. Input should finish without explanation</strong><br><br>Attendance input should be usable at a glance. I replaced dropdown-heavy input with drag and click adjustments on a 24-hour timeline, and exposed unavailable dates and times before errors happened.<br><br><strong>3. Let the system handle repetition</strong><br><br>Most employees work in repeated patterns. Templates let default schedules apply automatically, so employees only edit exception days.",
+    "designTag": "DESIGN DECISIONS",
+    "designTitle": "Check status → Adjust easily → Automate repetition → Connect operations",
+    "designH2s": [
+      "01. Show work status without mental math",
+      "02. Make work input feel like adjustment, not setup",
+      "03. Guide before mistakes, not after",
+      "04. Let templates handle repeated input",
+      "05. Show team availability at a glance",
+      "06. Combine attendance input and profile status sharing",
+      "07. Let admins configure annual leave once and let the system manage it",
+      "08. Align the product experience through Design System 2.0"
+    ],
+    "designPs": [
+      "The attendance home screen needed to help employees understand their status immediately. The previous screen made users calculate worked hours and remaining hours on their own.<br><br>I placed monthly work status and remaining leave together, and changed numbers that required interpretation into plain phrases such as “136 hours left.”",
+      "Most workdays are small variations from a default pattern. Instead of forcing employees to set schedules from scratch, I made the input flow about editing only what changed.<br><br>On a 24-hour timeline, employees can drag or click blocks to edit regular work, remote work, or overtime.",
+      "Company policies vary, so employees cannot remember every rule. I showed available actions before input, especially on holidays or restricted dates.<br><br>Rather than showing errors after the fact, the system guides employees before they make an unavailable choice.",
+      "Entering the same work hours every day was a repeated pain point. Work templates let teams or individuals save recurring schedules and apply them as defaults.<br><br>Employees only adjust the parts that changed, such as a different start time or remote work day.",
+      "In flexible work, collaboration starts with knowing a teammate’s status. I visualized work hours by employee on a timeline and separated status into office, remote, leave, and waiting.<br><br>The screen was designed around one question: “Can I collaborate with this person right now?”",
+      "Previously, employees entered attendance and then updated their Kakao Work profile separately. I connected attendance input to profile status so work, leave, or away states could be shared automatically.<br><br>Clear UX writing explains when and what information is shared, reducing anxiety around automation.",
+      "Annual leave was one of the heaviest admin burdens. Accrual criteria, fiscal-year or hire-date rules, additional leave, and expiration rules had to be legally correct and often manually handled.<br><br>I designed policy setup so admins configure rules once, and the system automatically grants, expires, and tracks balances afterward. The configured policy appears on employee screens immediately.",
+      "The revamp also surfaced a broader issue: Kakao Work’s work products used different visual and interaction rules.<br><br>I organized Design System 2.0 around <strong>Familiarity</strong>, <strong>Consistency</strong>, and <strong>Efficiency</strong>. The system became a foundation for scaling product quality and improving development speed by roughly 40%."
+    ],
+    "impactPs": [
+      "<strong>VALIDATION</strong><br><br>After the revamp, we ran a CBT through Kakao Work’s internal survey system to check whether the new structure was understandable and whether users could manage attendance without help.",
+      "<strong>CBT results</strong><br><br>- <strong>82.85% satisfaction</strong><br>- Very satisfied 43%<br>- Satisfied 39.83%<br>- Slightly dissatisfied 8.95%<br>- Dissatisfied 6.18%<br>- Total negative feedback 15.13%<br><br>Participants said the difficult UI had become easier to understand and use without help.",
+      "<strong>OUTCOME</strong><br><br>The revamp covered both employee and admin surfaces: a status-first home screen, timeline work input, templates, team status, automatic profile status sync, annual leave automation, admin settings, and Design System 2.0.",
+      "<strong>Check status → Adjust easily → Automate repetition → Connect operations</strong><br><br>Employees check work status and remaining leave, adjust work time on a timeline, and rely on templates for repeated patterns. Admins configure complex leave and policy rules once, and the system connects them to employee screens and operations.",
+      "<strong>LEARNING 01</strong><br><br>B2B SaaS UX is closer to organizing operations than decorating screens. The complexity came from company policies and exceptions not being processed inside the product.",
+      "<strong>LEARNING 02</strong><br><br>The biggest improvement came from removing work. Repeated input, manual checking, status sharing, and leave calculation became simpler when absorbed into the system’s default behavior.",
+      "<strong>LEARNING 03</strong><br><br>A design system is an operating tool for product expansion. Shared components, language, and interaction rules help users experience one product and help teams build faster."
+    ],
+    "footerTag": "Contact",
+    "footerHeading": "Let's start creating together",
+    "footerCta": "Let's talk ↗"
   },
-  ko:{
-    metaLabels:["산업","클라이언트","역할","기간","성과"],
-    metaValues:["B2B SaaS","Kakao Enterprise · Design Center","리드 프로덕트 디자이너 · 엔드투엔드 UX","2021.08 – 2023.01","CBT 만족도 82.85% · 개발 속도 +40%"],
-    hero:"카카오워크 2.0 근태관리 전면 개편",
-    txtH2:["한눈에 보기","문제","결과"],
-    problemSubhead:"리서치 & 인사이트",
-    overviewPs:[
-      "카카오워크는 카카오톡의 익숙함을 바탕으로 만든 협업 플랫폼입니다. 하지만 1.0에서는 타사 워크 플랫폼과 다른 점이 잘 보이지 않았고, 제품마다 경험이 달라 카카오워크만의 가치도 선명하게 드러나지 않았습니다. 회사는 MAU 5만 규모의 1.0을 근태관리·설문·할일관리 등 워크 엔진 전반을 고도화한 2.0으로 바꾸기로 했고, 저는 그중 사용 빈도와 VOC가 가장 높았던 근태관리를 맡았습니다.",
-      "기존 근태관리는 고정근무제를 기준으로 만든 초기 MVP였습니다. 출시 초기에는 기본 운영 도구로 충분했지만, 조직의 근무 방식이 바뀌면서 구조적인 한계가 보이기 시작했습니다.",
-      "유연근무제, 자율 선택 근무제, 원격근무, 해외 리모트 근무, 시간선택제, 하이브리드 워크 2.0처럼 근무 형태는 다양해졌습니다. 하지만 제품은 여전히 정해진 시간과 장소에서 일하는 상황을 기준으로 동작했습니다. 시스템이 흡수하지 못한 복잡함은 구성원과 관리자가 직접 처리해야 했습니다.",
-      "구성원은 비슷한 근무 정보를 매일 다시 입력했고, 근무 현황과 남은 휴가를 확인하려면 여러 정보를 직접 해석해야 했습니다. 관리자는 새 근무 제도와 예외를 시스템 밖에서 수기로 처리했습니다.",
-      "그래서 저는 이 프로젝트를 단순한 입력 UI 개선이 아니라, <strong>복잡한 근무 제도를 시스템이 먼저 이해하고 처리하는 경험</strong>으로 정의했습니다.<br><br>리드 디자이너로서 사용자를 조사하고, 문제를 정의하고, 정보 구조와 인터랙션을 다시 설계했습니다. 와이어프레임과 하이파이 목업을 만들고 PM·개발·QA와 함께 실제 운영에 맞게 제품을 다듬었습니다."
+  "ko": {
+    "metaLabels": [
+      "산업",
+      "클라이언트",
+      "역할",
+      "기간",
+      "성과"
     ],
-    problemPs:[
-      "<strong>구성원의 문제</strong><br><br>구성원은 근태관리에서 내 근무 현황을 빠르게 확인하고, 필요할 때 근무를 입력하거나 수정하고 싶어 했습니다. 하지만 기존 제품은 이 흐름을 한 번에 이어주지 못했습니다.<br><br>1. 월 근무 현황, 남은 근무시간, 남은 휴가를 확인하려면 여러 화면을 오가야 했습니다.<br>2. 시간을 드롭다운으로 하나씩 골라야 해서 입력이 오래 걸렸습니다.<br>3. 같은 근무 패턴도 매일 다시 입력해야 했습니다.<br>4. 휴일이나 입력할 수 있는 시간을 미리 알기 어려워 여러 번 다시 시도해야 했습니다.<br><br><strong>관리자의 문제</strong><br><br>관리자는 제도가 바뀌고 예외가 늘어날수록 제품 밖에서 더 많은 일을 처리했습니다.<br><br>1. 새 유연근무 제도를 관리자 화면과 운영 흐름에 바로 담기 어려웠습니다.<br>2. 자동으로 처리해야 할 운영 업무를 수기로 관리했습니다.<br>3. 시스템이 처리하지 못한 예외를 메신저 같은 별도 채널에서 반복해서 해결했습니다.<br><br>정리하면, 화면 몇 개를 고쳐서 풀 문제가 아니었습니다.<br><br><strong>근태관리 시스템이 실제 근무 방식에 맞춰 다시 설계되어야 했습니다.</strong>",
-      "설계하기 전에 기존 카카오워크 1.0이 어디에서 흐름을 끊는지 확인했습니다. 구성원과 관리자를 대상으로 설문과 심층 인터뷰를 진행해 실제 운영과 제품 경험 사이의 차이를 찾았습니다.<br><br><strong>설문 주요 결과</strong><br><br>개선된 근태관리에 기대한 점:<br><br>- <strong>근태를 더 쉽게 입력하기</strong> 68.7%<br>- <strong>새 근무제도를 자동으로 적용하기</strong> 71.7%<br><br>기존 서비스 이용 경험:<br><br>- 불편을 느꼈다 <strong>69.1%</strong><br>- 주요 불편 요소: <strong>근태 입력이 어려움 &gt; 정보 확인이 어려움 &gt; 휴가 신청이 어려움</strong><br><br><strong>인터뷰 핵심 인사이트</strong><br><br><strong>1) 사용자는 더 많은 입력 단계보다 빠른 확인을 원했습니다</strong><br><br>사용자는 복잡한 제도를 공부하려고 근태관리에 들어오지 않습니다. 알고 싶은 것은 네 가지였습니다.<br><br>- 오늘 내 근무가 어떻게 기록되어 있는지<br>- 이번 달에 얼마나 일했는지<br>- 휴가가 얼마나 남았는지<br>- 지금 더 입력할 것이 있는지<br><br>필요한 것은 <strong>바로 확인하고 빠르게 끝내는 경험</strong>이었습니다.<br><br><strong>2) 관리자의 진짜 문제는 운영이었습니다</strong><br><br>관리자를 힘들게 한 것은 제도의 복잡함 자체가 아니라, 제품이 제도를 처리하지 못해 생기는 반복적인 수기 작업이었습니다. 유연근무 제도와 예외 규칙이 관리자 화면과 운영 흐름에 자연스럽게 이어져야 했습니다.<br><br><strong>결론</strong><br><br>- 사용자는 쉽게 입력하고 빠르게 확인하고 싶어 합니다.<br>- 관리자는 수기 작업을 줄이고 자동으로 운영되는 시스템을 원합니다.<br>- 둘 다에게 필요한 것은 기능 추가보다, <strong>복잡한 제도를 대신 처리해 주는 제품 구조</strong>였습니다.<br><br>좋은 UX는 사용자에게 규칙을 외우게 하지 않습니다. 시스템이 먼저 이해하고 처리합니다."
+    "metaValues": [
+      "B2B SaaS",
+      "Kakao Enterprise · Design Center",
+      "리드 프로덕트 디자이너 · End-to-End UX",
+      "2021.08 – 2023.01",
+      "CBT 만족도 82.85% · 불만 15.13% · 개발 속도 약 40% 개선"
     ],
-    dirTag:"설계 방향",
-    dirTitle:"학습 없이 바로 쓰는 근태 경험",
-    dirP:"리서치 인사이트를 바탕으로 세 가지 설계 방향을 정했습니다.<br><br><strong>1) 달라진 근무제도를 담는 구조</strong><br><br>고정근무제 중심 구조를 다양한 근무 제도를 수용하는 구조로 다시 설계합니다.<br><br><strong>2) 빠르게 끝나는 입력 경험</strong><br><br>제도를 몰라도 보자마자 쓸 수 있는 입력 흐름을 만듭니다.<br><br><strong>3) 제품 안에서 이어지는 운영</strong><br><br>시스템 밖에서 처리하던 반복 작업과 예외 대응을 제품 안으로 가져옵니다.<br><br>이번 개편의 목표는 <strong>달라진 근무 제도가 구성원과 관리자 모두에게 자연스럽게 작동하는 경험</strong>을 만드는 것이었습니다.<br><br><strong>Design Principles</strong><br><br><strong>원칙 1. 중요한 정보부터 보여줍니다</strong><br><br>기존 첫 화면은 정보와 기능이 흩어져 있어 어디서 무엇을 해야 할지 판단하기 어려웠습니다. 사용자가 자주 확인하는 정보는 명확했습니다. 내 근무 현황, 남은 휴가, 오늘 필요한 액션입니다. 홈 화면은 기능을 나열하는 대신 이 세 가지가 가장 먼저 보이도록 정보 구조를 다시 정리했습니다.<br><br><strong>원칙 2. 입력은 설명 없이 끝납니다</strong><br><br>기존에는 드롭다운으로 시간을 일일이 맞춰야 했고, 허용 범위를 벗어나면 뒤늦게 에러가 났습니다. 근태 입력은 보자마자 할 수 있어야 합니다. 그래서 시간 입력을 타임라인 위에서 드래그와 클릭으로 조작하는 방식으로 바꾸고, 입력할 수 있는 날짜와 시간을 먼저 보여줬습니다.<br><br><strong>원칙 3. 반복은 시스템이 맡습니다</strong><br><br>구성원 대부분은 일정한 패턴으로 일합니다. 그런데 기존 시스템은 같은 패턴을 매일 새로 입력하게 했습니다. 자주 쓰는 근무 패턴을 템플릿으로 저장하면 기본값이 자동으로 적용되도록 설계해, 사용자는 <strong>예외가 있는 날만 수정</strong>하면 되도록 했습니다.",
-    designTag:"주요 설계",
-    designTitle:"원클릭 템플릿,<br>쉽게 읽히는 UX 라이팅",
-    designH2s:[
-      "1. 근무 상태를 계산 없이 확인합니다",
-      "2. 근무 입력은 ‘설정’보다 ‘조정’에 가깝습니다",
-      "3. 실수한 뒤가 아니라, 실수하기 전에 알려줍니다",
-      "4. 반복 입력은 템플릿이 대신합니다",
-      "5. 팀 근무 현황에서 협업 가능 여부를 바로 확인합니다",
-      "6. 근태 입력과 상태 공유를 한 번에 끝냅니다",
-      "7. 연차는 시스템이 자동으로 관리합니다",
-      "8. 디자인 시스템 2.0으로 제품 경험을 하나로 맞췄습니다"
+    "hero": "카카오워크 2.0 근태관리 전면 개편",
+    "heroSubtitle": "복잡한 근무 제도를 근무자가 외우지 않아도 되는 근태 경험",
+    "txtH2": [
+      "OVERVIEW",
+      "DIAGNOSIS",
+      "VALIDATION / OUTCOME"
     ],
-    designPs:[
-      "근태관리 홈의 목표는 사용자가 <strong>지금 내 상태를 바로 이해하게 하는 것</strong>입니다. 기존 화면에서는 사용자가 근무한 시간과 앞으로 근무해야 하는 시간을 직접 계산해야 했습니다. 개편한 메인 화면에는 월 근무 현황과 남은 휴가를 함께 배치했습니다. 사용자는 소정 근무 시간, 총 근무 시간, 실 근무 시간, 유급 휴가를 한눈에 확인할 수 있습니다. 연차·가족돌봄·건강검진·난임휴가처럼 헷갈리기 쉬운 휴가별 잔여 시간도 쉬운 문구로 풀어 숫자를 해석하는 부담을 줄였습니다.",
-      "실제 사용자의 하루는 대부분 기본 근무 패턴에서 조금씩만 달라집니다. 그래서 근무 입력을 매번 처음부터 설정하게 하지 않고, <strong>기본값을 필요할 때만 고치는 방식</strong>으로 바꿨습니다. 24시간 타임라인 위에서 근무 블록을 드래그하거나 클릭하면 기본 근무, 재택, 추가 근무를 바로 수정할 수 있습니다. 텍스트 입력 중심의 설정을 시각적인 조정으로 바꾸자, 하루 근무 구성을 훨씬 쉽게 확인하고 고칠 수 있었습니다.",
-      "회사마다 제도와 규칙이 달라 사용자가 모든 조건을 기억하기는 어렵습니다. 그래서 휴일이나 제한 시간이 있는 날짜에는 선택할 수 있는 액션을 먼저 보여줍니다. 입력이 끝난 뒤 에러를 띄우기보다, <strong>사용자가 가능한 선택지를 먼저 보게 하는 구조</strong>입니다. 규칙을 외우고 판단하는 일은 시스템이 대신합니다.",
-      "매일 같은 근무 시간을 입력하는 일은 리서치에서 가장 자주 나온 불편이었습니다. 팀과 근무 방식에 맞는 템플릿을 저장해 두면 매일 기본 근무값이 자동으로 적용됩니다. 출근 시간이 달라지거나 재택으로 바뀌는 날에는 해당 부분만 수정하면 됩니다. <strong>반복되던 행동을 제품의 기본 동작으로 흡수해</strong>, 사용자가 신경 쓸 일을 줄였습니다.",
-      "유연근무 환경에서 협업은 동료의 상태를 아는 데서 시작합니다. 팀 근무 현황 화면은 구성원별 근무 시간을 타임라인으로 보여주고, 현재 상태를 출근·재택·휴가·근무 대기로 구분합니다. 화면의 기준은 <strong>‘지금 이 사람과 협업할 수 있는가’</strong>를 바로 확인할 수 있는가였습니다. 상세한 운영 정보보다 상태 확인에 집중해, 하이브리드 환경에서 팀의 시간을 공유하는 협업 도구로 만들었습니다.",
-      "기존에는 근태를 입력한 뒤 카카오워크 프로필 상태도 따로 바꿔야 했습니다. 같은 정보를 두 번 입력하지 않도록, 근태관리에 입력한 근무 정보가 프로필 상태에 자동으로 이어지게 설계했습니다. 따로 체크인하지 않아도 근무 중·휴가·자리비움 상태가 팀에 공유됩니다. 자동 연동이 불안하게 느껴지지 않도록 언제 어떤 정보가 공유되는지 명확히 안내했습니다. 이 지점에서 UX 라이팅은 <strong>자동화에 대한 불안을 줄이는 신뢰 장치</strong>가 됐습니다.",
-      "관리자에게 가장 큰 부담은 연차였습니다. 입사일 기준인지 회계일 기준인지, 해마다 쌓이는 가산 연차와 소멸 규칙까지 근로기준법에 맞춰 따져야 했고, 시스템이 처리하지 못한 부분은 수기로 관리했습니다. 그래서 연차 발생 기준과 자동 소멸 규칙을 한 번만 설정하면 이후 부여·소멸·잔여 현황을 시스템이 자동으로 계산하도록 설계했습니다. 어려운 노무 정보는 설정에 필요한 항목만 남기고, 통일된 컴포넌트와 쉬운 캡션으로 읽기 쉽게 만들었습니다. 관리자가 설정한 제도는 구성원 화면에 바로 보여줘, 구성원도 우리 회사 제도를 쉽게 이해하고 쓸 수 있습니다.",
-      "개편을 진행하며 더 큰 문제도 보였습니다. 버티컬마다 디자인 시스템이 달라 카카오워크가 하나의 제품처럼 느껴지지 않았습니다. 그래서 세 가지 원칙으로 디자인 시스템 2.0을 함께 구축했습니다. <strong>Familiarity</strong> — 새 디자인 언어를 도입하기보다 기존 제품에서 쓰던 패턴을 찾아 컴포넌트로 정의했습니다. <strong>Consistency</strong> — 모든 제품군이 같은 디자인 언어를 쓰게 해, 제품을 오갈 때 이질감이 줄었습니다. <strong>Efficiency</strong> — 버티컬마다 따로 쓰던 시스템을 통일해 개발 리소스가 흩어지는 문제를 줄였습니다. 이 시스템이 개발 속도를 약 40% 높인 기반입니다."
+    "problemSubhead": "RESEARCH",
+    "overviewPs": [
+      "카카오워크 2.0의 근태관리 서비스를 전면 개편한 프로젝트입니다. 기존 1.0 근태관리는 고정근무제를 기준으로 빠르게 출시된 MVP였지만, 유연근무제·자율 선택 근무제·원격근무·해외 리모트 근무·하이브리드 워크처럼 근무 방식이 다양해지면서 근무자와 관리자 모두에게 복잡함이 전가되고 있었습니다.",
+      "이 프로젝트의 목표는 근태 입력 화면을 조금 더 쉽게 만드는 것이 아니었습니다. 달라진 근무 제도와 예외 규칙을 시스템이 먼저 이해하고, 근무자는 자신의 상태와 다음 행동만 빠르게 확인할 수 있는 근태 경험을 만드는 것이었습니다.",
+      "카카오워크는 카카오톡의 익숙함을 바탕으로 만든 협업 플랫폼입니다. 1.0 단계에서는 메신저 중심의 기본 업무 기능을 빠르게 제공했지만, 근태관리·설문·할일관리처럼 워크 엔진이 확장될수록 제품마다 경험이 달라지고 카카오워크만의 일관된 가치가 흐려지는 문제가 있었습니다.",
+      "그중 근태관리는 사용 빈도와 VOC가 가장 높은 영역이었습니다. 기존 근태관리 MVP는 정해진 시간과 장소에서 일하는 고정근무제를 기준으로 설계되어 있었습니다. 그러나 실제 조직의 근무 방식은 이미 바뀌고 있었습니다. 코어타임 없이 자율적으로 근무하거나, 장소를 선택하거나, 원격근무와 하이브리드 워크를 병행하는 회사가 늘었습니다.",
+      "제품이 이 복잡함을 흡수하지 못하자, 근무자는 매일 비슷한 근무 정보를 다시 입력해야 했고 관리자는 새 근무 제도와 예외를 시스템 밖에서 수기로 처리해야 했습니다.<br><br><strong>문제는 근태를 입력하기 어려운 화면 하나가 아니라, 달라진 근무 제도를 근무자와 관리자가 직접 해석하고 처리해야 하는 구조였습니다.</strong><br><br>그래서 저는 이 프로젝트를 단순한 UI 개선이 아니라, <strong>근무 규칙은 시스템이 처리하고 근무자는 필요한 상태와 다음 행동만 이해하는 경험</strong>으로 재정의했습니다."
     ],
-    impactPs:[
-      "<strong>무엇을 만들었나</strong><br><br>상태 중심 홈 화면, 타임라인 근무 입력, 근무 템플릿, 팀 현황, 프로필 상태 자동 연동까지 구성원과 관리자 화면 전반을 개편했습니다. 기존 시스템이 사용자에게 넘기던 유연근무 제도의 복잡함을 제품이 흡수하도록 만들었습니다.",
-      "<strong>측정한 임팩트</strong><br><br>개편 후 카카오워크 내부 설문 시스템으로 CBT를 진행했고 <strong>만족도 82.85%</strong>를 확인했습니다. 참여자들은 어려웠던 UI가 이해하기 쉬워져 도움 없이 근태를 관리할 수 있게 됐다고 평가했습니다. 업무 동선을 다시 짜 반복 업무의 클릭 수를 3–5회 줄였고, 디자인 시스템 2.0으로 디자인 부채를 줄여 제품 개발 속도를 약 40% 높였습니다.",
-      "<strong>어떻게 검증했나</strong><br><br>격주 사용성 테스트로 사용자 피드백을 제품 의사결정에 담았습니다. HR 관리자와 구성원을 대상으로 필드 리서치를 진행해 제도 운영의 페인 포인트를 찾고, 이를 디자인 방향과 로드맵에 연결했습니다. CBT에서 받은 불만 피드백 15.13%는 대부분 ‘기존 UI에 익숙해 새 화면을 배우는 시간이 든다’는 내용이었고, 이를 2차 개선 백로그로 정리해 다음 업데이트를 계획했습니다.",
-      "<strong>무엇을 배웠나</strong><br><br>가장 큰 개선은 일을 없애는 데서 나왔습니다. 시스템이 해석·반복·판단을 대신하면 구성원과 관리자 모두 시간을 돌려받습니다. 근태 정책의 복잡함은 화면 몇 개보다 시스템 차원에서 풀어야 하는 문제였고, 그 관점이 제품을 단순하게 만들었습니다.",
-      "",
-      "",
-      ""
+    "problemPs": [
+      "<strong>1. 근태관리 MVP는 바뀐 근무제도를 담지 못하고 있었습니다</strong><br><br>기존 제품은 빠르게 근무를 등록하고 현황을 보는 데 초점을 둔 초기 MVP였습니다. 출시 초기에는 기본 운영 도구로 충분했지만, 유연근무제와 원격근무가 확산되면서 제품 구조가 실제 근무 방식을 따라가지 못했습니다.<br><br>시간선택제, 투명한 근무제, 자율 선택 근무제, 해외 리모트 근무, 하이브리드 워크 2.0처럼 제도는 늘어났지만 화면은 여전히 정해진 시간과 장소에서 일하는 상황을 기준으로 움직이고 있었습니다.<br><br><strong>2. 근무자는 근무현황 확인과 근무입력 사이에서의 다른 UX 경험을 겪고 있었습니다</strong><br><br>근무자는 근태관리에서 복잡한 제도를 배우고 싶어 하지 않았습니다. 업무 전에 정보 입력 및 정보 습득을 간편하게 하고 싶어 하는 경향이 강했습니다.<br><br>- 오늘 내 근무가 어떻게 기록되어 있는지<br>- 이번 달에 얼마나 일했는지<br>- 남은 휴가가 얼마나 있는지<br>- 지금 더 입력해야 할 것이 있는지<br><br>하지만 기존 제품은 근무현황을 확인하는 경험과 근무시간을 입력하는 경험이 서로 다르게 느껴졌습니다. 현황 화면에서는 월 근무시간과 남은 휴가를 직접 해석해야 했고, 입력 화면에서는 시간을 드롭다운으로 하나씩 골라야 했습니다. 입력 가능한 날짜와 시간이 미리 안내되지 않아 여러 번 다시 시도해야 하는 일도 생겼습니다.<br><br><strong>3. 관리자는 근무제도와 예외를 시스템 밖에서 처리하고 있었습니다</strong><br><br>관리자의 문제는 화면 사용성보다 운영에 가까웠습니다. 새로운 근무제도를 반영하거나 연차·대체휴무·보상휴가처럼 다양한 경우의 수를 관리하려면 시스템 밖에서 확인하고 수기로 처리해야 했습니다.<br><br>자동화되지 않은 요소가 많을수록 HR 운영자는 같은 일을 반복했고, 근무자에게 안내해야 할 내용도 늘어났습니다. 관리자는 제도를 설정하고, 근무자는 그 제도를 이해하고, 제품은 두 흐름을 자연스럽게 이어줘야 했습니다.<br><br><strong>4. 카카오워크 제품군은 서로 다른 디자인 언어를 사용하고 있었습니다</strong><br><br>근태관리만의 문제도 있었지만, 더 큰 문제는 카카오워크의 여러 워크 제품군이 서로 다른 디자인 언어를 사용하고 있다는 점이었습니다. 근무자는 제품을 오갈 때마다 다른 규칙을 다시 학습해야 했고, 개발 조직도 버티컬마다 따로 시스템을 유지해야 했습니다.<br><br>결론은 분명했습니다. 근태관리는 화면 몇 개를 고쳐서 해결할 수 있는 문제가 아니라, <strong>근무제도·입력·운영·상태 공유가 하나의 시스템으로 연결되어야 하는 문제</strong>였습니다.",
+      "카카오워크 2.0 근태관리 설계를 위해 기존 1.0 근무자와 관리자를 대상으로 설문과 심층 인터뷰를 진행했습니다. 목표는 근무자가 어디에서 막히는지, 관리자가 어떤 운영 부담을 제품 밖에서 처리하고 있는지 확인하는 것이었습니다.<br><br><strong>설문에서 확인한 기대와 불편</strong><br><br>- <strong>더 쉬운 근태관리 등록</strong> 68.7%<br>- <strong>새로운 근무제도 자동화 적용</strong> 71.7%<br>- 기존 근태관리 사용 경험에서 <strong>불편을 느꼈다</strong> 69.1%<br><br>주요 불편 요소는 근태 등록이 어려움, 정보 파악이 힘듦, 휴가 등록이 어려움 순으로 나타났습니다.<br><br><strong>근무자는 규칙 학습보다 빠른 확인을 원했습니다.</strong><br><br>근무자는 근태관리 안에서 복잡한 근무 제도를 공부하려고 하지 않습니다. 오늘 내 상태와 이번 달 누적 근무, 남은 휴가, 지금 필요한 액션을 빠르게 알고 싶어 했습니다.<br><br><strong>관리자는 복잡한 제도보다 반복 운영이 더 힘들었습니다.</strong><br><br>관리자는 제도 자체가 복잡한 것보다, 제품이 제도를 자동으로 처리하지 못해 생기는 반복 수기 작업을 더 큰 문제로 느꼈습니다. 새 근무 제도가 어디에 반영되고, 어떤 예외가 자동 처리되며, 근무자 화면에는 어떻게 보이는지가 중요했습니다.<br><br><strong>근무자와 관리자에게 필요한 것은 기능 추가가 아니라 구조 변화였습니다.</strong><br><br>근무자에게는 쉬운 입력과 빠른 확인이 필요했고, 관리자에게는 수기 작업 없이 운영되는 시스템이 필요했습니다. 좋은 근태 UX는 근무자에게 규칙을 외우게 하지 않습니다. 시스템이 먼저 이해하고 처리해야 합니다."
     ],
-    footerTag:"연락처",
-    footerHeading:"함께 만들어갑니다",
-    footerCta:"이야기 나누기 ↗"
+    "dirTag": "APPROACH",
+    "dirTitle": "규칙은 시스템이 처리하고, 근무자는 필요한 행동만 확인합니다",
+    "dirP": "리서치 결과를 바탕으로 세 가지 설계 방향을 정했습니다.<br><br><strong>1. 달라진 근무제도를 담는 구조</strong><br><br>고정근무제 중심 구조가 실제 근무 방식을 따라가지 못하고 있었습니다. 그래서 유연근무·원격근무·시간선택제·하이브리드 워크를 수용하는 정보 구조로 다시 설계했습니다.<br><br><strong>2. 빠르게 끝나는 입력 경험</strong><br><br>드롭다운과 반복 입력 때문에 근태 등록이 오래 걸렸습니다. 그래서 타임라인 조작, 기본값 적용, 입력 가능 상태 선노출을 기준으로 입력 흐름을 다시 만들었습니다.<br><br><strong>3. 제품 안에서 이어지는 운영</strong><br><br>관리자가 예외와 연차를 수기로 처리하고 있었습니다. 그래서 정책 설정, 자동 부여·소멸, 근무자 화면 즉시 반영이 하나의 흐름으로 이어지도록 설계했습니다.<br><br>이번 개편의 핵심은 “근태를 더 많이 입력하게 하는 것”이 아니었습니다. 근무자가 신경 써야 하는 계산, 반복, 판단을 제품이 대신 처리하게 만드는 것이었습니다.<br><br><strong>Design Principles</strong><br><br><strong>1. 중요한 정보부터 보여줍니다</strong><br><br>기존 첫 화면은 정보와 기능이 흩어져 있어 근무자가 어디에서 무엇을 해야 하는지 판단하기 어려웠습니다. 근무자가 자주 확인하는 정보는 명확했습니다. 내 근무 현황, 남은 휴가, 오늘 필요한 액션입니다. 그래서 홈 화면은 기능을 나열하는 대신 이 세 가지가 가장 먼저 보이도록 정보 구조를 다시 정리했습니다.<br><br><strong>2. 입력은 설명 없이 끝나야 합니다</strong><br><br>기존에는 시간을 드롭다운으로 하나씩 맞춰야 했고, 허용 범위를 벗어나면 입력이 끝난 뒤에야 에러가 나타났습니다. 근태 입력은 근무자가 제도를 해석하지 않아도 보자마자 할 수 있어야 했습니다. 그래서 근무 시간을 24시간 타임라인 위에서 드래그와 클릭으로 조정하게 만들고, 입력할 수 없는 날짜와 시간은 먼저 보여주도록 했습니다.<br><br><strong>3. 반복은 시스템이 맡습니다</strong><br><br>근무자 대부분은 일정한 패턴으로 일합니다. 하지만 기존 시스템은 같은 패턴을 매일 새로 입력하게 했습니다. 자주 쓰는 근무 패턴을 템플릿으로 저장하면 기본값이 자동으로 적용되도록 설계했습니다. 근무자는 매일 다시 입력하는 대신, 예외가 있는 날만 수정하면 됩니다.",
+    "designTag": "DESIGN DECISIONS",
+    "designTitle": "상태 확인 → 쉬운 조정 → 반복 자동화 → 운영 연결",
+    "designH2s": [
+      "01. 근무 상태를 계산 없이 확인하게 했습니다",
+      "02. 근무 입력을 설정이 아니라 조정에 가깝게 만들었습니다",
+      "03. 실수한 뒤가 아니라, 실수하기 전에 알려줬습니다",
+      "04. 반복 입력은 템플릿이 대신하게 했습니다",
+      "05. 팀 근무 현황에서 협업 가능 여부를 바로 확인하게 했습니다",
+      "06. 근태 입력과 프로필 상태 공유를 한 번에 끝냈습니다",
+      "07. 연차 관리는 관리자가 한 번 설정하면 시스템이 자동으로 처리하게 했습니다",
+      "08. 디자인 시스템 2.0으로 제품 경험을 하나로 맞췄습니다"
+    ],
+    "designPs": [
+      "근태관리 홈의 목표는 근무자가 지금 내 상태를 바로 이해하게 하는 것입니다. 기존 화면에서는 근무자가 근무한 시간과 앞으로 근무해야 하는 시간을 직접 계산해야 했습니다.<br><br>개편한 메인 화면에는 월 근무 현황과 남은 휴가를 함께 배치했습니다. 소정 근무 시간, 총 근무 시간, 실 근무 시간, 유급 휴가를 한눈에 볼 수 있게 하고, “136시간 남았어요”처럼 해석이 필요한 숫자를 쉬운 문장으로 바꿨습니다.<br><br>연차·가족돌봄·건강검진·난임휴가처럼 헷갈리기 쉬운 휴가별 잔여 시간도 쉬운 문구로 풀어 숫자를 해석하는 부담을 줄였습니다.",
+      "실제 사용자의 하루는 대부분 기본 근무 패턴에서 조금씩만 달라집니다. 그래서 근무 입력을 매번 처음부터 설정하게 하지 않고, 기본값을 필요할 때만 고치는 방식으로 바꿨습니다.<br><br>24시간 타임라인 위에서 근무 블록을 드래그하거나 클릭하면 기본 근무, 재택, 추가 근무를 바로 수정할 수 있습니다. 텍스트 입력 중심의 설정을 시각적인 조정으로 바꾸자, 하루 근무 구성을 훨씬 쉽게 확인하고 고칠 수 있었습니다.",
+      "회사마다 제도와 규칙이 다르기 때문에 근무자가 모든 조건을 기억하기는 어렵습니다. 그래서 휴일이나 제한 시간이 있는 날짜에는 선택할 수 있는 액션을 먼저 보여줬습니다.<br><br>입력이 끝난 뒤 에러를 띄우기보다, 근무자가 가능한 선택지를 먼저 보게 하는 구조입니다. 규칙을 외우고 판단하는 일은 시스템이 대신합니다.",
+      "매일 같은 근무 시간을 입력하는 일은 리서치에서 가장 자주 나온 불편이었습니다. 팀과 근무 방식에 맞는 템플릿을 저장해 두면 매일 기본 근무값이 자동으로 적용됩니다.<br><br>출근 시간이 달라지거나 재택으로 바뀌는 날에는 해당 부분만 수정하면 됩니다. 반복되던 행동을 제품의 기본 동작으로 흡수해, 근무자가 신경 쓸 일을 줄였습니다.",
+      "유연근무 환경에서 협업은 동료의 상태를 아는 데서 시작합니다. 기존 화면은 정보가 많고 복잡해 팀원의 출근시간을 한눈에 파악하기 어려웠습니다.<br><br>팀 근무 현황 화면은 근무자별 근무 시간을 타임라인으로 보여주고, 현재 상태를 출근·재택·휴가·근무 대기로 구분했습니다. 화면의 기준은 “지금 이 사람과 협업할 수 있는가”를 바로 확인할 수 있는가였습니다.",
+      "기존에는 근태를 입력한 뒤 카카오워크 프로필 상태도 따로 바꿔야 했습니다. 같은 정보를 두 번 입력하지 않도록, 근태관리에 입력한 근무 정보가 프로필 상태에 자동으로 이어지게 설계했습니다.<br><br>따로 체크인하지 않아도 근무 중·휴가·자리비움 상태가 팀에 공유됩니다. 자동 연동이 불안하게 느껴지지 않도록 언제 어떤 정보가 공유되는지 명확히 안내했습니다. 이 지점에서 UX 라이팅은 자동화에 대한 불안을 줄이는 신뢰 장치가 됐습니다.",
+      "관리자에게 가장 큰 부담은 연차였습니다. 입사일 기준인지 회계일 기준인지, 매년 발생하는 가산 연차와 소멸 규칙까지 근로기준법에 맞춰 따져야 했고, 시스템이 처리하지 못한 부분은 수기로 관리했습니다.<br><br>그래서 연차 발생 기준과 자동 소멸 규칙을 한 번만 설정하면 이후 부여·소멸·잔여 현황을 시스템이 자동으로 계산하도록 설계했습니다. 어려운 노무 정보는 설정에 필요한 항목만 남기고, 통일된 컴포넌트와 쉬운 캡션으로 읽기 쉽게 만들었습니다.<br><br>관리자가 설정한 제도는 근무자 화면에 바로 반영됩니다. 근무자도 우리 회사 제도를 따로 물어보지 않고 제품 안에서 이해하고 사용할 수 있습니다.",
+      "개편을 진행하며 더 큰 문제도 함께 보였습니다. 카카오워크 안의 다양한 기능들이 워크 플랫폼이라는 공통 성격을 갖고 있음에도, 디자인 정렬이 맞지 않아 제품군마다 다른 서비스처럼 보였습니다.<br><br>그래서 디자인 시스템 2.0을 세 가지 원칙으로 정리했습니다.<br><br><strong>Familiarity</strong> — 완전히 새로운 언어를 만들기보다 기존 제품에서 쓰이던 익숙한 패턴을 컴포넌트로 정의합니다.<br><strong>Consistency</strong> — 모든 제품군이 같은 디자인 언어를 사용해 근무자가 제품을 오갈 때 이질감을 느끼지 않게 합니다.<br><strong>Efficiency</strong> — 버티컬마다 따로 쓰던 시스템을 통합해 개발 리소스가 흩어지는 문제를 줄입니다.<br><br>디자인 시스템은 화면을 예쁘게 맞추는 작업이 아니라, 제품이 확장될 때 같은 속도와 품질로 움직이게 하는 기반이었습니다."
+    ],
+    "impactPs": [
+      "<strong>VALIDATION</strong><br><br>개편 후 카카오워크 내부 설문 시스템으로 CBT를 진행했습니다. 목표는 새로운 근태관리 구조가 실제 근무자와 관리자에게 이해 가능한지, 도움 없이 근태를 관리할 수 있는지 확인하는 것이었습니다.",
+      "<strong>CBT 결과</strong><br><br>- <strong>만족도 82.85%</strong><br>- 매우 만족 43%<br>- 만족 39.83%<br>- 조금 불만 8.95%<br>- 불만 6.18%<br>- 불만 피드백 합계 15.13%<br><br>근무자와 관리자는 기존의 어려웠던 UI가 이해하기 쉬운 UI로 바뀌어, 도움 없이 근태관리를 할 수 있게 됐다고 평가했습니다.",
+      "<strong>OUTCOME</strong><br><br>근무자와 관리자 화면 전반을 함께 개편했습니다. 상태 중심 홈 화면, 타임라인 근무 입력, 근무 템플릿, 팀 현황, 프로필 상태 자동 연동, 연차 자동 부여·소멸, 관리자 설정 화면, 디자인 시스템 2.0까지 연결했습니다.<br><br>프로젝트 기간 동안 전달한 산출물은 근태관리 2.0 문제 정의, 리서치 인사이트, 근무자용 근태 홈, 관리자용 정책 설정, 프로필 상태 자동 연동 플로우, CBT 결과 분석, 디자인 시스템 2.0 원칙과 공통 컴포넌트였습니다.",
+      "<strong>상태 확인 → 쉬운 조정 → 반복 자동화 → 운영 연결</strong><br><br>근무자는 자신의 근무 상태와 남은 휴가를 빠르게 확인하고, 근무시간은 타임라인 위에서 조정하며, 반복되는 근무 패턴은 템플릿으로 자동 적용됩니다. 관리자는 복잡한 연차와 근무 정책을 한 번 설정하고, 시스템은 그 규칙을 근무자 화면과 운영 흐름에 이어줍니다.",
+      "<strong>LEARNING 01</strong><br><br>B2B SaaS의 UX는 화면보다 운영 구조를 정리하는 일에 가까웠습니다. 근태관리의 복잡함은 UI 요소가 많아서 생긴 문제가 아니라, 실제 회사 제도와 예외가 제품 안에서 처리되지 못해 생긴 문제였습니다. 그래서 화면을 단순하게 만드는 것보다 먼저, 어떤 규칙을 시스템이 맡고 어떤 판단만 사용자에게 남길지 정하는 것이 중요했습니다.",
+      "<strong>LEARNING 02</strong><br><br>가장 큰 개선은 기능을 더하는 것이 아니라 일을 없애는 데서 나왔습니다. 반복 입력, 수기 확인, 상태 공유, 연차 계산처럼 근무자와 관리자가 매번 처리하던 일을 시스템의 기본 동작으로 흡수했을 때 경험이 단순해졌습니다. 좋은 자동화는 사람을 대체하는 것이 아니라, 근무자와 관리자가 신경 쓰지 않아도 되는 일을 줄여줍니다.",
+      "<strong>LEARNING 03</strong><br><br>디자인 시스템은 제품 확장을 위한 운영 장치입니다. 카카오워크처럼 여러 워크 엔진이 함께 커지는 서비스에서는 각 기능이 따로 잘 만들어지는 것만으로는 부족합니다. 같은 컴포넌트, 같은 언어, 같은 상호작용 규칙으로 연결되어야 근무자는 하나의 제품으로 인식하고, 팀은 더 빠르게 만들 수 있습니다."
+    ],
+    "footerTag": "연락처",
+    "footerHeading": "함께 만들어갑니다",
+    "footerCta": "이야기 나누기 ↗"
   }
 };
 let tLang = localStorage.getItem('daye-lang') || 'ko';
@@ -453,6 +488,8 @@ function applyPageLang(lang){
   document.querySelectorAll('.meta-label').forEach((el,i)=>{if(P.metaLabels[i])el.textContent=P.metaLabels[i];});
   document.querySelectorAll('.meta-value').forEach((el,i)=>{if(P.metaValues[i])el.textContent=P.metaValues[i];});
   document.querySelector('.hero-h1').textContent=P.hero;
+  const heroSubtitle=document.querySelector('.hero-subtitle');
+  if(heroSubtitle&&P.heroSubtitle)heroSubtitle.textContent=P.heroSubtitle;
   document.querySelectorAll('.txt > h2.section-main').forEach((el,i)=>{if(P.txtH2[i])el.textContent=P.txtH2[i];});
   document.getElementById('problem-subhead').textContent=P.problemSubhead;
   P.overviewPs.forEach((text,i)=>{

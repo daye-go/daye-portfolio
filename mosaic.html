@@ -8,10 +8,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>삼성 모자이크 인트라넷 워크스페이스 개선 — Daye Go Portfolio</title>
-<meta name="description" content="삼성 모자이크 인트라넷 워크스페이스 개선 · 고다예 포트폴리오">
+<meta name="description" content="사내 문서를 찾아 아이디어 작성을 돕는 AI 어시스턴트 · 고다예 포트폴리오">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Samsung MOSAIC — M-pilot AI Copilot | Daye Go">
-<meta property="og:description" content="Designing an AI copilot for Samsung's internal ideation platform. Approved and advanced to an internal pilot.">
+<meta property="og:title" content="삼성 모자이크 인트라넷 워크스페이스 개선 | Daye Go">
+<meta property="og:description" content="사내 문서를 찾아 아이디어 작성을 돕는 AI 어시스턴트. 클라이언트 승인 후 내부 테스트와 후속 개발로 이어진 제안입니다.">
 <!-- 배포 시 절대 URL로 교체하세요 (상대 경로는 링크 미리보기가 생성되지 않습니다) -->
 <meta property="og:image" content="./Samsung MOSAIC — Daye Go Portfolio_files/UuPmXYOUnCSXjJl55j2UlsKSfo.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -49,6 +49,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:89px;display:flex;ali
 .meta-value{font-size:20px;font-weight:600;color:#000}
 .hero-divider{width:100%;height:1px;background:var(--border)}
 .hero-h1{font-size:clamp(36px,3.7vw,60px);font-weight:500;line-height:1.08;letter-spacing:-0.025em;color:#000;max-width:none;width:100%;text-wrap:balance}
+.hero-subtitle{margin-top:-22px;font-size:clamp(19px,1.7vw,28px);font-weight:400;line-height:1.45;letter-spacing:-0.01em;color:rgba(0,0,0,.58);max-width:900px}
 
 /* IMAGE */
 .img-wrap{width:100%;background:#f5f5f5;border-radius:16px;overflow:hidden;position:relative}
@@ -158,7 +159,7 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
         </div>
         <div>
           <div class="meta-label" id="m-role-label">역할</div>
-          <div class="meta-value" id="m-role-val">Team Lead (인턴 4명) · UX/UI 디자인 · AI 코파일럿 경험 설계</div>
+          <div class="meta-value" id="m-role-val">팀 리드(인턴 4명) · 서비스 기획 · UX/UI 디자인 · AI 브랜딩 및 디자인 시스템</div>
         </div>
         <div>
           <div class="meta-label" id="m-duration-label">기간</div>
@@ -170,6 +171,7 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
         </div>
       </div>
       <h1 class="hero-h1" id="hero-h1">삼성 모자이크 인트라넷 워크스페이스 개선</h1>
+      <p class="hero-subtitle" id="hero-subtitle">사내 문서를 찾아 아이디어 작성을 돕는 AI 어시스턴트</p>
       <div class="hero-divider"></div>
     </div>
   </div>
@@ -186,11 +188,11 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 1. THE CHALLENGE -->
       <div class="txt">
-        <h2 id="s1-h2">수많은 사내 문서를 내 아이디어의 근거로 찾아주는 RAG AI 플랫폼을 구현했습니다.</h2>
+        <h2 id="s1-h2">DIAGNOSIS — 아이디어를 제안으로 발전시키는 과정에 어시스트가 필요했습니다.</h2>
         <p id="s1-p1">모자이크는 임직원이 창의적인 아이디어를 공유하고, 업무 현안을 토론하고, 사내 전문가의 도움을 받는 온·오프라인 커뮤니티 플랫폼입니다. 공모전과 상시 제안이 열리고, 사내 문서·설문·리포트도 200건 넘게 쌓여 있었습니다.</p>
-        <p id="s1-p2">하지만 그 자산이 바로 아이디어로 이어지지는 않았습니다. 작성 화면은 텍스트 필드 중심이었고, 근거가 될 자료는 PDF·한글·워드 문서로 흩어져 있었습니다. 참여 이력도 누적되는 경험보다 이벤트처럼 흘러갔습니다.</p>
+        <p id="s1-p2">하지만 그 자산이 바로 아이디어로 이어지지는 않았습니다. 작성 화면은 텍스트 필드 중심이었고, 근거가 될 자료는 PDF·한글·워드 문서로 흩어져 있었습니다. 사용자는 주제를 떠올리고, 관련 사내 자료를 찾고, 읽고 요약하고, 근거로 붙이고, 다음 행동까지 스스로 이어가야 했습니다.</p>
         <blockquote>
-          <p id="s1-quote">"아이디어가 부족한 게 아니라, 200건 넘는 사내 문서를 근거로 꺼내 쓸 방법이 없었습니다."<br><span style="font-size:14px;font-style:normal;font-weight:400;color:rgba(0,0,0,.4)" id="s1-quote-attr">— 문제 정의</span></p>
+          <p id="s1-quote">"필요했던 것은 아이디어를 대신 써주는 챗봇이 아니라, 작성 흐름 안에서 주제를 제안하고, 관련 문서를 찾아 요약하고, 근거로 붙여주고, 다음 행동까지 이어주는 어시스트였습니다."<br><span style="font-size:14px;font-style:normal;font-weight:400;color:rgba(0,0,0,.4)" id="s1-quote-attr">— 문제 재정의</span></p>
         </blockquote>
       </div>
 
@@ -207,13 +209,13 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 2. MY ROLE -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="s2-tag">Role</div>
+          <div class="lbl-tag" id="s2-tag">OVERVIEW</div>
           <div class="lbl-title" id="s2-title">역할과 산출물</div>
         </div>
         <div class="lbl-content">
           <h2 id="s2-h2">M-pilot의 기능, 화면, 시각 규칙을 하나의 제안으로 묶었습니다.</h2>
-          <p id="s2-p1">Hidd lab의 프리랜서 외주 프로젝트로, 인턴 4명과 함께 제안을 만들었습니다. 서비스 기획부터 UX/UI 디자인, AI 브랜딩과 디자인 시스템까지 전 범위를 담당했습니다.</p>
-          <p id="s2-p2">프로젝트 범위는 화면 몇 장을 그리는 데서 끝나지 않았습니다. M-pilot이 어떤 기능을 갖고, 어떤 상태로 말하고, 어떤 시각 규칙으로 구분되는지까지 제안서 안에서 하나로 보여줘야 했습니다.</p>
+          <p id="s2-p1">Hidd lab의 프리랜서 외주 프로젝트로, 인턴 4명과 함께 제안을 만들었습니다. 저는 팀 리드로 서비스 기획, UX/UI 디자인, AI 브랜딩과 디자인 시스템 전 범위를 정리했습니다.</p>
+          <p id="s2-p2">프로젝트 범위는 화면 몇 장을 그리는 데서 끝나지 않았습니다. M-pilot이 어떤 도움을 주고, 어떤 상태로 말하고, 어떤 시각 규칙으로 AI 영역을 구분하는지까지 제안서 안에서 하나로 보여줘야 했습니다.</p>
           <p id="s2-p3"><strong>1. M-pilot 기능 정의</strong> / LLM·RAG 기반 내부 문서 검색과 AI Agent 기반 행동 추천을 나눠 구동 방식을 정리했습니다.</p>
           <p id="s2-p4"><strong>2. 워크스페이스 화면 설계</strong> / 아이디어 홈, 작성창, 문서 요약, 업무비서 화면을 하나의 흐름으로 연결했습니다.</p>
           <p id="s2-p5"><strong>3. AI 인터랙션·브랜딩 시스템</strong> / 진행 상태, 스트리밍, 출처 첨부, AI 생성 표기, 결과 없음 follow-up, 로고와 컬러 규칙을 정리했습니다.</p>
@@ -223,23 +225,23 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 3. APPROACH -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="s3-tag">Approach</div>
+          <div class="lbl-tag" id="s3-tag">APPROACH</div>
           <div class="lbl-title" id="s3-title">챗봇 하나가 아닌 이원 구조</div>
         </div>
         <div class="lbl-content">
-          <h2 id="s3-h2">워크스페이스 우측 챗봇 대신, M-pilot을 두 역할로 나눴습니다.</h2>
-          <p id="s3-p1">초기에는 워크스페이스 우측에 챗봇 하나를 두고 모든 요청을 받는 안을 검토했습니다. 구현은 단순하지만 사용자가 먼저 물어볼 거리를 찾아야 하므로, 기존 문제였던 “빈 화면에서 시작한다”는 상황이 그대로 남았습니다.</p>
-          <p id="s3-p2">그래서 M-pilot을 사용자가 만나는 순간 기준으로 나눴습니다. 아이디어를 떠올리는 순간에는 키워드와 다음 행동을 추천하고, 작성하는 순간에는 내부 문서와 참고 콘텐츠를 찾아 붙이는 구조입니다.</p>
+          <h2 id="s3-h2">M-pilot은 사용자가 도움을 필요로 하는 순간별로 나뉘어야 했습니다.</h2>
+          <p id="s3-p1">초기에는 워크스페이스 우측에 챗봇 하나를 두고 모든 요청을 받는 안을 검토했습니다. 구현은 단순하지만, 사용자가 먼저 무엇을 물어봐야 하는지 알아야 합니다. 기존 문제였던 빈 화면 앞에서 멈추는 상황은 그대로 남았습니다.</p>
+          <p id="s3-p2">그래서 M-pilot을 두 역할로 나눴습니다. 아이디어를 찾는 순간에는 키워드와 다음 행동을 추천하고, 작성하는 순간에는 내부 문서와 참고 콘텐츠를 찾아 근거로 붙이는 구조입니다.</p>
           <h3 id="s3-h3a">1. 검색형 코파일럿 (LLM/RAG)</h3>
           <p id="s3-p3">사내 문서·설문·리포트를 찾아 요약합니다. PDF·한글·워드처럼 흩어진 문서를 일정한 형식으로 DB화해, 작성 중인 아이디어에 바로 근거를 붙일 수 있게 했습니다.</p>
           <h3 id="s3-h3b">2. 추천 행동 제안 (AI Agent)</h3>
           <p id="s3-p4">최근 활동과 진행 중인 공모전을 바탕으로 추천 키워드, MOSAIC Report, 업무비서 기능을 제안합니다. 사용자는 아이디어 시작점과 다음 행동을 같은 흐름에서 확인할 수 있습니다.</p>
-          <h3 id="s3-h3c">3. 벤치마크에서 본 빈 자리</h3>
-          <p id="s3-p5">Microsoft 365 Copilot, Notion AI, Glean처럼 이미 쓰이던 AI 도구를 보며 출처 표기, 결과 없음 처리, AI 영역 시각 구분을 비교했습니다. M-pilot에서는 요약 하단 문서 카드, 다음 행동 전환, 그라디언트 글로우를 차별점으로 잡았습니다.</p>
+          <h3 id="s3-h3c">3. AI 신뢰 설계</h3>
+          <p id="s3-p5">사내 데이터를 다루는 서비스에서는 답변이 맞는지만큼 사용자가 답변을 검증할 수 있는지가 중요했습니다. 그래서 출처 카드, AI 생성 라벨, 결과 없음 follow-up, AI 영역의 시각 구분을 코파일럿의 기본 규칙으로 잡았습니다.</p>
           <h3 id="s3-h3d">4. 두 역할이 만나는 지점</h3>
-          <p id="s3-p6">두 역할의 공통 목표는 업무 생산성 향상입니다. 필요한 내부 문서를 찾고, 아이디어를 뒷받침하는 정보를 제공해 최종적으로 창의적인 제안으로 이어지게 했습니다.</p>
-          <p id="s3-p7">문제 정의는 클라이언트 브리프와 기존 화면 분석을 바탕으로 잡았습니다. 사용자 조사는 제안 단계 범위에 포함되지 않았기 때문에, 케이스스터디에서도 검증했다고 말하기보다 내부 테스트로 이어질 가설을 분명히 남겼습니다.</p>
-          <p id="s3-p8">이 기준 덕분에 M-pilot은 단순한 대화창이 아니라 아이디어 홈, 작성창, 문서 요약, 업무비서에 각각 다른 형태로 놓일 수 있었습니다.</p>
+          <p id="s3-p6">두 역할의 공통 목표는 업무 생산성 향상입니다. 필요한 내부 문서를 찾고, 아이디어를 뒷받침하는 정보를 제공해 최종적으로 더 설득력 있는 제안으로 이어지게 했습니다.</p>
+          <p id="s3-p7">이 구조 덕분에 M-pilot은 단순한 대화창이 아니라 아이디어 홈, 작성창, 문서 요약, 업무비서에 각각 다른 형태로 놓일 수 있었습니다.</p>
+          <p id="s3-p8">사용자는 추천 키워드로 시작하고, 내부 문서로 근거를 붙이고, 출처와 AI 라벨로 신뢰 경로를 확인한 뒤, 공모전 참여나 설문 제작, 회의 예약 같은 다음 행동으로 이어질 수 있습니다.</p>
         </div>
       </div>
 
@@ -256,19 +258,19 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 4. DESIGN -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="s4-tag">Design Decisions</div>
+          <div class="lbl-tag" id="s4-tag">DESIGN DECISIONS</div>
           <div class="lbl-title" id="s4-title">아이디어 흐름 설계</div>
         </div>
         <div class="lbl-content">
-          <h2 id="s4-h2">아이디어를 시작하게 하고, 작성 중에는 근거를 붙이며, 반복 업무는 에이전트로 넘겼습니다.</h2>
-          <p id="s4-p1"><strong>Insight Radar</strong>는 사내에서 급상승 중인 키워드를 방사형으로 배치합니다. ‘생성형 AI’, ‘라이프 로깅’, ‘개인화된 수면가이드’ 같은 키워드를 누르면 관련 리포트와 흐름을 보고 바로 아이디어 작성으로 넘어갈 수 있습니다.</p>
-          <p id="s4-p2"><strong>My MOSAIC Report</strong>는 수상 횟수, 참여한 공모전, 작성한 상시 제안을 배지 진행도로 보여줍니다. “새로운 배지 획득까지 2개의 활동이 남았어요”처럼 참여를 이벤트가 아니라 누적되는 기록으로 바꿨습니다.</p>
+          <h2 id="s4-h2">아이디어를 촉발하고, 작성 중에는 근거를 붙이며, 반복 업무는 에이전트가 이어받게 했습니다.</h2>
+          <p id="s4-p1"><strong>Insight Radar</strong>는 사내에서 급상승 중인 키워드를 방사형으로 배치합니다. 생성형 AI, 라이프 로깅, 개인화된 수면가이드 같은 키워드를 누르면 관련 리포트와 흐름을 보고 바로 아이디어 작성으로 넘어갈 수 있습니다.</p>
+          <p id="s4-p2"><strong>My MOSAIC Report</strong>는 수상 횟수, 참여한 공모전, 작성한 상시 제안을 배지 진행도로 보여줍니다. “새로운 배지 획득까지 2개의 활동이 남았어요”처럼 참여를 일회성 이벤트가 아니라 누적되는 기록으로 바꿨습니다.</p>
           <blockquote>
-            <p id="s4-quote">"아이디어를 떠올리는 순간, 쓰는 순간, 실행하는 순간에 각각 다른 형태의 코파일럿을 배치했습니다."</p>
+            <p id="s4-quote">"촉발하기 → 근거 붙이기 → 신뢰 남기기 → 행동으로 잇기"</p>
           </blockquote>
           <p id="s4-p3"><strong>작성창 코파일럿 패널</strong>은 Trend, CX, Idea, Discussion 탭으로 참고 콘텐츠를 나눠 보여줍니다. 작성 중인 키워드와 맞는 사내 문서를 찾고, 추천 아이디어명을 제안하고, 문서를 끌어다 놓으면 근거 자료로 첨부되게 했습니다.</p>
-          <p id="s4-p4"><strong>업무비서</strong>는 “다음주에 디자인팀 회의 잡아줘” 한 문장으로 가능한 시간을 조율하고 회의실과 참석 인원을 확인합니다. 결과만 던지지 않고, 일시·장소·참석 가능 인원 같은 판단 근거를 함께 보여줍니다.</p>
-          <p id="s4-p5"><strong>브랜딩 시스템</strong>은 연결, 지능, 창의성, 신뢰성을 네 개의 다이아몬드가 모이는 형태로 표현했습니다. 흩어진 아이디어가 하나로 모이는 M-pilot의 역할을 로고와 다크·라이트 심볼, Lexend/Pretendard 타이포그래피 규칙으로 정리했습니다.</p>
+          <p id="s4-p4"><strong>업무비서</strong>는 “다음주에 디자인팀 회의 잡아줘” 같은 한 문장 요청을 받아 가능한 시간을 조율하고, 회의실과 참석 가능 인원을 확인합니다. 결과만 던지지 않고 일시·장소·참석 가능 인원 같은 판단 근거를 함께 보여줍니다.</p>
+          <p id="s4-p5"><strong>브랜딩 시스템</strong>은 연결, 지능, 창의성, 신뢰성을 네 개의 다이아몬드가 모이는 형태로 표현했습니다. 흩어진 아이디어와 사내 지식이 하나로 모이는 M-pilot의 역할을 로고와 다크·라이트 심볼, Lexend/Pretendard 타이포그래피 규칙으로 정리했습니다.</p>
         </div>
       </div>
 
@@ -292,15 +294,15 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 5. TRUST DESIGN -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="s4b-tag">AI Trust</div>
-          <div class="lbl-title" id="s4b-title">할루시네이션을 UI로 다뤘습니다</div>
+          <div class="lbl-tag" id="s4b-tag">AI TRUST</div>
+          <div class="lbl-title" id="s4b-title">신뢰 경로 설계</div>
         </div>
         <div class="lbl-content">
-          <h2 id="s4b-h2">모델을 고칠 수 없다면, 인터페이스가 확인 경로를 남겨야 합니다.</h2>
+          <h2 id="s4b-h2">모델을 직접 고칠 수 없다면, 인터페이스가 확인 경로를 남겨야 합니다.</h2>
           <p id="s4b-p1">생성형 AI를 사내 시스템에 넣을 때 가장 큰 리스크는 신뢰입니다. 사내 데이터를 다루는 서비스에서는 틀린 답보다 검증할 수 없는 답이 더 위험하다고 보고, 할루시네이션 리스크를 인터페이스 패턴으로 다뤘습니다.</p>
-          <p id="s4b-p2"><strong>과정 노출</strong> / ‘Searching for: 전략 과제 폴더에서 수면 관련 내용’ 다음에 ‘Generating answers for you...’를 보여줘 응답이 처리되고 있음을 알렸습니다.</p>
+          <p id="s4b-p2"><strong>과정 노출</strong> / “Searching for: 전략 과제 폴더에서 수면 관련 내용” 다음에 “Generating answers for you...”를 보여줘 응답이 처리되고 있음을 알렸습니다.</p>
           <p id="s4b-p3"><strong>스트리밍 응답</strong> / 답변을 한 번에 완성해서 보여주기보다 일부부터 노출해 대화하는 감각을 만들고 체감 대기시간을 낮췄습니다.</p>
-          <p id="s4b-p4"><strong>출처 첨부와 AI 생성 표기</strong> / 요약 하단에는 근거 문서 카드를 붙이고, 생성 결과에는 ‘삼성 AI 코파일럿 M-pilot으로 작성된 내용입니다’ 라벨을 붙였습니다.</p>
+          <p id="s4b-p4"><strong>출처 첨부와 AI 생성 표기</strong> / 요약 하단에는 근거 문서 카드를 붙이고, 생성 결과에는 “삼성 AI 코파일럿 M-pilot으로 작성된 내용입니다” 라벨을 붙였습니다.</p>
           <p id="s4b-p5"><strong>결과 없음 follow-up</strong> / 검색 결과가 없을 때 “없습니다”로 끝내지 않고, 연령별 수면 시 스마트 기기 활용 행태 설문처럼 새 액션을 제안했습니다.</p>
           <p id="s4b-p6"><strong>AI 표면의 규칙</strong> / 그라디언트 글로우는 M-pilot이 개입한 영역에만 사용했습니다. 사용자는 색과 라벨만 보고도 “여기는 AI가 만든 영역”임을 알 수 있습니다.</p>
         </div>
@@ -309,22 +311,22 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
       <!-- 6. TEAM LEAD -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="s5a-tag">Team Lead</div>
-          <div class="lbl-title" id="s5a-title">인턴 4명과 2개월</div>
+          <div class="lbl-tag" id="s5a-tag">TEAM LEAD</div>
+          <div class="lbl-title" id="s5a-title">인턴 4명과 함께 만든 제안</div>
         </div>
         <div class="lbl-content">
-          <h2 id="s5a-h2">짧은 일정 안에서 기획, 화면, 브랜딩을 병렬로 움직였습니다.</h2>
-          <p id="s5a-p1">2개월 안에 제안 구조부터 브랜딩까지 끝내야 했기 때문에, 순서대로 넘기는 방식보다 기준을 먼저 세우고 나눠 작업하는 방식을 택했습니다.</p>
+          <h2 id="s5a-h2">기준을 먼저 세우고, 화면 제작은 병렬로 움직였습니다.</h2>
+          <p id="s5a-p1">인턴 4명으로 구성된 팀을 리드했습니다. 프로젝트 기간 동안 기획, 주요 화면, AI 브랜딩, 디자인 시스템까지 함께 정리해야 했기 때문에 순서대로 넘기는 방식보다 기준을 먼저 세우고 병렬로 움직이는 방식을 택했습니다.</p>
           <p id="s5a-p2"><strong>구조를 먼저 고정했습니다.</strong> LLM/RAG와 AI Agent로 코파일럿을 나누는 이원 구조를 초반에 잡았습니다. 이 기준선이 있어야 각자 맡은 화면이 따로 놀지 않았습니다.</p>
-          <p id="s5a-p3"><strong>판단 기준을 문서로 넘겼습니다.</strong> 출처는 어디에 붙이는지, AI 생성 영역은 어떻게 구분하는지, 결과 없음은 어디로 이어지는지 같은 규칙을 정리해 반복 질문을 줄였습니다.</p>
-          <p id="s5a-p4"><strong>최종 품질과 클라이언트 커뮤니케이션은 제가 맡았습니다.</strong> 제안 논리, 화면 정합성, 브랜딩 톤이 한 방향으로 읽히도록 마지막까지 맞췄습니다.</p>
+          <p id="s5a-p3"><strong>화면에 들어갈 컴포넌트를 먼저 설계했습니다.</strong> Insight Radar, 작성창 코파일럿 패널, 출처 카드, AI 생성 라벨, 결과 없음 follow-up, 업무비서 응답 카드처럼 각 화면에 필요한 핵심 컴포넌트를 정의했습니다. 신입 인턴들이 빈 화면에서 시작하지 않도록 목적과 상태, 들어가야 할 정보, 사용 위치를 먼저 잡아주고 화면 제작을 나눴습니다.</p>
+          <p id="s5a-p4"><strong>최종 품질과 클라이언트 커뮤니케이션은 제가 맡았습니다.</strong> 인턴들이 만든 화면이 제안 논리와 같은 방향으로 읽히는지 확인하고, 화면 정합성·브랜딩 톤·컴포넌트 사용 방식을 마지막까지 맞췄습니다. 클라이언트에게는 왜 이 구조와 컴포넌트가 필요한지 설명되는 제안으로 전달했습니다.</p>
         </div>
       </div>
 
       <!-- 7. MEASUREMENT -->
       <div class="labeled">
         <div class="lbl-col">
-          <div class="lbl-tag" id="s5b-tag">Validation</div>
+          <div class="lbl-tag" id="s5b-tag">VALIDATION</div>
           <div class="lbl-title" id="s5b-title">내부 테스트에서 볼 지표</div>
         </div>
         <div class="lbl-content">
@@ -337,15 +339,15 @@ footer{width:100%;background:#0a0a0a;padding:120px 0 64px;margin-top:40px}
 
       <!-- 8. OUTCOME -->
       <div class="txt">
-        <h2 id="s5-h2">결과 — 내부 테스트와 후속 개발로 이어진 제안</h2>
+        <h2 id="s5-h2">OUTCOME — 내부 테스트와 후속 개발로 이어진 제안</h2>
         <p id="s5-p1">제안이 승인되어 클라이언트 내부 테스트와 후속 개발로 이어졌습니다. 컨셉 검토로 끝나는 외주 제안과 달리, 설계한 구조가 실제 검증 단계로 넘어갔습니다.</p>
-        <p id="s5-p3">제안을 관통하는 흐름은 단순합니다.</p>
+        <p id="s5-p3">프로젝트 기간 동안 전달한 산출물은 M-pilot 기능 정의, 워크스페이스 주요 화면, AI 인터랙션 패턴, 브랜드 아이덴티티와 디자인 시스템이었습니다.</p>
         <p id="s5-framework"><strong>촉발하기 → 근거 붙이기 → 신뢰 남기기 → 행동으로 잇기</strong></p>
         <p id="s5-p4">추천 키워드로 아이디어를 시작하고, 내부 문서로 근거를 붙이고, 출처와 AI 라벨로 확인 경로를 남긴 뒤, 공모전 참여나 설문 제작, 회의 예약 같은 다음 행동으로 이어지는 구조입니다.</p>
-        <h3 id="s5b-h3">회고</h3>
-        <p id="s5b-p4">이 프로젝트에서는 AI 기능 자체보다 AI가 개입하는 순간을 설계하는 일이 더 중요했습니다. 아이디어를 떠올리는 순간, 쓰는 순간, 실행하는 순간에 각각 다른 형태로 코파일럿을 배치했기 때문입니다.</p>
-        <p id="s5-p5">이 프로젝트에서 배운 점은 신뢰가 모델 성능만으로 생기지 않는다는 것입니다. 사내 데이터를 다루는 서비스에서는 틀린 답보다 검증할 수 없는 답이 더 큰 문제라서, 출처·과정·AI 표기를 디자인 시스템 레벨의 규칙으로 잡는 것이 중요했습니다.</p>
-        <p id="s5b-p5">아쉬운 점도 있습니다. 제안은 승인됐지만 계약 범위상 검증 단계에는 참여하지 않았습니다. 다시 한다면 화면을 그리기 전에 모자이크 실사용자 인터뷰를 최소 3건이라도 확보해, 브리프가 아니라 사용자 언어로 문제를 먼저 세웠을 것입니다.</p>
+        <h3 id="s5b-h3">LEARNING</h3>
+        <p id="s5b-p4">AI 기능이 아니라 AI가 개입하는 순간을 설계했습니다. 챗봇 하나를 붙이는 방식은 사용자가 “물어볼 거리”를 스스로 찾아야 합니다. 그래서 아이디어를 떠올리는 순간, 쓰는 순간, 실행하는 순간에 각각 다른 형태로 코파일럿을 배치했습니다.</p>
+        <p id="s5-p5">신뢰는 모델 성능만으로 생기지 않습니다. 사내 데이터를 다루는 서비스에서는 틀린 답보다 검증할 수 없는 답이 더 큰 문제입니다. 출처, 과정, AI 표기 세 가지를 디자인 시스템 레벨의 규칙으로 잡은 이유입니다.</p>
+        <p id="s5b-p5">제안은 검증 가능한 형태로 남겨야 합니다. 문제 정의는 클라이언트 브리프와 기존 화면 분석에서 출발했지만, 화면을 예쁘게 만드는 데서 끝내지 않고 내부 테스트에서 확인할 지표까지 함께 정리했습니다. 덕분에 제안은 컨셉이 아니라 후속 개발과 검증으로 이어질 수 있는 구조가 됐습니다.</p>
       </div>
 
     </div>
@@ -383,85 +385,86 @@ const CONTENT = {
     'ft-nav-work': 'Work', 'ft-nav-about': 'About', 'ft-nav-resume': 'Resume',
     'm-industry-label': 'Project', 'm-industry-val': 'Samsung MOSAIC Intranet Workspace Improvement',
     'm-client-label': 'Client', 'm-client-val': 'Hidd lab · Freelance project',
-    'm-role-label': 'Role', 'm-role-val': 'Team Lead (4 interns) · UX/UI Design · AI Copilot Experience',
+    'm-role-label': 'Role', 'm-role-val': "Team Lead (4 interns) · Service Planning · UX/UI Design · AI Branding & Design System",
     'm-duration-label': 'Duration', 'm-duration-val': '2023.02 – 2025.12',
     'm-impact-label': 'Impact', 'm-impact-val': 'Client approved · Internal test and follow-up development confirmed',
-    'hero-h1': 'Samsung MOSAIC Intranet Workspace Improvement',
+    'hero-h1': "Samsung MOSAIC Intranet Workspace Improvement",
+    'hero-subtitle': "An internal AI assistant that helps employees find internal documents and write ideas",
     // Section 1
-    's1-h2': 'Built a RAG-based AI platform that finds internal documents as evidence for your own idea.',
-    's1-p1': 'MOSAIC is an online and offline community platform where Samsung employees share creative ideas, discuss work issues, and get help from internal experts. It already had contests, always-on proposals, and more than 200 internal documents, surveys, and reports.',
-    's1-p2': 'But those assets did not naturally become ideas. The writing screen was mostly a text field, supporting materials were scattered across PDF, HWP, and Word files, and participation felt closer to one-off events than a cumulative record.',
-    's1-quote': '"The issue was not a lack of ideas. There was no way to pull the 200-plus internal documents in as evidence."<br><span style="font-size:14px;font-style:normal;font-weight:400;color:rgba(0,0,0,.4)" id="s1-quote-attr">— Problem definition</span>',
-    's1-quote-attr': '— Problem definition',
+    's1-h2': "DIAGNOSIS — The idea workflow needed an assistant that could turn internal knowledge into usable evidence.",
+    's1-p1': "MOSAIC is Samsung’s internal community platform where employees share creative ideas, discuss work issues, and receive expert support. The platform already held more than 200 internal documents, surveys, and reports.",
+    's1-p2': "But those assets did not naturally turn into ideas. The writing screen was centered on blank text fields, while evidence lived across scattered PDF, HWP, and Word files. Users had to find a topic, search related material, read and summarize it, attach it as evidence, and decide the next action on their own.",
+    's1-quote': "\"What users needed was not a chatbot that writes ideas for them, but an assistant that suggests topics, finds and summarizes related documents, attaches evidence, and leads to the next action inside the writing flow.\"<br><span style=\"font-size:14px;font-style:normal;font-weight:400;color:rgba(0,0,0,.4)\" id=\"s1-quote-attr\">— Problem reframing</span>",
+    's1-quote-attr': "— Problem reframing",
     // Section 2
-    's2-tag': 'Role', 's2-title': 'Role & deliverables',
-    's2-h2': "I brought M-pilot's functions, screens, and visual rules together into one proposal.",
-    's2-p1': 'A freelance client project for Hidd lab, built with four interns. I covered the full range — service planning, UX/UI design, AI branding, and the design system.',
-    's2-p2': 'This was not only a set of screens. The proposal needed to show what M-pilot does, how it speaks in each state, and how users can visually identify AI-involved areas.',
-    's2-p3': '<strong>1. M-pilot function definition</strong> / I separated LLM/RAG-based internal document search from AI Agent-based action recommendations.',
-    's2-p4': '<strong>2. Workspace screen design</strong> / I connected the idea home, writing screen, document summary, and work assistant into one experience.',
-    's2-p5': '<strong>3. AI interaction and branding system</strong> / I organized progress states, streaming, source attachments, AI labels, no-result follow-up, logo, and color rules.',
+    's2-tag': "OVERVIEW", 's2-title': "Role & deliverables",
+    's2-h2': "I connected M-pilot’s functions, screens, and visual rules into one coherent proposal.",
+    's2-p1': "This was a freelance client project for Hidd lab, created with four interns. As team lead, I organized the full scope across service planning, UX/UI design, AI branding, and the design system.",
+    's2-p2': "The scope did not end with a few screens. The proposal had to explain what kind of help M-pilot provides, how it speaks in each state, and how users can recognize AI-assisted areas visually.",
+    's2-p3': "<strong>1. M-pilot function definition</strong> / I separated LLM/RAG-based internal document search from AI Agent-based action recommendations.",
+    's2-p4': "<strong>2. Workspace screen design</strong> / I connected the idea home, writing screen, document summary, and work assistant into one flow.",
+    's2-p5': "<strong>3. AI interaction and branding system</strong> / I organized progress states, streaming, source attachments, AI labels, no-result follow-up, logo, and color rules.",
     // Section 3
-    's3-tag': 'Approach',
-    's3-title': 'Two roles instead of one chatbot',
-    's3-h2': 'Instead of adding one chatbot to the workspace, I split M-pilot into two roles.',
-    's3-p1': 'The first option was to place one chatbot on the right side of the workspace and let it handle every request. It was simple to implement, but users still had to decide what to ask first, leaving the blank-start problem untouched.',
-    's3-p2': 'So I organized M-pilot around the moments users meet it. When users are forming an idea, it recommends keywords and next actions. When they are writing, it finds internal documents and attaches supporting references.',
-    's3-h3a': '1. Search Copilot (LLM/RAG)',
-    's3-p3': 'This role searches and summarizes internal documents, surveys, and reports. Scattered PDF, HWP, and Word files are converted into a consistent database so users can attach evidence while writing.',
-    's3-h3b': '2. Action Recommendation (AI Agent)',
-    's3-p4': 'This role recommends keywords, MOSAIC Report items, and work assistant actions based on recent activity and active contests. Users can see starting points and follow-up actions in one flow.',
-    's3-h3c': '3. Gap from benchmarking',
-    's3-p5': 'I compared existing AI tools such as Microsoft 365 Copilot, Notion AI, and Glean through source display, no-result handling, and visual separation of AI areas. M-pilot used document cards under summaries, next-action conversion, and gradient glow as its differentiators.',
-    's3-h3d': '4. Where the two roles meet',
-    's3-p6': 'Both roles serve the same goal: improving work productivity by finding needed internal documents and showing information that supports an idea.',
-    's3-p7': 'The problem definition came from the client brief and existing-screen analysis. User research was outside the proposal scope, so the case study frames those points as hypotheses for internal testing rather than verified findings.',
-    's3-p8': 'With that structure, M-pilot could appear as different experiences across the idea home, writing screen, document summary, and work assistant.',
+    's3-tag': "APPROACH",
+    's3-title': "Two roles instead of one chatbot",
+    's3-h2': "M-pilot had to be split by the moments when users needed help.",
+    's3-p1': "A single chatbot on the right side of the workspace would have been simple to implement, but users would still need to know what to ask first. The original blank-page problem would remain.",
+    's3-p2': "So I divided M-pilot into two roles. When users look for an idea, it suggests keywords and next actions. When users write, it finds internal documents and supporting content that can become evidence.",
+    's3-h3a': "1. Search Copilot (LLM/RAG)",
+    's3-p3': "This role searches and summarizes internal documents, surveys, and reports. Scattered PDF, HWP, and Word files are converted into a consistent database so users can attach evidence while writing.",
+    's3-h3b': "2. Action Recommendation (AI Agent)",
+    's3-p4': "This role recommends keywords, MOSAIC Report items, and work assistant actions based on recent activity and active contests. Users can see starting points and follow-up actions in one flow.",
+    's3-h3c': "3. AI trust design",
+    's3-p5': "In an internal-data service, users need to verify answers as much as receive them. I treated source cards, AI-generated labels, no-result follow-up, and visual separation of AI areas as baseline copilot rules.",
+    's3-h3d': "4. Where the two roles meet",
+    's3-p6': "Both roles serve the same goal: improving work productivity by finding needed internal documents and turning ideas into more persuasive proposals.",
+    's3-p7': "With this structure, M-pilot could appear not as a single chat window, but as different experiences across the idea home, writing screen, document summary, and work assistant.",
+    's3-p8': "Users can start from recommended keywords, attach evidence from internal documents, verify the path through sources and AI labels, and continue into actions such as contest participation, survey creation, or meeting scheduling.",
     // Section 4
-    's4-tag': 'Design Decisions',
-    's4-title': 'Designing the idea flow',
-    's4-h2': 'M-pilot triggers ideas, attaches evidence while writing, and hands repetitive work to the agent.',
-    's4-p1': '<strong>Insight Radar</strong> places rising internal keywords in a radial layout. Users can click topics such as generative AI, life logging, and personalized sleep guides, then move into idea writing from the related flow and report.',
-    's4-p2': '<strong>My MOSAIC Report</strong> shows awards, contest participation, and always-on proposals as badge progress. Participation becomes a cumulative record instead of a one-time event.',
-    's4-quote': '"I placed the copilot differently across the moment users find an idea, write it, and turn it into action."',
-    's4-p3': '<strong>Writing copilot panel</strong> organizes references into Trend, CX, Idea, and Discussion tabs. It finds internal documents, suggests idea titles, and lets users drag documents into the draft as evidence.',
-    's4-p4': '<strong>Work assistant</strong> handles requests like "set up a design team meeting next week." It checks available time, meeting rooms, and expected attendees, then returns the result with enough context to verify it.',
-    's4-p5': '<strong>Branding system</strong> expresses connection, intelligence, creativity, and trust through four diamonds. The logo, dark/light symbols, and Lexend/Pretendard typography rules make M-pilot feel consistent across the workspace.',
+    's4-tag': "DESIGN DECISIONS",
+    's4-title': "Designing the idea flow",
+    's4-h2': "M-pilot triggered ideas, attached evidence while writing, and handed repetitive work to an agent.",
+    's4-p1': "<strong>Insight Radar</strong> places rising internal keywords in a radial layout. Users can click topics such as generative AI, life logging, and personalized sleep guides, then move into idea writing from the related flow and report.",
+    's4-p2': "<strong>My MOSAIC Report</strong> shows awards, contest participation, and always-on proposals as badge progress. Participation becomes a cumulative record instead of a one-time event.",
+    's4-quote': "\"Trigger → Attach evidence → Leave trust cues → Lead to action\"",
+    's4-p3': "<strong>Writing copilot panel</strong> organizes references into Trend, CX, Idea, and Discussion tabs. It finds internal documents, suggests idea titles, and lets users drag documents into the draft as evidence.",
+    's4-p4': "<strong>Work assistant</strong> handles requests like “set up a design team meeting next week.” It checks available time, meeting rooms, and expected attendees, then returns the result with enough context to verify it.",
+    's4-p5': "<strong>Branding system</strong> expresses connection, intelligence, creativity, and trust through four diamonds. The logo, dark/light symbols, and Lexend/Pretendard typography rules make M-pilot feel consistent across the workspace.",
     // Trust Design
-    's4b-tag': 'AI Trust',
-    's4b-title': 'Handling hallucination through UI',
-    's4b-h2': 'If the model cannot be fixed in the interface, the interface must leave a path for verification.',
-    's4b-p1': 'Trust is the biggest risk when generative AI enters an internal system. In a workspace that handles company data, an unverifiable answer can be more dangerous than a wrong one, so I handled hallucination risk through interface patterns.',
-    's4b-p2': '<strong>Process visibility</strong> / States such as "Searching for: sleep-related content in the strategy folder" and "Generating answers for you..." show that the request is being handled.',
-    's4b-p3': '<strong>Streaming response</strong> / Instead of waiting for a finished answer, the UI reveals part of the answer while it is being generated to reduce perceived waiting time.',
-    's4b-p4': '<strong>Source attachment and AI labeling</strong> / Summary results include source document cards, and generated content is labeled as written by Samsung AI copilot M-pilot.',
-    's4b-p5': '<strong>No-result follow-up</strong> / Instead of ending with "no result," M-pilot suggests a new action, such as creating a survey about smart device use during sleep by age group.',
-    's4b-p6': '<strong>AI surface rules</strong> / Gradient glow appears only where M-pilot is involved, so users can recognize AI-generated or AI-assisted areas by color and label.',
+    's4b-tag': "AI TRUST",
+    's4b-title': "Designing trust paths",
+    's4b-h2': "If the model cannot be fixed directly, the interface must leave a path for verification.",
+    's4b-p1': "Trust is the biggest risk when generative AI enters an internal system. In a workspace that handles company data, an unverifiable answer can be more dangerous than a wrong one, so I handled hallucination risk through interface patterns.",
+    's4b-p2': "<strong>Process visibility</strong> / States such as “Searching for: sleep-related content in the strategy folder” and “Generating answers for you...” show that the request is being handled.",
+    's4b-p3': "<strong>Streaming response</strong> / Instead of waiting for a finished answer, the UI reveals part of the answer while it is being generated to reduce perceived waiting time.",
+    's4b-p4': "<strong>Source attachment and AI labeling</strong> / Summary results include source document cards, and generated content is labeled as written by Samsung AI copilot M-pilot.",
+    's4b-p5': "<strong>No-result follow-up</strong> / Instead of ending with “no result,” M-pilot suggests a new action, such as creating a survey about smart device use during sleep by age group.",
+    's4b-p6': "<strong>AI surface rules</strong> / Gradient glow appears only where M-pilot is involved, so users can recognize AI-generated or AI-assisted areas by color and label.",
     // Team Lead
-    's5a-tag': 'Team Lead',
-    's5a-title': 'Four interns, two months',
-    's5a-h2': 'Planning, screens, and branding moved in parallel under a short timeline.',
-    's5a-p1': 'Because the team had to finish the proposal structure and branding within two months, I fixed the shared logic first and then split the work.',
-    's5a-p2': '<strong>I fixed the structure first.</strong> The LLM/RAG and AI Agent split became the baseline that kept each assigned screen from drifting apart.',
-    's5a-p3': '<strong>I documented decision rules.</strong> I clarified where sources appear, how AI-generated areas are separated, and where no-result states lead.',
-    's5a-p4': '<strong>I owned final quality and client communication.</strong> I kept the proposal logic, screen consistency, and branding tone aligned until delivery.',
+    's5a-tag': "TEAM LEAD",
+    's5a-title': "Leading a four-intern team",
+    's5a-h2': "I set the standards first, then moved screen production in parallel.",
+    's5a-p1': "I led a team of four interns. Because planning, key screens, AI branding, and the design system had to move together, I fixed the shared standards first and then divided the work.",
+    's5a-p2': "<strong>I fixed the structure first.</strong> The LLM/RAG and AI Agent split became the baseline that kept each assigned screen from drifting apart.",
+    's5a-p3': "<strong>I designed the core components before screen production.</strong> I defined components such as Insight Radar, the writing copilot panel, source cards, AI-generated labels, no-result follow-up, and work-assistant response cards so junior interns could build screens from clear purposes, states, information rules, and usage points.",
+    's5a-p4': "<strong>I owned final quality and client communication.</strong> I checked whether the intern-produced screens supported the proposal logic, aligned screen consistency, branding tone, and component usage, and presented the proposal as a clear explanation of why the structure and components were needed.",
     // Measurement
-    's5b-tag': 'Validation',
-    's5b-title': 'Metrics for the internal test',
-    's5b-h2': 'After approval, the key question was quality, not just more ideas.',
-    's5b-p1': '<strong>Do recommended keywords lower the entry barrier?</strong> This can be checked through keyword click-to-writing start rate and completion rate from Insight Radar.',
-    's5b-p2': '<strong>Do supporting references improve proposal quality?</strong> This can be measured by comparing review pass rates between ideas with and without reference attachments.',
-    's5b-p3': '<strong>Do visible sources improve trust in AI answers?</strong> This can be checked through source-card clicks and a decrease in repeated questions.',
-    's5b-h3': 'Reflection',
-    's5b-p4': 'This project was less about adding an AI feature and more about designing the moments where AI intervenes: when users find an idea, write it, and turn it into action.',
-    's5b-p5': 'The proposal was approved, but I did not participate in the validation stage due to the contract scope. If I revisited it, I would start with at least three interviews with real MOSAIC users before drawing the screens.',
+    's5b-tag': "VALIDATION",
+    's5b-title': "Metrics for the internal test",
+    's5b-h2': "After approval, the key question was quality, not just more ideas.",
+    's5b-p1': "<strong>Do recommended keywords lower the entry barrier?</strong> This can be checked through keyword click-to-writing start rate and completion rate from Insight Radar.",
+    's5b-p2': "<strong>Do supporting references improve proposal quality?</strong> This can be measured by comparing review pass rates between ideas with and without reference attachments.",
+    's5b-p3': "<strong>Do visible sources improve trust in AI answers?</strong> This can be checked through source-card clicks and a decrease in repeated questions.",
+    's5b-h3': "LEARNING",
+    's5b-p4': "I designed the moments where AI intervenes, not just the AI feature itself. A single chatbot asks users to find what to ask, so I placed the copilot differently across the moments users find an idea, write it, and turn it into action.",
+    's5b-p5': "A proposal should remain testable. The problem definition started from the client brief and existing-screen analysis, but the work did not stop at polished screens. I also organized the metrics that internal testing could verify, so the proposal could move into follow-up development and validation.",
     // Section 5
-    's5-h2': 'Outcome — approved for internal test and follow-up development.',
-    's5-p1': 'The final proposal was approved by the client and moved into internal testing and follow-up development. It did not end as a concept review; the structure moved into a real validation stage.',
-    's5-p3': 'The proposal followed one simple flow.',
-    's5-framework': '<strong>Trigger → Attach evidence → Leave trust cues → Lead to action</strong>',
-    's5-p4': 'Start with recommended keywords, attach supporting internal documents, leave sources and AI labels, then continue into actions such as contest participation, survey creation, or meeting scheduling.',
-    's5-p5': 'The biggest takeaway was that trust does not come from model performance alone. In a workspace that handles internal data, an unverifiable answer is more dangerous than a wrong one, so sources, process, and AI labels needed to become design-system rules.',
+    's5-h2': "OUTCOME — a proposal that moved into internal testing and follow-up development",
+    's5-p1': "The final proposal was approved by the client and moved into internal testing and follow-up development. It did not end as a concept review; the structure moved into a real validation stage.",
+    's5-p3': "The delivered scope included M-pilot function definition, key workspace screens, AI interaction patterns, brand identity, and the design system.",
+    's5-framework': "<strong>Trigger → Attach evidence → Leave trust cues → Lead to action</strong>",
+    's5-p4': "The flow was simple: start with recommended keywords, attach internal evidence, leave source and AI-label trust cues, then continue into actions such as contest participation, survey creation, or meeting scheduling.",
+    's5-p5': "Trust does not come from model performance alone. In a workspace that handles internal data, an unverifiable answer can be more dangerous than a wrong one. That is why sources, process visibility, and AI labels had to become design-system rules.",
     // Footer
     'ft-tag': 'Contact', 'ft-h': "Let's start creating together", 'ft-cta': "Let's talk ↗",
   },
@@ -473,85 +476,86 @@ const CONTENT = {
     'ft-nav-work': '프로젝트', 'ft-nav-about': '소개', 'ft-nav-resume': '이력서',
     'm-industry-label': '프로젝트', 'm-industry-val': '삼성 모자이크 인트라넷 워크스페이스 개선',
     'm-client-label': '클라이언트', 'm-client-val': 'Hidd lab · 프리랜서 외주 프로젝트',
-    'm-role-label': '역할', 'm-role-val': 'Team Lead (인턴 4명) · UX/UI 디자인 · AI 코파일럿 경험 설계',
+    'm-role-label': '역할', 'm-role-val': "팀 리드(인턴 4명) · 서비스 기획 · UX/UI 디자인 · AI 브랜딩 및 디자인 시스템",
     'm-duration-label': '기간', 'm-duration-val': '2023.02 – 2025.12',
     'm-impact-label': '성과', 'm-impact-val': '클라이언트 승인 · 내부 테스트 및 후속 개발 확정',
-    'hero-h1': '삼성 모자이크 인트라넷 워크스페이스 개선',
+    'hero-h1': "삼성 모자이크 인트라넷 워크스페이스 개선",
+    'hero-subtitle': "사내 문서를 찾아 아이디어 작성을 돕는 AI 어시스턴트",
     // Section 1
-    's1-h2': '수많은 사내 문서를 내 아이디어의 근거로 찾아주는 RAG AI 플랫폼을 구현했습니다.',
-    's1-p1': '모자이크는 임직원이 창의적인 아이디어를 공유하고, 업무 현안을 토론하고, 사내 전문가의 도움을 받는 온·오프라인 커뮤니티 플랫폼입니다. 공모전과 상시 제안이 열리고, 사내 문서·설문·리포트도 200건 넘게 쌓여 있었습니다.',
-    's1-p2': '하지만 그 자산이 바로 아이디어로 이어지지는 않았습니다. 작성 화면은 텍스트 필드 중심이었고, 근거가 될 자료는 PDF·한글·워드 문서로 흩어져 있었습니다. 참여 이력도 누적되는 경험보다 이벤트처럼 흘러갔습니다.',
-    's1-quote': '"아이디어가 부족한 게 아니라, 200건 넘는 사내 문서를 근거로 꺼내 쓸 방법이 없었습니다."<br><span style="font-size:14px;font-style:normal;font-weight:400;color:rgba(0,0,0,.4)" id="s1-quote-attr">— 문제 정의</span>',
-    's1-quote-attr': '— 문제 정의',
+    's1-h2': "DIAGNOSIS — 아이디어를 제안으로 발전시키는 과정에 어시스트가 필요했습니다.",
+    's1-p1': "모자이크는 임직원이 창의적인 아이디어를 공유하고, 업무 현안을 토론하고, 사내 전문가의 도움을 받는 온·오프라인 커뮤니티 플랫폼입니다. 공모전과 상시 제안이 열리고, 사내 문서·설문·리포트도 200건 넘게 쌓여 있었습니다.",
+    's1-p2': "하지만 그 자산이 바로 아이디어로 이어지지는 않았습니다. 작성 화면은 텍스트 필드 중심이었고, 근거가 될 자료는 PDF·한글·워드 문서로 흩어져 있었습니다. 사용자는 주제를 떠올리고, 관련 사내 자료를 찾고, 읽고 요약하고, 근거로 붙이고, 다음 행동까지 스스로 이어가야 했습니다.",
+    's1-quote': "\"필요했던 것은 아이디어를 대신 써주는 챗봇이 아니라, 작성 흐름 안에서 주제를 제안하고, 관련 문서를 찾아 요약하고, 근거로 붙여주고, 다음 행동까지 이어주는 어시스트였습니다.\"<br><span style=\"font-size:14px;font-style:normal;font-weight:400;color:rgba(0,0,0,.4)\" id=\"s1-quote-attr\">— 문제 재정의</span>",
+    's1-quote-attr': "— 문제 재정의",
     // Section 2
-    's2-tag': 'Role', 's2-title': '역할과 산출물',
-    's2-h2': 'M-pilot의 기능, 화면, 시각 규칙을 하나의 제안으로 묶었습니다.',
-    's2-p1': 'Hidd lab의 프리랜서 외주 프로젝트로, 인턴 4명과 함께 제안을 만들었습니다. 서비스 기획부터 UX/UI 디자인, AI 브랜딩과 디자인 시스템까지 전 범위를 담당했습니다.',
-    's2-p2': '프로젝트 범위는 화면 몇 장을 그리는 데서 끝나지 않았습니다. M-pilot이 어떤 기능을 갖고, 어떤 상태로 말하고, 어떤 시각 규칙으로 구분되는지까지 제안서 안에서 하나로 보여줘야 했습니다.',
-    's2-p3': '<strong>1. M-pilot 기능 정의</strong> / LLM·RAG 기반 내부 문서 검색과 AI Agent 기반 행동 추천을 나눠 구동 방식을 정리했습니다.',
-    's2-p4': '<strong>2. 워크스페이스 화면 설계</strong> / 아이디어 홈, 작성창, 문서 요약, 업무비서 화면을 하나의 흐름으로 연결했습니다.',
-    's2-p5': '<strong>3. AI 인터랙션·브랜딩 시스템</strong> / 진행 상태, 스트리밍, 출처 첨부, AI 생성 표기, 결과 없음 follow-up, 로고와 컬러 규칙을 정리했습니다.',
+    's2-tag': "OVERVIEW", 's2-title': "역할과 산출물",
+    's2-h2': "M-pilot의 기능, 화면, 시각 규칙을 하나의 제안으로 묶었습니다.",
+    's2-p1': "Hidd lab의 프리랜서 외주 프로젝트로, 인턴 4명과 함께 제안을 만들었습니다. 저는 팀 리드로 서비스 기획, UX/UI 디자인, AI 브랜딩과 디자인 시스템 전 범위를 정리했습니다.",
+    's2-p2': "프로젝트 범위는 화면 몇 장을 그리는 데서 끝나지 않았습니다. M-pilot이 어떤 도움을 주고, 어떤 상태로 말하고, 어떤 시각 규칙으로 AI 영역을 구분하는지까지 제안서 안에서 하나로 보여줘야 했습니다.",
+    's2-p3': "<strong>1. M-pilot 기능 정의</strong> / LLM·RAG 기반 내부 문서 검색과 AI Agent 기반 행동 추천을 나눠 구동 방식을 정리했습니다.",
+    's2-p4': "<strong>2. 워크스페이스 화면 설계</strong> / 아이디어 홈, 작성창, 문서 요약, 업무비서 화면을 하나의 흐름으로 연결했습니다.",
+    's2-p5': "<strong>3. AI 인터랙션·브랜딩 시스템</strong> / 진행 상태, 스트리밍, 출처 첨부, AI 생성 표기, 결과 없음 follow-up, 로고와 컬러 규칙을 정리했습니다.",
     // Section 3
-    's3-tag': 'Approach',
-    's3-title': '챗봇 하나가 아닌 이원 구조',
-    's3-h2': '워크스페이스 우측 챗봇 대신, M-pilot을 두 역할로 나눴습니다.',
-    's3-p1': '초기에는 워크스페이스 우측에 챗봇 하나를 두고 모든 요청을 받는 안을 검토했습니다. 구현은 단순하지만 사용자가 먼저 물어볼 거리를 찾아야 하므로, 기존 문제였던 “빈 화면에서 시작한다”는 상황이 그대로 남았습니다.',
-    's3-p2': '그래서 M-pilot을 사용자가 만나는 순간 기준으로 나눴습니다. 아이디어를 떠올리는 순간에는 키워드와 다음 행동을 추천하고, 작성하는 순간에는 내부 문서와 참고 콘텐츠를 찾아 붙이는 구조입니다.',
-    's3-h3a': '1. 검색형 코파일럿 (LLM/RAG)',
-    's3-p3': '사내 문서·설문·리포트를 찾아 요약합니다. PDF·한글·워드처럼 흩어진 문서를 일정한 형식으로 DB화해, 작성 중인 아이디어에 바로 근거를 붙일 수 있게 했습니다.',
-    's3-h3b': '2. 추천 행동 제안 (AI Agent)',
-    's3-p4': '최근 활동과 진행 중인 공모전을 바탕으로 추천 키워드, MOSAIC Report, 업무비서 기능을 제안합니다. 사용자는 아이디어 시작점과 다음 행동을 같은 흐름에서 확인할 수 있습니다.',
-    's3-h3c': '3. 벤치마크에서 본 빈 자리',
-    's3-p5': 'Microsoft 365 Copilot, Notion AI, Glean처럼 이미 쓰이던 AI 도구를 보며 출처 표기, 결과 없음 처리, AI 영역 시각 구분을 비교했습니다. M-pilot에서는 요약 하단 문서 카드, 다음 행동 전환, 그라디언트 글로우를 차별점으로 잡았습니다.',
-    's3-h3d': '4. 두 역할이 만나는 지점',
-    's3-p6': '두 역할의 공통 목표는 업무 생산성 향상입니다. 필요한 내부 문서를 찾고, 아이디어를 뒷받침하는 정보를 제공해 최종적으로 창의적인 제안으로 이어지게 했습니다.',
-    's3-p7': '문제 정의는 클라이언트 브리프와 기존 화면 분석을 바탕으로 잡았습니다. 사용자 조사는 제안 단계 범위에 포함되지 않았기 때문에, 케이스스터디에서도 검증했다고 말하기보다 내부 테스트로 이어질 가설을 분명히 남겼습니다.',
-    's3-p8': '이 기준 덕분에 M-pilot은 단순한 대화창이 아니라 아이디어 홈, 작성창, 문서 요약, 업무비서에 각각 다른 형태로 놓일 수 있었습니다.',
+    's3-tag': "APPROACH",
+    's3-title': "챗봇 하나가 아닌 이원 구조",
+    's3-h2': "M-pilot은 사용자가 도움을 필요로 하는 순간별로 나뉘어야 했습니다.",
+    's3-p1': "초기에는 워크스페이스 우측에 챗봇 하나를 두고 모든 요청을 받는 안을 검토했습니다. 구현은 단순하지만, 사용자가 먼저 무엇을 물어봐야 하는지 알아야 합니다. 기존 문제였던 빈 화면 앞에서 멈추는 상황은 그대로 남았습니다.",
+    's3-p2': "그래서 M-pilot을 두 역할로 나눴습니다. 아이디어를 찾는 순간에는 키워드와 다음 행동을 추천하고, 작성하는 순간에는 내부 문서와 참고 콘텐츠를 찾아 근거로 붙이는 구조입니다.",
+    's3-h3a': "1. 검색형 코파일럿 (LLM/RAG)",
+    's3-p3': "사내 문서·설문·리포트를 찾아 요약합니다. PDF·한글·워드처럼 흩어진 문서를 일정한 형식으로 DB화해, 작성 중인 아이디어에 바로 근거를 붙일 수 있게 했습니다.",
+    's3-h3b': "2. 추천 행동 제안 (AI Agent)",
+    's3-p4': "최근 활동과 진행 중인 공모전을 바탕으로 추천 키워드, MOSAIC Report, 업무비서 기능을 제안합니다. 사용자는 아이디어 시작점과 다음 행동을 같은 흐름에서 확인할 수 있습니다.",
+    's3-h3c': "3. AI 신뢰 설계",
+    's3-p5': "사내 데이터를 다루는 서비스에서는 답변이 맞는지만큼 사용자가 답변을 검증할 수 있는지가 중요했습니다. 그래서 출처 카드, AI 생성 라벨, 결과 없음 follow-up, AI 영역의 시각 구분을 코파일럿의 기본 규칙으로 잡았습니다.",
+    's3-h3d': "4. 두 역할이 만나는 지점",
+    's3-p6': "두 역할의 공통 목표는 업무 생산성 향상입니다. 필요한 내부 문서를 찾고, 아이디어를 뒷받침하는 정보를 제공해 최종적으로 더 설득력 있는 제안으로 이어지게 했습니다.",
+    's3-p7': "이 구조 덕분에 M-pilot은 단순한 대화창이 아니라 아이디어 홈, 작성창, 문서 요약, 업무비서에 각각 다른 형태로 놓일 수 있었습니다.",
+    's3-p8': "사용자는 추천 키워드로 시작하고, 내부 문서로 근거를 붙이고, 출처와 AI 라벨로 신뢰 경로를 확인한 뒤, 공모전 참여나 설문 제작, 회의 예약 같은 다음 행동으로 이어질 수 있습니다.",
     // Section 4
-    's4-tag': 'Design Decisions',
-    's4-title': '아이디어 흐름 설계',
-    's4-h2': '아이디어를 시작하게 하고, 작성 중에는 근거를 붙이며, 반복 업무는 에이전트로 넘겼습니다.',
-    's4-p1': '<strong>Insight Radar</strong>는 사내에서 급상승 중인 키워드를 방사형으로 배치합니다. ‘생성형 AI’, ‘라이프 로깅’, ‘개인화된 수면가이드’ 같은 키워드를 누르면 관련 리포트와 흐름을 보고 바로 아이디어 작성으로 넘어갈 수 있습니다.',
-    's4-p2': '<strong>My MOSAIC Report</strong>는 수상 횟수, 참여한 공모전, 작성한 상시 제안을 배지 진행도로 보여줍니다. “새로운 배지 획득까지 2개의 활동이 남았어요”처럼 참여를 이벤트가 아니라 누적되는 기록으로 바꿨습니다.',
-    's4-quote': '"아이디어를 떠올리는 순간, 쓰는 순간, 실행하는 순간에 각각 다른 형태의 코파일럿을 배치했습니다."',
-    's4-p3': '<strong>작성창 코파일럿 패널</strong>은 Trend, CX, Idea, Discussion 탭으로 참고 콘텐츠를 나눠 보여줍니다. 작성 중인 키워드와 맞는 사내 문서를 찾고, 추천 아이디어명을 제안하고, 문서를 끌어다 놓으면 근거 자료로 첨부되게 했습니다.',
-    's4-p4': '<strong>업무비서</strong>는 “다음주에 디자인팀 회의 잡아줘” 한 문장으로 가능한 시간을 조율하고 회의실과 참석 인원을 확인합니다. 결과만 던지지 않고, 일시·장소·참석 가능 인원 같은 판단 근거를 함께 보여줍니다.',
-    's4-p5': '<strong>브랜딩 시스템</strong>은 연결, 지능, 창의성, 신뢰성을 네 개의 다이아몬드가 모이는 형태로 표현했습니다. 흩어진 아이디어가 하나로 모이는 M-pilot의 역할을 로고와 다크·라이트 심볼, Lexend/Pretendard 타이포그래피 규칙으로 정리했습니다.',
+    's4-tag': "DESIGN DECISIONS",
+    's4-title': "아이디어 흐름 설계",
+    's4-h2': "아이디어를 촉발하고, 작성 중에는 근거를 붙이며, 반복 업무는 에이전트가 이어받게 했습니다.",
+    's4-p1': "<strong>Insight Radar</strong>는 사내에서 급상승 중인 키워드를 방사형으로 배치합니다. 생성형 AI, 라이프 로깅, 개인화된 수면가이드 같은 키워드를 누르면 관련 리포트와 흐름을 보고 바로 아이디어 작성으로 넘어갈 수 있습니다.",
+    's4-p2': "<strong>My MOSAIC Report</strong>는 수상 횟수, 참여한 공모전, 작성한 상시 제안을 배지 진행도로 보여줍니다. “새로운 배지 획득까지 2개의 활동이 남았어요”처럼 참여를 일회성 이벤트가 아니라 누적되는 기록으로 바꿨습니다.",
+    's4-quote': "\"촉발하기 → 근거 붙이기 → 신뢰 남기기 → 행동으로 잇기\"",
+    's4-p3': "<strong>작성창 코파일럿 패널</strong>은 Trend, CX, Idea, Discussion 탭으로 참고 콘텐츠를 나눠 보여줍니다. 작성 중인 키워드와 맞는 사내 문서를 찾고, 추천 아이디어명을 제안하고, 문서를 끌어다 놓으면 근거 자료로 첨부되게 했습니다.",
+    's4-p4': "<strong>업무비서</strong>는 “다음주에 디자인팀 회의 잡아줘” 같은 한 문장 요청을 받아 가능한 시간을 조율하고, 회의실과 참석 가능 인원을 확인합니다. 결과만 던지지 않고 일시·장소·참석 가능 인원 같은 판단 근거를 함께 보여줍니다.",
+    's4-p5': "<strong>브랜딩 시스템</strong>은 연결, 지능, 창의성, 신뢰성을 네 개의 다이아몬드가 모이는 형태로 표현했습니다. 흩어진 아이디어와 사내 지식이 하나로 모이는 M-pilot의 역할을 로고와 다크·라이트 심볼, Lexend/Pretendard 타이포그래피 규칙으로 정리했습니다.",
     // Trust Design
-    's4b-tag': 'AI Trust',
-    's4b-title': '할루시네이션을 UI로 다뤘습니다',
-    's4b-h2': '모델을 고칠 수 없다면, 인터페이스가 확인 경로를 남겨야 합니다.',
-    's4b-p1': '생성형 AI를 사내 시스템에 넣을 때 가장 큰 리스크는 신뢰입니다. 사내 데이터를 다루는 서비스에서는 틀린 답보다 검증할 수 없는 답이 더 위험하다고 보고, 할루시네이션 리스크를 인터페이스 패턴으로 다뤘습니다.',
-    's4b-p2': '<strong>과정 노출</strong> / ‘Searching for: 전략 과제 폴더에서 수면 관련 내용’ 다음에 ‘Generating answers for you...’를 보여줘 응답이 처리되고 있음을 알렸습니다.',
-    's4b-p3': '<strong>스트리밍 응답</strong> / 답변을 한 번에 완성해서 보여주기보다 일부부터 노출해 대화하는 감각을 만들고 체감 대기시간을 낮췄습니다.',
-    's4b-p4': '<strong>출처 첨부와 AI 생성 표기</strong> / 요약 하단에는 근거 문서 카드를 붙이고, 생성 결과에는 ‘삼성 AI 코파일럿 M-pilot으로 작성된 내용입니다’ 라벨을 붙였습니다.',
-    's4b-p5': '<strong>결과 없음 follow-up</strong> / 검색 결과가 없을 때 “없습니다”로 끝내지 않고, 연령별 수면 시 스마트 기기 활용 행태 설문처럼 새 액션을 제안했습니다.',
-    's4b-p6': '<strong>AI 표면의 규칙</strong> / 그라디언트 글로우는 M-pilot이 개입한 영역에만 사용했습니다. 사용자는 색과 라벨만 보고도 “여기는 AI가 만든 영역”임을 알 수 있습니다.',
+    's4b-tag': "AI TRUST",
+    's4b-title': "신뢰 경로 설계",
+    's4b-h2': "모델을 직접 고칠 수 없다면, 인터페이스가 확인 경로를 남겨야 합니다.",
+    's4b-p1': "생성형 AI를 사내 시스템에 넣을 때 가장 큰 리스크는 신뢰입니다. 사내 데이터를 다루는 서비스에서는 틀린 답보다 검증할 수 없는 답이 더 위험하다고 보고, 할루시네이션 리스크를 인터페이스 패턴으로 다뤘습니다.",
+    's4b-p2': "<strong>과정 노출</strong> / “Searching for: 전략 과제 폴더에서 수면 관련 내용” 다음에 “Generating answers for you...”를 보여줘 응답이 처리되고 있음을 알렸습니다.",
+    's4b-p3': "<strong>스트리밍 응답</strong> / 답변을 한 번에 완성해서 보여주기보다 일부부터 노출해 대화하는 감각을 만들고 체감 대기시간을 낮췄습니다.",
+    's4b-p4': "<strong>출처 첨부와 AI 생성 표기</strong> / 요약 하단에는 근거 문서 카드를 붙이고, 생성 결과에는 “삼성 AI 코파일럿 M-pilot으로 작성된 내용입니다” 라벨을 붙였습니다.",
+    's4b-p5': "<strong>결과 없음 follow-up</strong> / 검색 결과가 없을 때 “없습니다”로 끝내지 않고, 연령별 수면 시 스마트 기기 활용 행태 설문처럼 새 액션을 제안했습니다.",
+    's4b-p6': "<strong>AI 표면의 규칙</strong> / 그라디언트 글로우는 M-pilot이 개입한 영역에만 사용했습니다. 사용자는 색과 라벨만 보고도 “여기는 AI가 만든 영역”임을 알 수 있습니다.",
     // Team Lead
-    's5a-tag': 'Team Lead',
-    's5a-title': '인턴 4명과 2개월',
-    's5a-h2': '짧은 일정 안에서 기획, 화면, 브랜딩을 병렬로 움직였습니다.',
-    's5a-p1': '2개월 안에 제안 구조부터 브랜딩까지 끝내야 했기 때문에, 순서대로 넘기는 방식보다 기준을 먼저 세우고 나눠 작업하는 방식을 택했습니다.',
-    's5a-p2': '<strong>구조를 먼저 고정했습니다.</strong> LLM/RAG와 AI Agent로 코파일럿을 나누는 이원 구조를 초반에 잡았습니다. 이 기준선이 있어야 각자 맡은 화면이 따로 놀지 않았습니다.',
-    's5a-p3': '<strong>판단 기준을 문서로 넘겼습니다.</strong> 출처는 어디에 붙이는지, AI 생성 영역은 어떻게 구분하는지, 결과 없음은 어디로 이어지는지 같은 규칙을 정리해 반복 질문을 줄였습니다.',
-    's5a-p4': '<strong>최종 품질과 클라이언트 커뮤니케이션은 제가 맡았습니다.</strong> 제안 논리, 화면 정합성, 브랜딩 톤이 한 방향으로 읽히도록 마지막까지 맞췄습니다.',
+    's5a-tag': "TEAM LEAD",
+    's5a-title': "인턴 4명과 함께 만든 제안",
+    's5a-h2': "기준을 먼저 세우고, 화면 제작은 병렬로 움직였습니다.",
+    's5a-p1': "인턴 4명으로 구성된 팀을 리드했습니다. 프로젝트 기간 동안 기획, 주요 화면, AI 브랜딩, 디자인 시스템까지 함께 정리해야 했기 때문에 순서대로 넘기는 방식보다 기준을 먼저 세우고 병렬로 움직이는 방식을 택했습니다.",
+    's5a-p2': "<strong>구조를 먼저 고정했습니다.</strong> LLM/RAG와 AI Agent로 코파일럿을 나누는 이원 구조를 초반에 잡았습니다. 이 기준선이 있어야 각자 맡은 화면이 따로 놀지 않았습니다.",
+    's5a-p3': "<strong>화면에 들어갈 컴포넌트를 먼저 설계했습니다.</strong> Insight Radar, 작성창 코파일럿 패널, 출처 카드, AI 생성 라벨, 결과 없음 follow-up, 업무비서 응답 카드처럼 각 화면에 필요한 핵심 컴포넌트를 정의했습니다. 신입 인턴들이 빈 화면에서 시작하지 않도록 목적과 상태, 들어가야 할 정보, 사용 위치를 먼저 잡아주고 화면 제작을 나눴습니다.",
+    's5a-p4': "<strong>최종 품질과 클라이언트 커뮤니케이션은 제가 맡았습니다.</strong> 인턴들이 만든 화면이 제안 논리와 같은 방향으로 읽히는지 확인하고, 화면 정합성·브랜딩 톤·컴포넌트 사용 방식을 마지막까지 맞췄습니다. 클라이언트에게는 왜 이 구조와 컴포넌트가 필요한지 설명되는 제안으로 전달했습니다.",
     // Measurement
-    's5b-tag': 'Validation',
-    's5b-title': '내부 테스트에서 볼 지표',
-    's5b-h2': '승인 이후에는 아이디어의 양보다 질을 확인해야 한다고 봤습니다.',
-    's5b-p1': '<strong>추천 키워드가 진입 장벽을 낮추는지</strong>는 Insight Radar 키워드 클릭 이후 작성 시작률과 완료율로 확인할 수 있습니다.',
-    's5b-p2': '<strong>근거 자료가 제안의 질을 높이는지</strong>는 참고 콘텐츠 첨부 여부별 심사 통과율로 볼 수 있습니다. 이 프로젝트의 핵심 가설은 아이디어를 많이 만들게 하는 것보다, 근거 있는 제안으로 발전시키는 것이었습니다.',
-    's5b-p3': '<strong>출처 노출이 AI 응답 신뢰도를 높이는지</strong>는 출처 카드 클릭률과 같은 질문 재입력 감소로 확인할 수 있습니다.',
-    's5b-h3': '회고',
-    's5b-p4': '이 프로젝트에서는 AI 기능 자체보다 AI가 개입하는 순간을 설계하는 일이 더 중요했습니다. 아이디어를 떠올리는 순간, 쓰는 순간, 실행하는 순간에 각각 다른 형태로 코파일럿을 배치했기 때문입니다.',
-    's5b-p5': '아쉬운 점도 있습니다. 제안은 승인됐지만 계약 범위상 검증 단계에는 참여하지 않았습니다. 다시 한다면 화면을 그리기 전에 모자이크 실사용자 인터뷰를 최소 3건이라도 확보해, 브리프가 아니라 사용자 언어로 문제를 먼저 세웠을 것입니다.',
+    's5b-tag': "VALIDATION",
+    's5b-title': "내부 테스트에서 볼 지표",
+    's5b-h2': "승인 이후에는 아이디어의 양보다 질을 확인해야 한다고 봤습니다.",
+    's5b-p1': "<strong>추천 키워드가 진입 장벽을 낮추는지</strong>는 Insight Radar 키워드 클릭 이후 작성 시작률과 완료율로 확인할 수 있습니다.",
+    's5b-p2': "<strong>근거 자료가 제안의 질을 높이는지</strong>는 참고 콘텐츠 첨부 여부별 심사 통과율로 볼 수 있습니다. 이 프로젝트의 핵심 가설은 아이디어를 많이 만들게 하는 것보다, 근거 있는 제안으로 발전시키는 것이었습니다.",
+    's5b-p3': "<strong>출처 노출이 AI 응답 신뢰도를 높이는지</strong>는 출처 카드 클릭률과 같은 질문 재입력 감소로 확인할 수 있습니다.",
+    's5b-h3': "LEARNING",
+    's5b-p4': "AI 기능이 아니라 AI가 개입하는 순간을 설계했습니다. 챗봇 하나를 붙이는 방식은 사용자가 “물어볼 거리”를 스스로 찾아야 합니다. 그래서 아이디어를 떠올리는 순간, 쓰는 순간, 실행하는 순간에 각각 다른 형태로 코파일럿을 배치했습니다.",
+    's5b-p5': "제안은 검증 가능한 형태로 남겨야 합니다. 문제 정의는 클라이언트 브리프와 기존 화면 분석에서 출발했지만, 화면을 예쁘게 만드는 데서 끝내지 않고 내부 테스트에서 확인할 지표까지 함께 정리했습니다. 덕분에 제안은 컨셉이 아니라 후속 개발과 검증으로 이어질 수 있는 구조가 됐습니다.",
     // Section 5
-    's5-h2': '결과 — 내부 테스트와 후속 개발로 이어진 제안',
-    's5-p1': '제안이 승인되어 클라이언트 내부 테스트와 후속 개발로 이어졌습니다. 컨셉 검토로 끝나는 외주 제안과 달리, 설계한 구조가 실제 검증 단계로 넘어갔습니다.',
-    's5-p3': '제안을 관통하는 흐름은 단순합니다.',
-    's5-framework': '<strong>촉발하기 → 근거 붙이기 → 신뢰 남기기 → 행동으로 잇기</strong>',
-    's5-p4': '추천 키워드로 아이디어를 시작하고, 내부 문서로 근거를 붙이고, 출처와 AI 라벨로 확인 경로를 남긴 뒤, 공모전 참여나 설문 제작, 회의 예약 같은 다음 행동으로 이어지는 구조입니다.',
-    's5-p5': '이 프로젝트에서 배운 점은 신뢰가 모델 성능만으로 생기지 않는다는 것입니다. 사내 데이터를 다루는 서비스에서는 틀린 답보다 검증할 수 없는 답이 더 큰 문제라서, 출처·과정·AI 표기를 디자인 시스템 레벨의 규칙으로 잡는 것이 중요했습니다.',
+    's5-h2': "OUTCOME — 내부 테스트와 후속 개발로 이어진 제안",
+    's5-p1': "제안이 승인되어 클라이언트 내부 테스트와 후속 개발로 이어졌습니다. 컨셉 검토로 끝나는 외주 제안과 달리, 설계한 구조가 실제 검증 단계로 넘어갔습니다.",
+    's5-p3': "프로젝트 기간 동안 전달한 산출물은 M-pilot 기능 정의, 워크스페이스 주요 화면, AI 인터랙션 패턴, 브랜드 아이덴티티와 디자인 시스템이었습니다.",
+    's5-framework': "<strong>촉발하기 → 근거 붙이기 → 신뢰 남기기 → 행동으로 잇기</strong>",
+    's5-p4': "추천 키워드로 아이디어를 시작하고, 내부 문서로 근거를 붙이고, 출처와 AI 라벨로 확인 경로를 남긴 뒤, 공모전 참여나 설문 제작, 회의 예약 같은 다음 행동으로 이어지는 구조입니다.",
+    's5-p5': "신뢰는 모델 성능만으로 생기지 않습니다. 사내 데이터를 다루는 서비스에서는 틀린 답보다 검증할 수 없는 답이 더 큰 문제입니다. 출처, 과정, AI 표기 세 가지를 디자인 시스템 레벨의 규칙으로 잡은 이유입니다.",
     // Footer
     'ft-tag': '연락처', 'ft-h': '함께 만들어갑니다', 'ft-cta': '이야기 나누기 ↗',
   }
